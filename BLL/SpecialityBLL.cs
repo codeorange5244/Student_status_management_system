@@ -3,15 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StudentStatusManageSystem.AbstractDAL;
 using StudentStatusManageSystem.Model;
 
-namespace StudentStatusManageSystem.AbstractDAL
+namespace StudentStatusManageSystem.BLL
 {
-    public interface IUserDAL
+    public class SpecialityBLL
     {
-       User GetUserByUserName();
-
-        User GetUserrByUserId();
-
     }
 }

@@ -40,8 +40,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IClassInfoDAL.cs" />
+    <Compile Include="IClassroomDAL.cs" />
+    <Compile Include="ICourseDAL.cs" />
+    <Compile Include="IRoleDAL.cs" />
+    <Compile Include="ISpecialityDAL.cs" />
+    <Compile Include="IStudentDAL.cs" />
     <Compile Include="IUserDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8dedbb75-4cc4-4f48-bd1e-2f47b28f60b0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -41,6 +41,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqliteUserDAL.cs" />
+    <Compile Include="SqlserverClassInfoDAL.cs" />
+    <Compile Include="SqlserverClassroomDAL.cs" />
+    <Compile Include="SqlserverCourseDAL.cs" />
+    <Compile Include="SqlserverRoleDAL.cs" />
+    <Compile Include="SqlserverSpecialityDAL.cs" />
+    <Compile Include="SqlserverStudentDAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AbstractDAL\AbstractDAL.csproj">
+      <Project>{43a38f16-1c0a-4239-ade5-52301049ad62}</Project>
+      <Name>AbstractDAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8dedbb75-4cc4-4f48-bd1e-2f47b28f60b0}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

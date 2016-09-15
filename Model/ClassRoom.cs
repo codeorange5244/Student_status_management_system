@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace StudentStatusManageSystem.Model
 {
-    public class ClassRoom
+    public class Classroom
     {
     }
 }
