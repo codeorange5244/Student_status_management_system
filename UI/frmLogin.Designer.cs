@@ -155,7 +155,7 @@
             this.Controls.Add(this.btnLogin);
             this.Name = "frmLogin";
             this.Radius = 430;
-            this.SkinOpacity = 0.6D;
+            this.SkinOpacity = 0.7D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.TopMost = true;

@@ -31,6 +31,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -44,6 +45,7 @@
     <Compile Include="SqlserverClassInfoDAL.cs" />
     <Compile Include="SqlserverClassroomDAL.cs" />
     <Compile Include="SqlserverCourseDAL.cs" />
+    <Compile Include="SqlserverHelper.cs" />
     <Compile Include="SqlserverRoleDAL.cs" />
     <Compile Include="SqlserverSpecialityDAL.cs" />
     <Compile Include="SqlserverStudentDAL.cs" />

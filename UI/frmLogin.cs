@@ -39,6 +39,8 @@ namespace StudentStatusManageSystem.UI
         //登录
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            //登录成功
+            this.DialogResult = DialogResult.OK;
 
         }
     }

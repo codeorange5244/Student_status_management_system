@@ -13,7 +13,7 @@ namespace StudentStatusManageSystem.BLL
         private static readonly string assemblyName;
         private static readonly string dbName;
 
-        public IUserDAL CreateUserDAL()
+        public static IUserDAL CreateUserDAL()
         {
             throw new NotImplementedException();
         }
@@ -23,27 +23,27 @@ namespace StudentStatusManageSystem.BLL
             throw new NotImplementedException();
         }
 
-        public IRoleDAL CreateRoleDAL()
+        public static IRoleDAL CreateRoleDAL()
         {
             throw new NotImplementedException();
         }
 
-        public IClassInfoDAL CreateClassInfoDAL()
+        public static IClassInfoDAL CreateClassInfoDAL()
         {
             throw new NotImplementedException();
         }
 
-        public ISpecialityDAL CreateSpecialityDAL()
+        public static ISpecialityDAL CreateSpecialityDAL()
         {
             throw new NotImplementedException();
         }
 
-        public ICourseDAL CreateCourseDAL()
+        public static ICourseDAL CreateCourseDAL()
         {
             throw new NotImplementedException();
         }
 
-        public IClassroomDAL CreateClassroomDAL()
+        public static IClassroomDAL CreateClassroomDAL()
         {
             throw new NotImplementedException();
         }
