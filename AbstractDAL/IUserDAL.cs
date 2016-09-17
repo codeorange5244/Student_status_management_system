@@ -9,8 +9,17 @@ namespace StudentStatusManageSystem.AbstractDAL
 {
     public interface IUserDAL
     {
-       User GetUserByUserName();
+        /// <summary>
+        /// 获得用户对象根据用户姓名
+        /// </summary>
+        /// <returns></returns>
+        User GetUserByUserName();
 
+
+        /// <summary>
+        /// 获得用户对象根据用户Id
+        /// </summary>
+        /// <returns></returns>
         User GetUserrByUserId();
 
     }

@@ -260,7 +260,9 @@
             this.Name = "frmMain";
             this.Radius = 20;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Tag = "currentUser";
             this.Text = "";
+            this.Load += new System.EventHandler(this.frmMain_Load);
             this.skinSplitContainer1.Panel1.ResumeLayout(false);
             this.skinSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).EndInit();

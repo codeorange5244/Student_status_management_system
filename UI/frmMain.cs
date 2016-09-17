@@ -1,4 +1,6 @@
 ﻿using CCWin;
+using StudentStatusManageSystem.BLL;
+using StudentStatusManageSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,6 +19,8 @@ namespace StudentStatusManageSystem.UI
         {
             InitializeComponent();
         }
+        //当前登录用户
+        private User currentUser = new User();       
 
         private void btnAboutMe_MouseEnter(object sender, EventArgs e)
         {
@@ -28,6 +32,12 @@ namespace StudentStatusManageSystem.UI
         {
             Button currentButton = sender as Button;
             currentButton.BackColor = Color.Transparent;
+        }
+        //主窗体加载
+        private void frmMain_Load(object sender, EventArgs e)
+        {
+            UserBLL bll = new UserBLL();
+            User u=bll.GetUserByUserName();
         }
     }
 }

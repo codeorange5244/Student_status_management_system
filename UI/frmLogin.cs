@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using CCWin;
-using SelfForm;
 
 namespace StudentStatusManageSystem.UI
 {

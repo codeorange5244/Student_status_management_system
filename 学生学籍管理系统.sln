@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlserverDAL", "SqlserverDA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqliteDAL", "SqliteDAL\SqliteDAL.csproj", "{872E41F5-143E-432D-B5EB-024267F3FEA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleFactory", "Factory\SimpleFactory.csproj", "{416EFDCA-3102-4895-8FEA-F8DF0CDB8526}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{872E41F5-143E-432D-B5EB-024267F3FEA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{872E41F5-143E-432D-B5EB-024267F3FEA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{872E41F5-143E-432D-B5EB-024267F3FEA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{416EFDCA-3102-4895-8FEA-F8DF0CDB8526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{416EFDCA-3102-4895-8FEA-F8DF0CDB8526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{416EFDCA-3102-4895-8FEA-F8DF0CDB8526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{416EFDCA-3102-4895-8FEA-F8DF0CDB8526}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

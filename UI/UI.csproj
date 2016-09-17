@@ -36,10 +36,6 @@
     <Reference Include="CSkin">
       <HintPath>C:\Users\宇锅\Desktop\xinpian\Code\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
     </Reference>
-    <Reference Include="SelfForm, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\自定义控件\WindowsFormsApplication1\bin\Debug\SelfForm.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
@@ -101,6 +97,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{1ef728e7-1481-451e-874e-b97f186d8c57}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{8dedbb75-4cc4-4f48-bd1e-2f47b28f60b0}</Project>
+      <Name>Model</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

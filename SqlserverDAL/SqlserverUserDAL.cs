@@ -12,7 +12,12 @@ namespace StudentStatusManageSystem.SqlserverDAL
     {
         public User GetUserByUserName()
         {
-            throw new NotImplementedException();
+            return new User()
+            {
+                Id = 11,
+                Name = "哈哈",
+                Pwd = "sss"
+            };
         }
 
         public User GetUserrByUserId()
