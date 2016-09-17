@@ -39,10 +39,15 @@
             this.btnSpecialitySetting = new CCWin.SkinControl.SkinButton();
             this.btnSystemSetting = new CCWin.SkinControl.SkinButton();
             this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.btnAdvanced_operations = new CCWin.SkinControl.SkinButton();
+            this.btnAddRole = new CCWin.SkinControl.SkinButton();
+            this.btnAeroWallpaperChanger = new CCWin.SkinControl.SkinButton();
+            this.btnAddUser = new CCWin.SkinControl.SkinButton();
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
             this.skinSplitContainer1.Panel1.SuspendLayout();
             this.skinSplitContainer1.Panel2.SuspendLayout();
             this.skinSplitContainer1.SuspendLayout();
+            this.skinGroupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // skinSplitContainer1
@@ -115,6 +120,7 @@
             this.btnScoreManage.Text = "成绩信息管理";
             this.btnScoreManage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnScoreManage.UseVisualStyleBackColor = false;
+            this.btnScoreManage.Click += new System.EventHandler(this.btnScoreManage_Click);
             this.btnScoreManage.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnScoreManage.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
@@ -138,6 +144,7 @@
             this.btnCourseManage.Text = "课程信息管理";
             this.btnCourseManage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCourseManage.UseVisualStyleBackColor = false;
+            this.btnCourseManage.Click += new System.EventHandler(this.btnCourseManage_Click);
             this.btnCourseManage.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnCourseManage.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
@@ -161,6 +168,7 @@
             this.btnStudentManage.Text = "学生信息管理";
             this.btnStudentManage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnStudentManage.UseVisualStyleBackColor = false;
+            this.btnStudentManage.Click += new System.EventHandler(this.btnStudentManage_Click);
             this.btnStudentManage.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnStudentManage.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
@@ -184,6 +192,7 @@
             this.btnClassInfoManage.Text = "班级信息管理";
             this.btnClassInfoManage.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnClassInfoManage.UseVisualStyleBackColor = false;
+            this.btnClassInfoManage.Click += new System.EventHandler(this.btnClassInfoManage_Click);
             this.btnClassInfoManage.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnClassInfoManage.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
@@ -207,6 +216,7 @@
             this.btnSpecialitySetting.Text = "专业设置";
             this.btnSpecialitySetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSpecialitySetting.UseVisualStyleBackColor = false;
+            this.btnSpecialitySetting.Click += new System.EventHandler(this.btnSpecialitySetting_Click);
             this.btnSpecialitySetting.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnSpecialitySetting.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
@@ -229,13 +239,20 @@
             this.btnSystemSetting.Text = "系统设置";
             this.btnSystemSetting.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSystemSetting.UseVisualStyleBackColor = false;
+            this.btnSystemSetting.Click += new System.EventHandler(this.btnSystemSetting_Click);
             this.btnSystemSetting.MouseEnter += new System.EventHandler(this.btnAboutMe_MouseEnter);
             this.btnSystemSetting.MouseLeave += new System.EventHandler(this.btnAboutMe_MouseLeave);
             // 
             // skinGroupBox1
             // 
             this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BackgroundImage = global::StudentStatusManageSystem.UI.Properties.Resources.上海海洋大学;
+            this.skinGroupBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.skinGroupBox1.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox1.Controls.Add(this.btnAdvanced_operations);
+            this.skinGroupBox1.Controls.Add(this.btnAddRole);
+            this.skinGroupBox1.Controls.Add(this.btnAeroWallpaperChanger);
+            this.skinGroupBox1.Controls.Add(this.btnAddUser);
             this.skinGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
             this.skinGroupBox1.Location = new System.Drawing.Point(0, 0);
@@ -248,6 +265,82 @@
             this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Red;
             this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
             this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // btnAdvanced_operations
+            // 
+            this.btnAdvanced_operations.BackColor = System.Drawing.Color.Transparent;
+            this.btnAdvanced_operations.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAdvanced_operations.DownBack = null;
+            this.btnAdvanced_operations.Location = new System.Drawing.Point(443, 173);
+            this.btnAdvanced_operations.MouseBack = null;
+            this.btnAdvanced_operations.Name = "btnAdvanced_operations";
+            this.btnAdvanced_operations.NormlBack = null;
+            this.btnAdvanced_operations.Radius = 117;
+            this.btnAdvanced_operations.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAdvanced_operations.Size = new System.Drawing.Size(117, 117);
+            this.btnAdvanced_operations.TabIndex = 0;
+            this.btnAdvanced_operations.Text = "高级操作";
+            this.btnAdvanced_operations.UseVisualStyleBackColor = false;
+            this.btnAdvanced_operations.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
+            this.btnAdvanced_operations.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
+            this.btnAdvanced_operations.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
+            // 
+            // btnAddRole
+            // 
+            this.btnAddRole.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddRole.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAddRole.DownBack = null;
+            this.btnAddRole.Location = new System.Drawing.Point(152, 114);
+            this.btnAddRole.MouseBack = null;
+            this.btnAddRole.Name = "btnAddRole";
+            this.btnAddRole.NormlBack = null;
+            this.btnAddRole.Radius = 117;
+            this.btnAddRole.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAddRole.Size = new System.Drawing.Size(117, 117);
+            this.btnAddRole.TabIndex = 0;
+            this.btnAddRole.Text = "添加角色";
+            this.btnAddRole.UseVisualStyleBackColor = false;
+            this.btnAddRole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
+            this.btnAddRole.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
+            this.btnAddRole.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
+            // 
+            // btnAeroWallpaperChanger
+            // 
+            this.btnAeroWallpaperChanger.BackColor = System.Drawing.Color.Transparent;
+            this.btnAeroWallpaperChanger.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAeroWallpaperChanger.DownBack = null;
+            this.btnAeroWallpaperChanger.Location = new System.Drawing.Point(313, 114);
+            this.btnAeroWallpaperChanger.MouseBack = null;
+            this.btnAeroWallpaperChanger.Name = "btnAeroWallpaperChanger";
+            this.btnAeroWallpaperChanger.NormlBack = null;
+            this.btnAeroWallpaperChanger.Radius = 117;
+            this.btnAeroWallpaperChanger.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAeroWallpaperChanger.Size = new System.Drawing.Size(117, 117);
+            this.btnAeroWallpaperChanger.TabIndex = 0;
+            this.btnAeroWallpaperChanger.Text = "更换壁纸";
+            this.btnAeroWallpaperChanger.UseVisualStyleBackColor = false;
+            this.btnAeroWallpaperChanger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
+            this.btnAeroWallpaperChanger.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
+            this.btnAeroWallpaperChanger.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
+            // 
+            // btnAddUser
+            // 
+            this.btnAddUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddUser.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAddUser.DownBack = null;
+            this.btnAddUser.Location = new System.Drawing.Point(29, 20);
+            this.btnAddUser.MouseBack = null;
+            this.btnAddUser.Name = "btnAddUser";
+            this.btnAddUser.NormlBack = null;
+            this.btnAddUser.Radius = 117;
+            this.btnAddUser.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAddUser.Size = new System.Drawing.Size(117, 117);
+            this.btnAddUser.TabIndex = 0;
+            this.btnAddUser.Text = "添加登录用户";
+            this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
+            this.btnAddUser.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
+            this.btnAddUser.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
             // 
             // frmMain
             // 
@@ -262,11 +355,13 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "currentUser";
             this.Text = "";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.skinSplitContainer1.Panel1.ResumeLayout(false);
             this.skinSplitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).EndInit();
             this.skinSplitContainer1.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -282,5 +377,9 @@
         private CCWin.SkinControl.SkinButton btnSpecialitySetting;
         private CCWin.SkinControl.SkinButton btnAboutMe;
         private CCWin.SkinControl.SkinGroupBox skinGroupBox1;
+        private CCWin.SkinControl.SkinButton btnAddUser;
+        private CCWin.SkinControl.SkinButton btnAdvanced_operations;
+        private CCWin.SkinControl.SkinButton btnAddRole;
+        private CCWin.SkinControl.SkinButton btnAeroWallpaperChanger;
     }
 }
