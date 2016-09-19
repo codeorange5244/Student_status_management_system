@@ -14,6 +14,7 @@ using System.Windows.Forms;
 using CCWin.SkinControl;
 // 首先引用命名空间
 using System.Runtime.InteropServices;
+using SelfForm;
 
 namespace StudentStatusManageSystem.UI
 {
@@ -24,7 +25,8 @@ namespace StudentStatusManageSystem.UI
             InitializeComponent();
         }
         //当前登录用户
-        private User currentUser = new User();
+        public static User current_user;
+        private bool isPressDown = false;   //标识1：是否按下了0级的某个选项
 
         private void btnAboutMe_MouseEnter(object sender, EventArgs e)
         {
@@ -40,8 +42,7 @@ namespace StudentStatusManageSystem.UI
         //主窗体加载
         private void frmMain_Load(object sender, EventArgs e)
         {
-            UserBLL bll = new UserBLL();
-            User u = bll.GetUserByUserName();
+          
         }
         //系统设置
         private void btnSystemSetting_Click(object sender, EventArgs e)
@@ -148,9 +149,61 @@ namespace StudentStatusManageSystem.UI
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Opacity = 0.3;
+            Controls.Clear();
+            BackgroundImage = Properties.Resources.site;           
+
             System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
+            int biaozhi = 0;
             timer.Interval = 20;
-           
+            EventHandler eh0 = new EventHandler((a, b) =>
+            {
+                this.Size = new Size(this.Size.Width - 10, this.Size.Width - 10);
+                this.Radius = this.Size.Width;
+                if (this.Size.Width <= 200)
+                {
+                    timer.Enabled = false;
+                    //后续操作，比如往右下角跑
+                    e.Cancel = false;
+                    this.FormClosing -= frmMain_FormClosing;
+                    Application.Exit();
+                }
+            });
+
+            EventHandler eh = new EventHandler((a, b) =>
+            {
+                if (this.Size.Width - this.Size.Height > 0)
+                {
+                    this.Size = new Size(this.Size.Width - 45, this.Size.Height);
+                }
+                else
+                {
+                    this.Size = new Size(this.Size.Width, this.Size.Height - 45);
+                }
+
+                if (biaozhi == 0 && Math.Abs(this.Size.Width - this.Size.Height)<50) 
+                {
+                    this.Size = new Size(this.Size.Width, this.Size.Width); //长宽相等
+                    timer.Tick += new EventHandler(eh0);
+                    biaozhi++; //让此委托只进行3次空判断
+                }
+            });
+            timer.Tick += new EventHandler(eh);
+            timer.Enabled = true;
+            e.Cancel = true;
         }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            if (current_user.current_role.System_manage!=1)
+            {
+                Msbox.Show("亲~ 没权限哦--");
+                (sender as Control).Enabled = false;//关闭该控件
+                return;
+            }
+            frmAddUser frm_add_user = new frmAddUser();
+            frm_add_user.Show();
+        }
+     
     }
 }

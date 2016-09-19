@@ -12,5 +12,11 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// 根据Id查询角色
         Role GetRoleByRoleId();
 
+        /// <summary>
+        ///  获得所有Role数据根据删除标识
+        /// </summary>
+        /// <param name="delflag">0---未删除，1---已删除</param>
+        /// <returns></returns>
+        List<Role> GetAllRoleInfoByDelFlag(int delflag);
     }
 }

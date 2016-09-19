@@ -10,16 +10,17 @@ namespace StudentStatusManageSystem.Model
     {
         public int Id { get; set; }
         public string Name { get; set; }        
-        public decimal System_manage { get; set; }
-        public decimal Speciality_manage { get; set; }
-        public decimal Class_manage { get; set; }
-        public decimal Course_manage { get; set; }
-        public decimal Score_manage { get; set; }
-        public decimal Student_manage { get; set; }
+        public int System_manage { get; set; }
+        public int Speciality_manage { get; set; }
+        public int Class_manage { get; set; }
+        public int Course_manage { get; set; }
+        public int Score_manage { get; set; }
+        public int Student_manage { get; set; }
+        public string Remark { get; set; }
         /// <summary>
         /// 删除标识，0---未删除 1---已删除
         /// </summary>
-        public decimal DelFlag { get; set; }
+        public int DelFlag { get; set; }
         /// <summary>
         /// 提交人Id
         /// </summary>

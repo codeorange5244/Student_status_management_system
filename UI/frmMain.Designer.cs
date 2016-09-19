@@ -338,6 +338,7 @@
             this.btnAddUser.TabIndex = 0;
             this.btnAddUser.Text = "添加登录用户";
             this.btnAddUser.UseVisualStyleBackColor = false;
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             this.btnAddUser.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
             this.btnAddUser.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
             this.btnAddUser.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
@@ -347,6 +348,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::StudentStatusManageSystem.UI.Properties.Resources.home;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1137, 703);
             this.Controls.Add(this.skinSplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

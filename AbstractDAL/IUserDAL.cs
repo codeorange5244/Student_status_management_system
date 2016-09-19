@@ -22,5 +22,11 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <returns></returns>
         User GetUserrByUserId();
 
+        /// <summary>
+        /// 添加新登录用户
+        /// </summary>
+        /// <param name="model">用户对象</param>
+        /// <returns></returns>
+        int AddUser(User model);
     }
 }

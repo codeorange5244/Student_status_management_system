@@ -153,10 +153,29 @@ namespace StudentStatusManageSystem.UI.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap site {
+            get {
+                object obj = ResourceManager.GetObject("site", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap speciality {
             get {
                 object obj = ResourceManager.GetObject("speciality", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 https://www.google.com.hk/imgres?imgurl=http%3A%2F%2Fimg3.50tu.com%2Fbizhi%2Ffengjing%2F2014-11-04%2F248b36bd68e6ec4689434b9dcaa8db7f.jpg&amp;imgrefurl=http%3A%2F%2F50tu.com%2Fbizhi%2Ffengjing%2F2014-11-04%2F629485.html&amp;docid=FGgnMoGBIpCRSM&amp;tbnid=5E1Ri8BQ7syaWM%3A&amp;w=1024&amp;h=640&amp;safe=strict&amp;bih=878&amp;biw=1920&amp;ved=0ahUKEwiU8bDH7JbPAhUHNo8KHRwrCgQQMwh2KEkwSQ&amp;iact=mrc&amp;uact=8 的本地化字符串。
+        /// </summary>
+        internal static string String {
+            get {
+                return ResourceManager.GetString("String", resourceCulture);
             }
         }
         

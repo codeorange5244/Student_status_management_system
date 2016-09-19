@@ -145,8 +145,14 @@
   <data name="settings20" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="site" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\site.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="speciality" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\speciality.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="String" xml:space="preserve">
+    <value>https://www.google.com.hk/imgres?imgurl=http%3A%2F%2Fimg3.50tu.com%2Fbizhi%2Ffengjing%2F2014-11-04%2F248b36bd68e6ec4689434b9dcaa8db7f.jpg&amp;imgrefurl=http%3A%2F%2F50tu.com%2Fbizhi%2Ffengjing%2F2014-11-04%2F629485.html&amp;docid=FGgnMoGBIpCRSM&amp;tbnid=5E1Ri8BQ7syaWM%3A&amp;w=1024&amp;h=640&amp;safe=strict&amp;bih=878&amp;biw=1920&amp;ved=0ahUKEwiU8bDH7JbPAhUHNo8KHRwrCgQQMwh2KEkwSQ&amp;iact=mrc&amp;uact=8</value>
   </data>
   <data name="student2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\student2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

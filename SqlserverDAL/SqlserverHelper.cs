@@ -12,7 +12,7 @@ namespace StudentStatusManageSystem.SqlserverDAL
     {
         private static readonly string connStr = System.Configuration.ConfigurationManager.ConnectionStrings["Student_status_manage_system"].ConnectionString;
 
-        //对SqlCommand.ExecuteNonQuery的封装
+       
         public static int ExecuteNonQuery(string commStr, params SqlParameter[] pms)
         {
             using (SqlConnection conn = new SqlConnection(connStr))

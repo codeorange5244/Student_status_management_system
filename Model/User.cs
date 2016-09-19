@@ -11,7 +11,7 @@ namespace StudentStatusManageSystem.Model
     /// </summary>
     public class User
     {
-        public int Id { get; set; }
+        public int Id { get; }  //自动生成
         /// <summary>
         /// 角色Id
         /// </summary>
@@ -27,5 +27,8 @@ namespace StudentStatusManageSystem.Model
         /// 提交人Id
         /// </summary>
         public Nullable<int> Submitter_id { get; set; }
+
+        //以下为数据库中不存在的属性
+        public Role current_role { get; set; }  
     }
 }

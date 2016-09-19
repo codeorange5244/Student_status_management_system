@@ -10,6 +10,11 @@ namespace StudentStatusManageSystem.SqliteDAL
 {
     public class SqliteRoleDAL : IRoleDAL
     {
+        public List<Role> GetAllRoleInfoByDelFlag(int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
         public Role GetRoleByRoleId()
         {
             throw new NotImplementedException();
