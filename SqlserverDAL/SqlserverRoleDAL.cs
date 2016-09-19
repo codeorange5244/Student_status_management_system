@@ -41,6 +41,11 @@ namespace StudentStatusManageSystem.SqlserverDAL
             }
         }
 
+        public List<string> GetAllRolePermissionBy()
+        {
+            return null;
+        }
+
         public Role GetRoleByRoleId()
         {
             return null;

@@ -204,6 +204,17 @@ namespace StudentStatusManageSystem.UI
             frmAddUser frm_add_user = new frmAddUser();
             frm_add_user.Show();
         }
-     
+
+        private void btnAddRole_Click(object sender, EventArgs e)
+        {
+            if (current_user.current_role.System_manage != 1)
+            {
+                Msbox.Show("亲~ 没权限哦--");
+                (sender as Control).Enabled = false;//关闭该控件
+                return;
+            }
+            frmAddRole frm_add_role = new frmAddRole();
+            frm_add_role.Show();
+        }
     }
 }

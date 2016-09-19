@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using SelfForm;
+
 using StudentStatusManageSystem.BLL;
 using StudentStatusManageSystem.Model;
 
 namespace StudentStatusManageSystem.UI
-{
+{    
     public partial class frmAddUser :Form   // CCWin.CCSkinMain
     {
         public frmAddUser()
@@ -53,7 +53,7 @@ namespace StudentStatusManageSystem.UI
             model.Remark = txtRemark.Text.Trim();
             model.Role_id = (int)cmbRole.SelectedValue;
             model.Submitter_id = frmMain.current_user.Id;
-            Msbox.Show(bll.AddUser(model)?"添加成功":"添加失败");
+            SelfForm.Msbox.Show(bll.AddUser(model)?"添加成功":"添加失败");
             this.Close();
         }
 

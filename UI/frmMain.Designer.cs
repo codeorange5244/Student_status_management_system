@@ -300,6 +300,7 @@
             this.btnAddRole.TabIndex = 0;
             this.btnAddRole.Text = "添加角色";
             this.btnAddRole.UseVisualStyleBackColor = false;
+            this.btnAddRole.Click += new System.EventHandler(this.btnAddRole_Click);
             this.btnAddRole.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
             this.btnAddRole.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
             this.btnAddRole.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
