@@ -281,6 +281,7 @@
             this.btnAdvanced_operations.TabIndex = 0;
             this.btnAdvanced_operations.Text = "高级操作";
             this.btnAdvanced_operations.UseVisualStyleBackColor = false;
+            this.btnAdvanced_operations.Click += new System.EventHandler(this.btnAdvanced_operations_Click);
             this.btnAdvanced_operations.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
             this.btnAdvanced_operations.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
             this.btnAdvanced_operations.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
@@ -320,6 +321,7 @@
             this.btnAeroWallpaperChanger.TabIndex = 0;
             this.btnAeroWallpaperChanger.Text = "更换壁纸";
             this.btnAeroWallpaperChanger.UseVisualStyleBackColor = false;
+            this.btnAeroWallpaperChanger.Click += new System.EventHandler(this.btnAeroWallpaperChanger_Click);
             this.btnAeroWallpaperChanger.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnAdvanced_operations_MouseDown);
             this.btnAeroWallpaperChanger.MouseEnter += new System.EventHandler(this.btnAdvanced_operations_MouseEnter);
             this.btnAeroWallpaperChanger.MouseLeave += new System.EventHandler(this.btnAdvanced_operations_MouseLeave);
@@ -351,9 +353,12 @@
             this.BackgroundImage = global::StudentStatusManageSystem.UI.Properties.Resources.home;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1137, 703);
+            this.CloseBoxSize = new System.Drawing.Size(32, 27);
             this.Controls.Add(this.skinSplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MaxSize = new System.Drawing.Size(32, 27);
+            this.MiniSize = new System.Drawing.Size(32, 27);
             this.Name = "frmMain";
             this.Radius = 20;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

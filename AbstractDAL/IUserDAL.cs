@@ -28,5 +28,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="model">用户对象</param>
         /// <returns></returns>
         int AddUser(User model);
+
+        /// <summary>
+        /// 获得所有User表信息（经过处理的）
+        /// </summary>
+        /// <param name="delFlag"></param>
+        /// <returns></returns>
+       object GetAllUsersByDelFlag(int delFlag);
     }
 }

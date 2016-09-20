@@ -26,6 +26,17 @@ namespace StudentStatusManageSystem.SqlserverDAL
            return  SqlserverHelper.ExecuteNonQuery(sql, ps);
         }
 
+        public object GetAllUsersByDelFlag(int delFlag)
+        {
+            //一张表的内连接
+            //SELECT UserInfo.Id 编号, RoleInfo.Name 角色, UserInfo.Name 名字, UserInfo.Remark 备注, U1.Name 提交人 FROM[dbo].[UserInfo]
+            //inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id
+            //inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id
+
+            string sql = "SELECT UserInfo.Id 编号,UserInfo.Name 名字,RoleInfo.Name 角色,UserInfo.Remark 备注,U1.Name 提交人 FROM[dbo].[UserInfo] inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id";
+            return SqlserverHelper.AdapterDataTable(sql);
+        }
+
         public User GetUserByUserName()
         {
             return new User()

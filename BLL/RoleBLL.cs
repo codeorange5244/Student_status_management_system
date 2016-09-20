@@ -18,6 +18,7 @@ namespace StudentStatusManageSystem.BLL
         /// <returns></returns>
         public List<Role> GetAllRoleInfoByDelFlag(int delFlag)
         {
+
             return idal.GetAllRoleInfoByDelFlag(delFlag);
         }
 

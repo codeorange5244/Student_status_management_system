@@ -213,8 +213,23 @@ namespace StudentStatusManageSystem.UI
                 (sender as Control).Enabled = false;//关闭该控件
                 return;
             }
+            //显示
             frmAddRole frm_add_role = new frmAddRole();
             frm_add_role.Show();
+        }
+        
+        private void btnAeroWallpaperChanger_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAdvanced_operations_Click(object sender, EventArgs e)
+        {
+
+
+            //显示
+            frmAdvancedOperations frm = new frmAdvancedOperations();
+            frm.Show();
         }
     }
 }
