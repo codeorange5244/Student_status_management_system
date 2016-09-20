@@ -11,6 +11,24 @@ namespace StudentStatusManageSystem.SqlserverDAL
 {
     public class SqlserverRoleDAL : IRoleDAL
     {
+        public int AddRole(Role model)
+        {
+            string sql = "INSERT INTO [dbo].[RoleInfo]([Name],[System_manage],[Speciality_manage],[Class_manage],[Course_manage],[Score_manage],[Student_manage],[Remark],[Submitter_id]) VALUES(@Name,@System_manage,@Speciality_manage,@Class_manage,@Course_manage,@Score_manage,@Student_manage,@Remark,@Submitter_id)";
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@Name",model.Name),
+                new SqlParameter("@System_manage",model.System_manage),
+                new  SqlParameter("@Speciality_manage",model.Speciality_manage),
+                new SqlParameter("@Class_manage",model.Class_manage),
+                new SqlParameter("@Course_manage",model.Course_manage),
+                new SqlParameter ("@Score_manage",model.Score_manage),
+                new SqlParameter("@Student_manage",model.Student_manage),
+                new SqlParameter("@Remark",model.Remark),
+                new SqlParameter("@Submitter_id",model.Submitter_id)
+            };
+            return SqlserverHelper.ExecuteNonQuery(sql, ps);
+        }
+
         public List<Role> GetAllRoleInfoByDelFlag(int delflag)
         {
             //"select 除了DelFlag以外的列 from RoleInfo";
@@ -50,5 +68,6 @@ namespace StudentStatusManageSystem.SqlserverDAL
         {
             return null;
         }
+    
     }
 }

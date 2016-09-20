@@ -353,6 +353,7 @@
             this.ClientSize = new System.Drawing.Size(1137, 703);
             this.Controls.Add(this.skinSplitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "frmMain";
             this.Radius = 20;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -187,7 +187,7 @@
             this.cklbPermission.Location = new System.Drawing.Point(147, 60);
             this.cklbPermission.Name = "cklbPermission";
             this.cklbPermission.ScrollAlwaysVisible = true;
-            this.cklbPermission.Size = new System.Drawing.Size(156, 100);
+            this.cklbPermission.Size = new System.Drawing.Size(177, 100);
             this.cklbPermission.TabIndex = 29;
             // 
             // label2

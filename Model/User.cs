@@ -11,7 +11,7 @@ namespace StudentStatusManageSystem.Model
     /// </summary>
     public class User
     {
-        public int Id { get; }  //自动生成
+        public int Id { get; set;}  //自动生成 最后去除set
         /// <summary>
         /// 角色Id
         /// </summary>

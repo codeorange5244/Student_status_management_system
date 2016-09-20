@@ -21,6 +21,7 @@ namespace StudentStatusManageSystem.UI
             //{            
             frmMain.current_user = new Model.User()
             {
+                Id=1,
                 Role_id = 4,
                 Name = "零号芯片",
                 Pwd = "admin",

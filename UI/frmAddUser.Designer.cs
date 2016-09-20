@@ -108,7 +108,6 @@
         "X",
         "Y",
         "Z"};
-            this.skinCode1.Click += new System.EventHandler(this.skinCode1_Click);
             // 
             // btnCancel
             // 

@@ -18,5 +18,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="delflag">0---未删除，1---已删除</param>
         /// <returns></returns>
         List<Role> GetAllRoleInfoByDelFlag(int delflag);
+
+        /// <summary>
+        /// 添加用户
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        int AddRole(Role model);
     }
 }

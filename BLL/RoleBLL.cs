@@ -20,5 +20,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.GetAllRoleInfoByDelFlag(delFlag);
         }
+
+        /// <summary>
+        /// 添加角色
+        /// </summary>
+        /// <param name="model">角色对象</param>
+        /// <returns></returns>
+        public bool AddRole(Role model)
+        {
+            return idal.AddRole(model)>0;
+        }
     }
 }

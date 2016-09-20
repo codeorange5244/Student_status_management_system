@@ -22,11 +22,12 @@ namespace StudentStatusManageSystem.UI
         private void btnOk_Click(object sender, EventArgs e)
         {            
             //判断验证码
-            if (skinCode1.CodeStr != txtCode.Text)
+            if (skinCode1.CodeStr.ToLower() != txtCode.Text.ToLower())
             {
                 SelfForm.Msbox.Show("验证码不正确");
                 return;
             }
+            //建立Role对象
             Role model = new Role();
             model.Name = txtName.Text.Trim();
             model.Submitter_id = frmMain.current_user.Id;
@@ -48,6 +49,7 @@ namespace StudentStatusManageSystem.UI
 
         private void frmAddRole_Load(object sender, EventArgs e)
         {
+            txtName.ImeMode = ImeMode.Inherit;
             //从Role类属性中加载所有角色权限
             LoadRoleAllPermission();
         }
