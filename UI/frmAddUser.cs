@@ -57,6 +57,48 @@ namespace StudentStatusManageSystem.UI
             this.Close();
         }
 
+        #region 该窗体用于 修改登录用户
+        /// <summary>
+        /// 改变该窗体用途
+        /// </summary>
+        /// <param name="model"></param>
+       public void AddUserToEditUser(User model)
+        {            
+            txtName.Text = model.Name;
+            cmbRole.SelectedValue = model.Role_id;
+
+            txtPwd2.Visible = false;    //不显示确认密码框
+            label4.Visible = false;
+            btnOk.Click -= btnOk_Click; //移除事件
+            btnOk.Click += new EventHandler((a, b) =>   //注册事件
+            {
+                //判断验证码
+                if (txtCode.Text.Trim().ToLower() != skinCode1.CodeStr.ToLower())
+                {
+                    CCWin.MessageBoxEx.Show("验证码输入不正确!!");
+                    skinCode1.NewCode();
+                    return;
+                }
+                //修改操作
+                //先取值
+                model.Name = txtName.Text.Trim();
+                model.Pwd = txtPwd1.Text.Trim();
+                model.Remark = txtRemark.Text.Trim();
+                model.Role_id = (int)cmbRole.SelectedValue;
+                model.Submitter_id = frmMain.current_user.Id;
+
+                UserBLL bll = new UserBLL();
+                bool result = bll.UpdateUserByUserId(model);
+                SelfForm.Msbox.Show( result? "修改成功" : "修改失败");
+                if (result)
+                {
+                    this.Close();
+                    this.DialogResult = DialogResult.OK;    //修改成功，窗体的结果设为OK，给其调用者使用
+                }
+            });
+        }
+        #endregion
+
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();

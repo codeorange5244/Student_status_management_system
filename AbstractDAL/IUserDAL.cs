@@ -20,7 +20,7 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// 获得用户对象根据用户Id
         /// </summary>
         /// <returns></returns>
-        User GetUserrByUserId();
+        User GetUserByUserId(int user_id);
 
         /// <summary>
         /// 添加新登录用户
@@ -35,5 +35,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="delFlag"></param>
         /// <returns></returns>
        object GetAllUsersByDelFlag(int delFlag);
+
+        /// <summary>
+        /// 更新登录用户信息
+        /// </summary>
+        /// <param name="model">用户对象</param>
+        /// <returns></returns>
+        int UpdateUserByUserId(User model);
     }
 }

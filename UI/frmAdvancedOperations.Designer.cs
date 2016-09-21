@@ -37,8 +37,20 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.txtSearchUser2 = new System.Windows.Forms.TextBox();
+            this.txtSearchUser1 = new System.Windows.Forms.TextBox();
+            this.btnUpdateUser = new System.Windows.Forms.Button();
+            this.btnSearchUser2 = new System.Windows.Forms.Button();
+            this.btnSearchUser1 = new System.Windows.Forms.Button();
+            this.btnDeleteUser = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txtSearchRole2 = new System.Windows.Forms.TextBox();
+            this.txtSearchRole1 = new System.Windows.Forms.TextBox();
+            this.btnDeleteRole = new System.Windows.Forms.Button();
+            this.btnUpdateRole = new System.Windows.Forms.Button();
+            this.btnSearchRole1 = new System.Windows.Forms.Button();
+            this.btnSearchRole2 = new System.Windows.Forms.Button();
             this.dgvRole = new System.Windows.Forms.DataGridView();
             this.Role_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -50,18 +62,6 @@
             this.Student_manage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_submitter_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnDeleteUser = new System.Windows.Forms.Button();
-            this.btnSearchUser1 = new System.Windows.Forms.Button();
-            this.txtSearchUser1 = new System.Windows.Forms.TextBox();
-            this.btnUpdateUser = new System.Windows.Forms.Button();
-            this.btnSearchUser2 = new System.Windows.Forms.Button();
-            this.txtSearchUser2 = new System.Windows.Forms.TextBox();
-            this.btnDeleteRole = new System.Windows.Forms.Button();
-            this.btnSearchRole1 = new System.Windows.Forms.Button();
-            this.btnSearchRole2 = new System.Windows.Forms.Button();
-            this.btnUpdateRole = new System.Windows.Forms.Button();
-            this.txtSearchRole1 = new System.Windows.Forms.TextBox();
-            this.txtSearchRole2 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -88,6 +88,7 @@
             this.dgvUser.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUser.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUser.ColumnFont = null;
             this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -124,6 +125,7 @@
             dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvUser.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUser.RowTemplate.Height = 23;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvUser.Size = new System.Drawing.Size(811, 340);
             this.dgvUser.TabIndex = 0;
             this.dgvUser.TitleBack = null;
@@ -181,6 +183,67 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "登录用户操作";
             // 
+            // txtSearchUser2
+            // 
+            this.txtSearchUser2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSearchUser2.ForeColor = System.Drawing.Color.Red;
+            this.txtSearchUser2.Location = new System.Drawing.Point(140, 200);
+            this.txtSearchUser2.Multiline = true;
+            this.txtSearchUser2.Name = "txtSearchUser2";
+            this.txtSearchUser2.Size = new System.Drawing.Size(169, 33);
+            this.txtSearchUser2.TabIndex = 2;
+            this.txtSearchUser2.Text = "根据用户名字查找";
+            this.txtSearchUser2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            // 
+            // txtSearchUser1
+            // 
+            this.txtSearchUser1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSearchUser1.ForeColor = System.Drawing.Color.Red;
+            this.txtSearchUser1.Location = new System.Drawing.Point(140, 146);
+            this.txtSearchUser1.Multiline = true;
+            this.txtSearchUser1.Name = "txtSearchUser1";
+            this.txtSearchUser1.Size = new System.Drawing.Size(169, 33);
+            this.txtSearchUser1.TabIndex = 2;
+            this.txtSearchUser1.Text = "根据用户编号查找";
+            this.txtSearchUser1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            // 
+            // btnUpdateUser
+            // 
+            this.btnUpdateUser.Location = new System.Drawing.Point(25, 86);
+            this.btnUpdateUser.Name = "btnUpdateUser";
+            this.btnUpdateUser.Size = new System.Drawing.Size(87, 28);
+            this.btnUpdateUser.TabIndex = 1;
+            this.btnUpdateUser.Text = "修改选中";
+            this.btnUpdateUser.UseVisualStyleBackColor = true;
+            this.btnUpdateUser.Click += new System.EventHandler(this.btnUpdateUser_Click);
+            // 
+            // btnSearchUser2
+            // 
+            this.btnSearchUser2.Location = new System.Drawing.Point(25, 201);
+            this.btnSearchUser2.Name = "btnSearchUser2";
+            this.btnSearchUser2.Size = new System.Drawing.Size(87, 28);
+            this.btnSearchUser2.TabIndex = 1;
+            this.btnSearchUser2.Text = "查找";
+            this.btnSearchUser2.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchUser1
+            // 
+            this.btnSearchUser1.Location = new System.Drawing.Point(25, 147);
+            this.btnSearchUser1.Name = "btnSearchUser1";
+            this.btnSearchUser1.Size = new System.Drawing.Size(87, 28);
+            this.btnSearchUser1.TabIndex = 1;
+            this.btnSearchUser1.Text = "查找";
+            this.btnSearchUser1.UseVisualStyleBackColor = true;
+            // 
+            // btnDeleteUser
+            // 
+            this.btnDeleteUser.Location = new System.Drawing.Point(169, 86);
+            this.btnDeleteUser.Name = "btnDeleteUser";
+            this.btnDeleteUser.Size = new System.Drawing.Size(87, 28);
+            this.btnDeleteUser.TabIndex = 1;
+            this.btnDeleteUser.Text = "删除选中";
+            this.btnDeleteUser.UseVisualStyleBackColor = true;
+            // 
             // splitContainer3
             // 
             this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -214,6 +277,67 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "角色操作";
             // 
+            // txtSearchRole2
+            // 
+            this.txtSearchRole2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSearchRole2.ForeColor = System.Drawing.Color.Red;
+            this.txtSearchRole2.Location = new System.Drawing.Point(140, 199);
+            this.txtSearchRole2.Multiline = true;
+            this.txtSearchRole2.Name = "txtSearchRole2";
+            this.txtSearchRole2.Size = new System.Drawing.Size(169, 33);
+            this.txtSearchRole2.TabIndex = 2;
+            this.txtSearchRole2.Text = "根据角色名字查找";
+            this.txtSearchRole2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            // 
+            // txtSearchRole1
+            // 
+            this.txtSearchRole1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSearchRole1.ForeColor = System.Drawing.Color.Red;
+            this.txtSearchRole1.Location = new System.Drawing.Point(140, 145);
+            this.txtSearchRole1.Multiline = true;
+            this.txtSearchRole1.Name = "txtSearchRole1";
+            this.txtSearchRole1.Size = new System.Drawing.Size(169, 33);
+            this.txtSearchRole1.TabIndex = 2;
+            this.txtSearchRole1.Text = "根据角色编号查找";
+            this.txtSearchRole1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            // 
+            // btnDeleteRole
+            // 
+            this.btnDeleteRole.Location = new System.Drawing.Point(169, 85);
+            this.btnDeleteRole.Name = "btnDeleteRole";
+            this.btnDeleteRole.Size = new System.Drawing.Size(87, 28);
+            this.btnDeleteRole.TabIndex = 1;
+            this.btnDeleteRole.Text = "删除选中";
+            this.btnDeleteRole.UseVisualStyleBackColor = true;
+            // 
+            // btnUpdateRole
+            // 
+            this.btnUpdateRole.Location = new System.Drawing.Point(25, 85);
+            this.btnUpdateRole.Name = "btnUpdateRole";
+            this.btnUpdateRole.Size = new System.Drawing.Size(87, 28);
+            this.btnUpdateRole.TabIndex = 1;
+            this.btnUpdateRole.Text = "修改选中";
+            this.btnUpdateRole.UseVisualStyleBackColor = true;
+            this.btnUpdateRole.Click += new System.EventHandler(this.btnUpdateRole_Click);
+            // 
+            // btnSearchRole1
+            // 
+            this.btnSearchRole1.Location = new System.Drawing.Point(25, 146);
+            this.btnSearchRole1.Name = "btnSearchRole1";
+            this.btnSearchRole1.Size = new System.Drawing.Size(87, 28);
+            this.btnSearchRole1.TabIndex = 1;
+            this.btnSearchRole1.Text = "查找";
+            this.btnSearchRole1.UseVisualStyleBackColor = true;
+            // 
+            // btnSearchRole2
+            // 
+            this.btnSearchRole2.Location = new System.Drawing.Point(25, 200);
+            this.btnSearchRole2.Name = "btnSearchRole2";
+            this.btnSearchRole2.Size = new System.Drawing.Size(87, 28);
+            this.btnSearchRole2.TabIndex = 1;
+            this.btnSearchRole2.Text = "查找";
+            this.btnSearchRole2.UseVisualStyleBackColor = true;
+            // 
             // dgvRole
             // 
             this.dgvRole.AllowUserToAddRows = false;
@@ -234,9 +358,11 @@
             this.Role_submitter_id});
             this.dgvRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRole.Location = new System.Drawing.Point(0, 0);
+            this.dgvRole.MultiSelect = false;
             this.dgvRole.Name = "dgvRole";
             this.dgvRole.ReadOnly = true;
             this.dgvRole.RowTemplate.Height = 23;
+            this.dgvRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRole.Size = new System.Drawing.Size(808, 339);
             this.dgvRole.TabIndex = 0;
             // 
@@ -309,132 +435,6 @@
             this.Role_submitter_id.HeaderText = "提交人编号";
             this.Role_submitter_id.Name = "Role_submitter_id";
             this.Role_submitter_id.ReadOnly = true;
-            // 
-            // btnDeleteUser
-            // 
-            this.btnDeleteUser.Location = new System.Drawing.Point(169, 86);
-            this.btnDeleteUser.Name = "btnDeleteUser";
-            this.btnDeleteUser.Size = new System.Drawing.Size(87, 28);
-            this.btnDeleteUser.TabIndex = 1;
-            this.btnDeleteUser.Text = "删除选中";
-            this.btnDeleteUser.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchUser1
-            // 
-            this.btnSearchUser1.Location = new System.Drawing.Point(25, 147);
-            this.btnSearchUser1.Name = "btnSearchUser1";
-            this.btnSearchUser1.Size = new System.Drawing.Size(87, 28);
-            this.btnSearchUser1.TabIndex = 1;
-            this.btnSearchUser1.Text = "查找";
-            this.btnSearchUser1.UseVisualStyleBackColor = true;
-            this.btnSearchUser1.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtSearchUser1
-            // 
-            this.txtSearchUser1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSearchUser1.ForeColor = System.Drawing.Color.Red;
-            this.txtSearchUser1.Location = new System.Drawing.Point(140, 146);
-            this.txtSearchUser1.Multiline = true;
-            this.txtSearchUser1.Name = "txtSearchUser1";
-            this.txtSearchUser1.Size = new System.Drawing.Size(169, 33);
-            this.txtSearchUser1.TabIndex = 2;
-            this.txtSearchUser1.Text = "根据用户编号查找";
-            this.txtSearchUser1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
-            // 
-            // btnUpdateUser
-            // 
-            this.btnUpdateUser.Location = new System.Drawing.Point(25, 86);
-            this.btnUpdateUser.Name = "btnUpdateUser";
-            this.btnUpdateUser.Size = new System.Drawing.Size(87, 28);
-            this.btnUpdateUser.TabIndex = 1;
-            this.btnUpdateUser.Text = "修改选中";
-            this.btnUpdateUser.UseVisualStyleBackColor = true;
-            this.btnUpdateUser.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnSearchUser2
-            // 
-            this.btnSearchUser2.Location = new System.Drawing.Point(25, 201);
-            this.btnSearchUser2.Name = "btnSearchUser2";
-            this.btnSearchUser2.Size = new System.Drawing.Size(87, 28);
-            this.btnSearchUser2.TabIndex = 1;
-            this.btnSearchUser2.Text = "查找";
-            this.btnSearchUser2.UseVisualStyleBackColor = true;
-            this.btnSearchUser2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtSearchUser2
-            // 
-            this.txtSearchUser2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSearchUser2.ForeColor = System.Drawing.Color.Red;
-            this.txtSearchUser2.Location = new System.Drawing.Point(140, 200);
-            this.txtSearchUser2.Multiline = true;
-            this.txtSearchUser2.Name = "txtSearchUser2";
-            this.txtSearchUser2.Size = new System.Drawing.Size(169, 33);
-            this.txtSearchUser2.TabIndex = 2;
-            this.txtSearchUser2.Text = "根据用户名字查找";
-            this.txtSearchUser2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
-            // 
-            // btnDeleteRole
-            // 
-            this.btnDeleteRole.Location = new System.Drawing.Point(169, 85);
-            this.btnDeleteRole.Name = "btnDeleteRole";
-            this.btnDeleteRole.Size = new System.Drawing.Size(87, 28);
-            this.btnDeleteRole.TabIndex = 1;
-            this.btnDeleteRole.Text = "删除选中";
-            this.btnDeleteRole.UseVisualStyleBackColor = true;
-            // 
-            // btnSearchRole1
-            // 
-            this.btnSearchRole1.Location = new System.Drawing.Point(25, 146);
-            this.btnSearchRole1.Name = "btnSearchRole1";
-            this.btnSearchRole1.Size = new System.Drawing.Size(87, 28);
-            this.btnSearchRole1.TabIndex = 1;
-            this.btnSearchRole1.Text = "查找";
-            this.btnSearchRole1.UseVisualStyleBackColor = true;
-            this.btnSearchRole1.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnSearchRole2
-            // 
-            this.btnSearchRole2.Location = new System.Drawing.Point(25, 200);
-            this.btnSearchRole2.Name = "btnSearchRole2";
-            this.btnSearchRole2.Size = new System.Drawing.Size(87, 28);
-            this.btnSearchRole2.TabIndex = 1;
-            this.btnSearchRole2.Text = "查找";
-            this.btnSearchRole2.UseVisualStyleBackColor = true;
-            this.btnSearchRole2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // btnUpdateRole
-            // 
-            this.btnUpdateRole.Location = new System.Drawing.Point(25, 85);
-            this.btnUpdateRole.Name = "btnUpdateRole";
-            this.btnUpdateRole.Size = new System.Drawing.Size(87, 28);
-            this.btnUpdateRole.TabIndex = 1;
-            this.btnUpdateRole.Text = "修改选中";
-            this.btnUpdateRole.UseVisualStyleBackColor = true;
-            this.btnUpdateRole.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // txtSearchRole1
-            // 
-            this.txtSearchRole1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSearchRole1.ForeColor = System.Drawing.Color.Red;
-            this.txtSearchRole1.Location = new System.Drawing.Point(140, 145);
-            this.txtSearchRole1.Multiline = true;
-            this.txtSearchRole1.Name = "txtSearchRole1";
-            this.txtSearchRole1.Size = new System.Drawing.Size(169, 33);
-            this.txtSearchRole1.TabIndex = 2;
-            this.txtSearchRole1.Text = "根据角色编号查找";
-            this.txtSearchRole1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
-            // 
-            // txtSearchRole2
-            // 
-            this.txtSearchRole2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSearchRole2.ForeColor = System.Drawing.Color.Red;
-            this.txtSearchRole2.Location = new System.Drawing.Point(140, 199);
-            this.txtSearchRole2.Multiline = true;
-            this.txtSearchRole2.Name = "txtSearchRole2";
-            this.txtSearchRole2.Size = new System.Drawing.Size(169, 33);
-            this.txtSearchRole2.TabIndex = 2;
-            this.txtSearchRole2.Text = "根据角色名字查找";
-            this.txtSearchRole2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
             // 
             // frmAdvancedOperations
             // 

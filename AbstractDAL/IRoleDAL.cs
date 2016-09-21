@@ -25,5 +25,13 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="model"></param>
         /// <returns></returns>
         int AddRole(Role model);
+
+
+        /// <summary>
+        /// 修改角色信息根据角色Id
+        /// </summary>
+        /// <param name="model_role">角色对象</param>
+        /// <returns></returns>
+        int UpdateRoleByRoleId(Role model_role);
     }
 }

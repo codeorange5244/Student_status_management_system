@@ -68,6 +68,23 @@ namespace StudentStatusManageSystem.SqlserverDAL
         {
             return null;
         }
-    
+
+        public int UpdateRoleByRoleId(Role model_role)
+        {
+            string sql = "UPDATE [dbo].[RoleInfo] SET[Name] =@Name,[System_manage] =@System_manage,[Speciality_manage] =@Speciality_manage,[Class_manage] = @Class_manage,[Course_manage] =@Course_manage,[Score_manage] =@Score_manage,[Student_manage] =@Student_manage,[Remark] =@Remark,[Submitter_id] = @Submitter_id where [DelFlag]=0 and [Id]=" + model_role.Id;
+            SqlParameter[] ps =
+            {
+                new SqlParameter("@Name",model_role.Name    ),
+                new SqlParameter("@System_manage",model_role.System_manage),
+                new  SqlParameter("@Speciality_manage",model_role.Speciality_manage),
+                new SqlParameter("@Class_manage",model_role.Class_manage),
+                new SqlParameter("@Course_manage",model_role.Course_manage),
+                new SqlParameter("@Score_manage",model_role.Score_manage),
+                new SqlParameter("@Student_manage",model_role.Student_manage),
+                new SqlParameter("@Remark",model_role.Remark),
+                new SqlParameter("@Submitter_id",model_role.Submitter_id)
+            };
+            return SqlserverHelper.ExecuteNonQuery(sql, ps);
+        }
     }
 }

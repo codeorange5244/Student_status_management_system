@@ -6,6 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using StudentStatusManageSystem.Model;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace StudentStatusManageSystem.SqlserverDAL
 {
@@ -46,9 +47,35 @@ namespace StudentStatusManageSystem.SqlserverDAL
             };
         }
 
-        public User GetUserrByUserId()
+        public User GetUserByUserId(int user_id)
         {
-            throw new NotImplementedException();
+            string sql = "SELECT [Id], [Role_id],[Name],[Pwd],[Remark],[Submitter_id] FROM [dbo].[UserInfo] where [DelFlag]=0 and [Id]="+user_id;
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            User model = null;
+            if (dt.Rows.Count > 0)
+            {
+                model = new User();
+                model.Id = Convert.ToInt32(dt.Rows[0][0]);
+                model.Role_id = Convert.ToInt32(dt.Rows[0][1]);
+                model.Name = dt.Rows[0][2].ToString();
+                model.Pwd = dt.Rows[0][3].ToString();
+                model.Remark = dt.Rows[0][4].ToString();
+                model.Submitter_id = Convert.ToInt32(dt.Rows[0][5]);
+            }
+            return model;
+        }
+
+        public int UpdateUserByUserId(User model)
+        {
+            string sql = "Update UserInfo set Name=@Name,Role_id=@Role_id,Pwd=@Pwd,Remark=@Remark,Submitter_id=@Submitter_id where Id=" + model.Id;
+            SqlParameter[] ps = {
+                new SqlParameter("@Name",model.Name),
+                new SqlParameter("@Role_id",model.Role_id),
+                new SqlParameter("@Pwd",model.Pwd ),
+                new SqlParameter("@Remark",model.Remark),
+                new  SqlParameter("@Submitter_id",model.Submitter_id)                
+            };
+            return SqlserverHelper.ExecuteNonQuery(sql, ps);
         }
     }
 }

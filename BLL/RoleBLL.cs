@@ -31,5 +31,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.AddRole(model)>0;
         }
+        
+        /// <summary>
+        /// 修改角色信息根据角色Id
+        /// </summary>
+        /// <param name="model_role">角色对象</param>
+        /// <returns></returns>
+        public bool UpdateRoleByRoleId(Role model_role)
+        {
+            return idal.UpdateRoleByRoleId(model_role)>0;
+        }
     }
 }
