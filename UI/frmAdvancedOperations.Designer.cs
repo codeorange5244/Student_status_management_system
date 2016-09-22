@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -37,6 +38,9 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.skinButton3 = new CCWin.SkinControl.SkinButton();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
+            this.btnUserRecycleBin = new CCWin.SkinControl.SkinButton();
             this.txtSearchUser2 = new System.Windows.Forms.TextBox();
             this.txtSearchUser1 = new System.Windows.Forms.TextBox();
             this.btnUpdateUser = new System.Windows.Forms.Button();
@@ -45,6 +49,9 @@
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.skinButton4 = new CCWin.SkinControl.SkinButton();
+            this.skinButton2 = new CCWin.SkinControl.SkinButton();
+            this.btnRoleRecycleBin = new CCWin.SkinControl.SkinButton();
             this.txtSearchRole2 = new System.Windows.Forms.TextBox();
             this.txtSearchRole1 = new System.Windows.Forms.TextBox();
             this.btnDeleteRole = new System.Windows.Forms.Button();
@@ -52,6 +59,8 @@
             this.btnSearchRole1 = new System.Windows.Forms.Button();
             this.btnSearchRole2 = new System.Windows.Forms.Button();
             this.dgvRole = new System.Windows.Forms.DataGridView();
+            this.btnRestoreUser = new CCWin.SkinControl.SkinButton();
+            this.btnRestoreRole = new CCWin.SkinControl.SkinButton();
             this.Role_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Speciality_manage = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,6 +71,7 @@
             this.Student_manage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_remark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_submitter_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Role_delFlag = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -169,6 +179,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btnRestoreUser);
+            this.groupBox1.Controls.Add(this.skinButton3);
+            this.groupBox1.Controls.Add(this.skinButton1);
+            this.groupBox1.Controls.Add(this.btnUserRecycleBin);
             this.groupBox1.Controls.Add(this.txtSearchUser2);
             this.groupBox1.Controls.Add(this.txtSearchUser1);
             this.groupBox1.Controls.Add(this.btnUpdateUser);
@@ -183,6 +197,53 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "登录用户操作";
             // 
+            // skinButton3
+            // 
+            this.skinButton3.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton3.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton3.DownBack = null;
+            this.skinButton3.Location = new System.Drawing.Point(165, 301);
+            this.skinButton3.MouseBack = null;
+            this.skinButton3.Name = "skinButton3";
+            this.skinButton3.NormlBack = null;
+            this.skinButton3.Size = new System.Drawing.Size(75, 23);
+            this.skinButton3.TabIndex = 5;
+            this.skinButton3.Text = "清空回收站";
+            this.skinButton3.UseVisualStyleBackColor = false;
+            this.skinButton3.Visible = false;
+            this.skinButton3.Click += new System.EventHandler(this.skinButton3_Click);
+            // 
+            // skinButton1
+            // 
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.DownBack = null;
+            this.skinButton1.Location = new System.Drawing.Point(6, 301);
+            this.skinButton1.MouseBack = null;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = null;
+            this.skinButton1.Size = new System.Drawing.Size(68, 23);
+            this.skinButton1.TabIndex = 4;
+            this.skinButton1.Text = "退出回收站";
+            this.skinButton1.UseVisualStyleBackColor = false;
+            this.skinButton1.Visible = false;
+            this.skinButton1.Click += new System.EventHandler(this.skinButton1_Click);
+            // 
+            // btnUserRecycleBin
+            // 
+            this.btnUserRecycleBin.BackColor = System.Drawing.Color.Transparent;
+            this.btnUserRecycleBin.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnUserRecycleBin.DownBack = null;
+            this.btnUserRecycleBin.Location = new System.Drawing.Point(248, 301);
+            this.btnUserRecycleBin.MouseBack = null;
+            this.btnUserRecycleBin.Name = "btnUserRecycleBin";
+            this.btnUserRecycleBin.NormlBack = null;
+            this.btnUserRecycleBin.Size = new System.Drawing.Size(75, 23);
+            this.btnUserRecycleBin.TabIndex = 3;
+            this.btnUserRecycleBin.Text = "回收站";
+            this.btnUserRecycleBin.UseVisualStyleBackColor = false;
+            this.btnUserRecycleBin.Click += new System.EventHandler(this.btnUserRecycleBin_Click);
+            // 
             // txtSearchUser2
             // 
             this.txtSearchUser2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -193,6 +254,8 @@
             this.txtSearchUser2.Size = new System.Drawing.Size(169, 33);
             this.txtSearchUser2.TabIndex = 2;
             this.txtSearchUser2.Text = "根据用户名字查找";
+            this.txtSearchUser2.Click += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchUser2.TextChanged += new System.EventHandler(this.txtSearchUser2_TextChanged);
             this.txtSearchUser2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
             // 
             // txtSearchUser1
@@ -200,12 +263,16 @@
             this.txtSearchUser1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtSearchUser1.ForeColor = System.Drawing.Color.Red;
             this.txtSearchUser1.Location = new System.Drawing.Point(140, 146);
+            this.txtSearchUser1.MaxLength = 6;
             this.txtSearchUser1.Multiline = true;
             this.txtSearchUser1.Name = "txtSearchUser1";
             this.txtSearchUser1.Size = new System.Drawing.Size(169, 33);
             this.txtSearchUser1.TabIndex = 2;
             this.txtSearchUser1.Text = "根据用户编号查找";
+            this.txtSearchUser1.Click += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchUser1.TextChanged += new System.EventHandler(this.txtSearchUser1_TextChanged);
             this.txtSearchUser1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchUser1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchUser1_KeyPress);
             // 
             // btnUpdateUser
             // 
@@ -225,6 +292,7 @@
             this.btnSearchUser2.TabIndex = 1;
             this.btnSearchUser2.Text = "查找";
             this.btnSearchUser2.UseVisualStyleBackColor = true;
+            this.btnSearchUser2.Click += new System.EventHandler(this.btnSearchUser2_Click);
             // 
             // btnSearchUser1
             // 
@@ -234,6 +302,7 @@
             this.btnSearchUser1.TabIndex = 1;
             this.btnSearchUser1.Text = "查找";
             this.btnSearchUser1.UseVisualStyleBackColor = true;
+            this.btnSearchUser1.Click += new System.EventHandler(this.btnSearchUser1_Click);
             // 
             // btnDeleteUser
             // 
@@ -243,6 +312,7 @@
             this.btnDeleteUser.TabIndex = 1;
             this.btnDeleteUser.Text = "删除选中";
             this.btnDeleteUser.UseVisualStyleBackColor = true;
+            this.btnDeleteUser.Click += new System.EventHandler(this.btnDeleteUser_Click);
             // 
             // splitContainer3
             // 
@@ -263,6 +333,10 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnRestoreRole);
+            this.groupBox2.Controls.Add(this.skinButton4);
+            this.groupBox2.Controls.Add(this.skinButton2);
+            this.groupBox2.Controls.Add(this.btnRoleRecycleBin);
             this.groupBox2.Controls.Add(this.txtSearchRole2);
             this.groupBox2.Controls.Add(this.txtSearchRole1);
             this.groupBox2.Controls.Add(this.btnDeleteRole);
@@ -277,6 +351,53 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "角色操作";
             // 
+            // skinButton4
+            // 
+            this.skinButton4.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton4.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton4.DownBack = null;
+            this.skinButton4.Location = new System.Drawing.Point(165, 267);
+            this.skinButton4.MouseBack = null;
+            this.skinButton4.Name = "skinButton4";
+            this.skinButton4.NormlBack = null;
+            this.skinButton4.Size = new System.Drawing.Size(75, 23);
+            this.skinButton4.TabIndex = 5;
+            this.skinButton4.Text = "清空回收站";
+            this.skinButton4.UseVisualStyleBackColor = false;
+            this.skinButton4.Visible = false;
+            this.skinButton4.Click += new System.EventHandler(this.skinButton4_Click);
+            // 
+            // skinButton2
+            // 
+            this.skinButton2.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton2.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton2.DownBack = null;
+            this.skinButton2.Location = new System.Drawing.Point(6, 267);
+            this.skinButton2.MouseBack = null;
+            this.skinButton2.Name = "skinButton2";
+            this.skinButton2.NormlBack = null;
+            this.skinButton2.Size = new System.Drawing.Size(68, 23);
+            this.skinButton2.TabIndex = 4;
+            this.skinButton2.Text = "退出回收站";
+            this.skinButton2.UseVisualStyleBackColor = false;
+            this.skinButton2.Visible = false;
+            this.skinButton2.Click += new System.EventHandler(this.skinButton2_Click);
+            // 
+            // btnRoleRecycleBin
+            // 
+            this.btnRoleRecycleBin.BackColor = System.Drawing.Color.Transparent;
+            this.btnRoleRecycleBin.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRoleRecycleBin.DownBack = null;
+            this.btnRoleRecycleBin.Location = new System.Drawing.Point(248, 267);
+            this.btnRoleRecycleBin.MouseBack = null;
+            this.btnRoleRecycleBin.Name = "btnRoleRecycleBin";
+            this.btnRoleRecycleBin.NormlBack = null;
+            this.btnRoleRecycleBin.Size = new System.Drawing.Size(75, 23);
+            this.btnRoleRecycleBin.TabIndex = 3;
+            this.btnRoleRecycleBin.Text = "回收站";
+            this.btnRoleRecycleBin.UseVisualStyleBackColor = false;
+            this.btnRoleRecycleBin.Click += new System.EventHandler(this.btnRoleRecycleBin_Click);
+            // 
             // txtSearchRole2
             // 
             this.txtSearchRole2.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -287,6 +408,8 @@
             this.txtSearchRole2.Size = new System.Drawing.Size(169, 33);
             this.txtSearchRole2.TabIndex = 2;
             this.txtSearchRole2.Text = "根据角色名字查找";
+            this.txtSearchRole2.Click += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchRole2.TextChanged += new System.EventHandler(this.txtSearchRole2_TextChanged);
             this.txtSearchRole2.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
             // 
             // txtSearchRole1
@@ -294,12 +417,16 @@
             this.txtSearchRole1.Font = new System.Drawing.Font("华文中宋", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.txtSearchRole1.ForeColor = System.Drawing.Color.Red;
             this.txtSearchRole1.Location = new System.Drawing.Point(140, 145);
+            this.txtSearchRole1.MaxLength = 6;
             this.txtSearchRole1.Multiline = true;
             this.txtSearchRole1.Name = "txtSearchRole1";
             this.txtSearchRole1.Size = new System.Drawing.Size(169, 33);
             this.txtSearchRole1.TabIndex = 2;
             this.txtSearchRole1.Text = "根据角色编号查找";
+            this.txtSearchRole1.Click += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchRole1.TextChanged += new System.EventHandler(this.txtSearchRole1_TextChanged);
             this.txtSearchRole1.Enter += new System.EventHandler(this.txtSearchUser2_Enter);
+            this.txtSearchRole1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearchUser1_KeyPress);
             // 
             // btnDeleteRole
             // 
@@ -309,6 +436,7 @@
             this.btnDeleteRole.TabIndex = 1;
             this.btnDeleteRole.Text = "删除选中";
             this.btnDeleteRole.UseVisualStyleBackColor = true;
+            this.btnDeleteRole.Click += new System.EventHandler(this.btnDeleteRole_Click);
             // 
             // btnUpdateRole
             // 
@@ -328,6 +456,7 @@
             this.btnSearchRole1.TabIndex = 1;
             this.btnSearchRole1.Text = "查找";
             this.btnSearchRole1.UseVisualStyleBackColor = true;
+            this.btnSearchRole1.Click += new System.EventHandler(this.btnSearchRole1_Click);
             // 
             // btnSearchRole2
             // 
@@ -337,12 +466,14 @@
             this.btnSearchRole2.TabIndex = 1;
             this.btnSearchRole2.Text = "查找";
             this.btnSearchRole2.UseVisualStyleBackColor = true;
+            this.btnSearchRole2.Click += new System.EventHandler(this.btnSearchRole2_Click);
             // 
             // dgvRole
             // 
             this.dgvRole.AllowUserToAddRows = false;
             this.dgvRole.AllowUserToDeleteRows = false;
             this.dgvRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRole.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRole.BackgroundColor = System.Drawing.Color.White;
             this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -355,7 +486,8 @@
             this.Score_manage,
             this.Student_manage,
             this.Role_remark,
-            this.Role_submitter_id});
+            this.Role_submitter_id,
+            this.Role_delFlag});
             this.dgvRole.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvRole.Location = new System.Drawing.Point(0, 0);
             this.dgvRole.MultiSelect = false;
@@ -366,75 +498,144 @@
             this.dgvRole.Size = new System.Drawing.Size(808, 339);
             this.dgvRole.TabIndex = 0;
             // 
+            // btnRestoreUser
+            // 
+            this.btnRestoreUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestoreUser.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRestoreUser.DownBack = null;
+            this.btnRestoreUser.Location = new System.Drawing.Point(82, 301);
+            this.btnRestoreUser.MouseBack = null;
+            this.btnRestoreUser.Name = "btnRestoreUser";
+            this.btnRestoreUser.NormlBack = null;
+            this.btnRestoreUser.Size = new System.Drawing.Size(75, 23);
+            this.btnRestoreUser.TabIndex = 6;
+            this.btnRestoreUser.Text = "还原选中项";
+            this.btnRestoreUser.UseVisualStyleBackColor = false;
+            this.btnRestoreUser.Visible = false;
+            this.btnRestoreUser.Click += new System.EventHandler(this.btnRestoreUser_Click);
+            // 
+            // btnRestoreRole
+            // 
+            this.btnRestoreRole.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestoreRole.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRestoreRole.DownBack = null;
+            this.btnRestoreRole.Location = new System.Drawing.Point(82, 267);
+            this.btnRestoreRole.MouseBack = null;
+            this.btnRestoreRole.Name = "btnRestoreRole";
+            this.btnRestoreRole.NormlBack = null;
+            this.btnRestoreRole.Size = new System.Drawing.Size(75, 23);
+            this.btnRestoreRole.TabIndex = 6;
+            this.btnRestoreRole.Text = "还原选中项";
+            this.btnRestoreRole.UseVisualStyleBackColor = false;
+            this.btnRestoreRole.Visible = false;
+            this.btnRestoreRole.Click += new System.EventHandler(this.btnRestoreRole_Click);
+            // 
             // Role_id
             // 
+            this.Role_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_id.DataPropertyName = "Id";
+            this.Role_id.Frozen = true;
             this.Role_id.HeaderText = "编号";
             this.Role_id.Name = "Role_id";
             this.Role_id.ReadOnly = true;
+            this.Role_id.Width = 77;
             // 
             // Role_name
             // 
+            this.Role_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_name.DataPropertyName = "Name";
+            this.Role_name.Frozen = true;
             this.Role_name.HeaderText = "角色名称";
             this.Role_name.Name = "Role_name";
             this.Role_name.ReadOnly = true;
+            this.Role_name.Width = 76;
             // 
             // Speciality_manage
             // 
+            this.Speciality_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Speciality_manage.DataPropertyName = "Speciality_manage";
+            this.Speciality_manage.Frozen = true;
             this.Speciality_manage.HeaderText = "专业管理";
             this.Speciality_manage.Name = "Speciality_manage";
             this.Speciality_manage.ReadOnly = true;
+            this.Speciality_manage.Width = 77;
             // 
             // Class_manage
             // 
+            this.Class_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Class_manage.DataPropertyName = "Class_manage";
+            this.Class_manage.Frozen = true;
             this.Class_manage.HeaderText = "班级管理";
             this.Class_manage.Name = "Class_manage";
             this.Class_manage.ReadOnly = true;
+            this.Class_manage.Width = 76;
             // 
             // Course_manage
             // 
+            this.Course_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Course_manage.DataPropertyName = "Course_manage";
+            this.Course_manage.Frozen = true;
             this.Course_manage.HeaderText = "课程管理";
             this.Course_manage.Name = "Course_manage";
             this.Course_manage.ReadOnly = true;
+            this.Course_manage.Width = 77;
             // 
             // System_manage
             // 
+            this.System_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.System_manage.DataPropertyName = "System_manage";
+            this.System_manage.Frozen = true;
             this.System_manage.HeaderText = "系统管理";
             this.System_manage.Name = "System_manage";
             this.System_manage.ReadOnly = true;
+            this.System_manage.Width = 76;
             // 
             // Score_manage
             // 
+            this.Score_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Score_manage.DataPropertyName = "Score_manage";
+            this.Score_manage.Frozen = true;
             this.Score_manage.HeaderText = "分数管理";
             this.Score_manage.Name = "Score_manage";
             this.Score_manage.ReadOnly = true;
+            this.Score_manage.Width = 77;
             // 
             // Student_manage
             // 
+            this.Student_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Student_manage.DataPropertyName = "Student_manage";
+            this.Student_manage.Frozen = true;
             this.Student_manage.HeaderText = "学生管理";
             this.Student_manage.Name = "Student_manage";
             this.Student_manage.ReadOnly = true;
+            this.Student_manage.Width = 76;
             // 
             // Role_remark
             // 
+            this.Role_remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_remark.DataPropertyName = "Remark";
+            this.Role_remark.Frozen = true;
             this.Role_remark.HeaderText = "备注";
             this.Role_remark.Name = "Role_remark";
             this.Role_remark.ReadOnly = true;
+            this.Role_remark.Width = 77;
             // 
             // Role_submitter_id
             // 
+            this.Role_submitter_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_submitter_id.DataPropertyName = "Submitter_id";
+            this.Role_submitter_id.Frozen = true;
             this.Role_submitter_id.HeaderText = "提交人编号";
             this.Role_submitter_id.Name = "Role_submitter_id";
             this.Role_submitter_id.ReadOnly = true;
+            this.Role_submitter_id.Width = 76;
+            // 
+            // Role_delFlag
+            // 
+            this.Role_delFlag.HeaderText = "删除标识";
+            this.Role_delFlag.Name = "Role_delFlag";
+            this.Role_delFlag.ReadOnly = true;
+            this.Role_delFlag.Visible = false;
             // 
             // frmAdvancedOperations
             // 
@@ -479,16 +680,6 @@
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView dgvRole;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role_id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role_name;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Speciality_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Class_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Course_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn System_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Score_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Student_manage;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role_remark;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Role_submitter_id;
         private System.Windows.Forms.TextBox txtSearchUser1;
         private System.Windows.Forms.Button btnSearchUser1;
         private System.Windows.Forms.Button btnDeleteUser;
@@ -501,5 +692,24 @@
         private System.Windows.Forms.Button btnUpdateRole;
         private System.Windows.Forms.Button btnSearchRole1;
         private System.Windows.Forms.Button btnSearchRole2;
+        private CCWin.SkinControl.SkinButton btnUserRecycleBin;
+        private CCWin.SkinControl.SkinButton btnRoleRecycleBin;
+        private CCWin.SkinControl.SkinButton skinButton1;
+        private CCWin.SkinControl.SkinButton skinButton2;
+        private CCWin.SkinControl.SkinButton skinButton3;
+        private CCWin.SkinControl.SkinButton skinButton4;
+        private CCWin.SkinControl.SkinButton btnRestoreUser;
+        private CCWin.SkinControl.SkinButton btnRestoreRole;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_name;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Speciality_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Class_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Course_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn System_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Score_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Student_manage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_remark;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_submitter_id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Role_delFlag;
     }
 }

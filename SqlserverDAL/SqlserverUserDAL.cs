@@ -34,7 +34,13 @@ namespace StudentStatusManageSystem.SqlserverDAL
             //inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id
             //inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id
 
-            string sql = "SELECT UserInfo.Id 编号,UserInfo.Name 名字,RoleInfo.Name 角色,UserInfo.Remark 备注,U1.Name 提交人 FROM[dbo].[UserInfo] inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id";
+            string sql = "SELECT UserInfo.Id 编号,UserInfo.Name 名字,RoleInfo.Name 角色,UserInfo.Remark 备注,U1.Name 提交人 FROM[dbo].[UserInfo] inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id where UserInfo.DelFlag="+delFlag;
+            return SqlserverHelper.AdapterDataTable(sql);
+        }        
+
+        public object GetUserByUserIdUserDelFlag(int user_id,int delFlag)
+        {
+            string sql = "SELECT UserInfo.Id 编号,UserInfo.Name 名字,RoleInfo.Name 角色,UserInfo.Remark 备注,U1.Name 提交人 FROM[dbo].[UserInfo] inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id where UserInfo.DelFlag=" + delFlag + " and UserInfo.Id like '%" + user_id + "%'";
             return SqlserverHelper.AdapterDataTable(sql);
         }
 
@@ -63,7 +69,7 @@ namespace StudentStatusManageSystem.SqlserverDAL
                 model.Submitter_id = Convert.ToInt32(dt.Rows[0][5]);
             }
             return model;
-        }
+        }       
 
         public int UpdateUserByUserId(User model)
         {
@@ -76,6 +82,24 @@ namespace StudentStatusManageSystem.SqlserverDAL
                 new  SqlParameter("@Submitter_id",model.Submitter_id)                
             };
             return SqlserverHelper.ExecuteNonQuery(sql, ps);
+        }
+
+        public int DeleteUserByUserId(int user_id,int submitter_id,int delFlag=1)
+        {
+            string sql = "Update UserInfo set [DelFlag]="+delFlag+" , Submitter_id="+submitter_id+" where Id="+user_id;
+            return SqlserverHelper.ExecuteNonQuery(sql);
+        }
+
+        public object GetUsersByUserNameUserDelFlag(string user_name, int delFlag)
+        {
+            string sql = "SELECT UserInfo.Id 编号,UserInfo.Name 名字,RoleInfo.Name 角色,UserInfo.Remark 备注,U1.Name 提交人 FROM[dbo].[UserInfo] inner join RoleInfo on UserInfo.Role_id = RoleInfo.Id inner join UserInfo U1 on U1.Id = UserInfo.Submitter_id where UserInfo.DelFlag=" + delFlag + " and UserInfo.Name like '%" + user_name+"%'";
+            return SqlserverHelper.AdapterDataTable(sql);
+        }
+
+        public int DeleteAllDeletedUsers(int submitter_id)
+        {
+            string sql = "update UserInfo set [DelFlag]=2 where [DelFlag]=1";
+            return SqlserverHelper.ExecuteNonQuery(sql);
         }
     }
 }

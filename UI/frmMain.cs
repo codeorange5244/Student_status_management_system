@@ -26,7 +26,7 @@ namespace StudentStatusManageSystem.UI
         }
         //当前登录用户
         public static User current_user;
-        private bool isPressDown = false;   //标识1：是否按下了0级的某个选项
+        //private bool isPressDown = false;   //标识1：是否按下了0级的某个选项
 
         private void btnAboutMe_MouseEnter(object sender, EventArgs e)
         {
@@ -79,7 +79,7 @@ namespace StudentStatusManageSystem.UI
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern bool SystemParametersInfo(int nAction, int nParam, ref int value, int ignore);
         // 这样就可以修改了这里我设置为1000毫秒
-        int value = 5;
+        //int value = 5;
 
         private void btnAdvanced_operations_MouseEnter(object sender, EventArgs e)
         {
@@ -149,48 +149,7 @@ namespace StudentStatusManageSystem.UI
 
         private void frmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            Opacity = 0.3;
-            Controls.Clear();
-            BackgroundImage = Properties.Resources.site;           
 
-            System.Windows.Forms.Timer timer = new System.Windows.Forms.Timer();
-            int biaozhi = 0;
-            timer.Interval = 20;
-            EventHandler eh0 = new EventHandler((a, b) =>
-            {
-                this.Size = new Size(this.Size.Width - 10, this.Size.Width - 10);
-                this.Radius = this.Size.Width;
-                if (this.Size.Width <= 200)
-                {
-                    timer.Enabled = false;
-                    //后续操作，比如往右下角跑
-                    e.Cancel = false;
-                    this.FormClosing -= frmMain_FormClosing;
-                    Application.Exit();
-                }
-            });
-
-            EventHandler eh = new EventHandler((a, b) =>
-            {
-                if (this.Size.Width - this.Size.Height > 0)
-                {
-                    this.Size = new Size(this.Size.Width - 45, this.Size.Height);
-                }
-                else
-                {
-                    this.Size = new Size(this.Size.Width, this.Size.Height - 45);
-                }
-
-                if (biaozhi == 0 && Math.Abs(this.Size.Width - this.Size.Height)<50) 
-                {
-                    this.Size = new Size(this.Size.Width, this.Size.Width); //长宽相等
-                    timer.Tick += new EventHandler(eh0);
-                    biaozhi++; //让此委托只进行3次空判断
-                }
-            });
-            timer.Tick += new EventHandler(eh);
-            timer.Enabled = true;
-            e.Cancel = true;
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)

@@ -364,7 +364,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "currentUser";
             this.Text = "";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmMain_FormClosing);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.skinSplitContainer1.Panel1.ResumeLayout(false);
             this.skinSplitContainer1.Panel2.ResumeLayout(false);

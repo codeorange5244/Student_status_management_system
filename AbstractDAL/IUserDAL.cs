@@ -42,5 +42,34 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="model">用户对象</param>
         /// <returns></returns>
         int UpdateUserByUserId(User model);
+
+        /// <summary>
+        /// 删除User
+        /// </summary>
+        /// <param name="user_id">user_id</param>
+        /// <returns></returns>
+        int DeleteUserByUserId(int user_id,int submitter_id,int delFlag=1);
+
+        /// <summary>
+        /// 得到User（经处理过的）
+        /// </summary>
+        /// <param name="user_id"></param>
+        /// <param name="delFlag"></param>
+        /// <returns></returns>
+        object GetUserByUserIdUserDelFlag(int user_id, int delFlag);
+
+        /// <summary>
+        /// 得到User（经处理过的）
+        /// </summary>
+        /// <param name="user_id"></param>
+        /// <param name="delFlag"></param>
+        /// <returns></returns>
+        object GetUsersByUserNameUserDelFlag(string user_name, int delFlag);
+
+        /// <summary>
+        /// 清空所有已删除的User
+        /// </summary>
+        /// <returns></returns>
+        int DeleteAllDeletedUsers(int submitter_id);
     }
 }
