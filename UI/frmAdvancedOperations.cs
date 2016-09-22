@@ -265,7 +265,7 @@ namespace StudentStatusManageSystem.UI
         {
             if (!string.IsNullOrEmpty(txtSearchRole1.Text))
             {
-                RoleBLL bll = new RoleBLL();                
+                RoleBLL bll = new RoleBLL();
                 dgvRole.DataSource = bll.GetRolesByRoleIdAndDelFlag(Convert.ToInt32(txtSearchRole1.Text), IsShowingDeletedRole ? 1 : 0);
             }
         }
@@ -309,12 +309,12 @@ namespace StudentStatusManageSystem.UI
         private void txtSearchRole1_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSearchRole1.Text))
-            {   
+            {
                 //搜索框为空，则加载全部
-                LoadAllRolesByDelFlag(IsShowingDeletedRole?1:0);
+                LoadAllRolesByDelFlag(IsShowingDeletedRole ? 1 : 0);
             }
             else
-            {                
+            {
                 btnSearchRole1_Click(sender, e);
             }
         }
@@ -329,6 +329,16 @@ namespace StudentStatusManageSystem.UI
             else
             {
                 btnSearchRole2_Click(sender, e);
+            }
+        }
+
+        //改变显示的文本
+        private void dgvRole_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            //2-7
+            if (e.ColumnIndex >= 2 && e.ColumnIndex <= 7)
+            {
+                e.Value = (int)e.Value == 1 ? "是" : "否";
             }
         }
     }

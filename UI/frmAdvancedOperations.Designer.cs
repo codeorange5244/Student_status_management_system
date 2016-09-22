@@ -38,6 +38,7 @@
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnRestoreUser = new CCWin.SkinControl.SkinButton();
             this.skinButton3 = new CCWin.SkinControl.SkinButton();
             this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.btnUserRecycleBin = new CCWin.SkinControl.SkinButton();
@@ -49,6 +50,7 @@
             this.btnDeleteUser = new System.Windows.Forms.Button();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btnRestoreRole = new CCWin.SkinControl.SkinButton();
             this.skinButton4 = new CCWin.SkinControl.SkinButton();
             this.skinButton2 = new CCWin.SkinControl.SkinButton();
             this.btnRoleRecycleBin = new CCWin.SkinControl.SkinButton();
@@ -59,8 +61,6 @@
             this.btnSearchRole1 = new System.Windows.Forms.Button();
             this.btnSearchRole2 = new System.Windows.Forms.Button();
             this.dgvRole = new System.Windows.Forms.DataGridView();
-            this.btnRestoreUser = new CCWin.SkinControl.SkinButton();
-            this.btnRestoreRole = new CCWin.SkinControl.SkinButton();
             this.Role_id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Role_name = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Speciality_manage = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,7 +109,8 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.ColumnHeadersHeight = 26;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvUser.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
@@ -125,6 +126,7 @@
             this.dgvUser.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dgvUser.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
             this.dgvUser.Location = new System.Drawing.Point(0, 0);
+            this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
             this.dgvUser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -136,7 +138,7 @@
             this.dgvUser.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUser.RowTemplate.Height = 23;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(811, 340);
+            this.dgvUser.Size = new System.Drawing.Size(935, 340);
             this.dgvUser.TabIndex = 0;
             this.dgvUser.TitleBack = null;
             this.dgvUser.TitleBackColorBegin = System.Drawing.Color.White;
@@ -156,7 +158,7 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer3);
-            this.splitContainer1.Size = new System.Drawing.Size(1150, 683);
+            this.splitContainer1.Size = new System.Drawing.Size(1324, 683);
             this.splitContainer1.SplitterDistance = 340;
             this.splitContainer1.TabIndex = 1;
             // 
@@ -173,8 +175,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.dgvUser);
-            this.splitContainer2.Size = new System.Drawing.Size(1150, 340);
-            this.splitContainer2.SplitterDistance = 335;
+            this.splitContainer2.Size = new System.Drawing.Size(1324, 340);
+            this.splitContainer2.SplitterDistance = 385;
             this.splitContainer2.TabIndex = 0;
             // 
             // groupBox1
@@ -192,10 +194,26 @@
             this.groupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(335, 340);
+            this.groupBox1.Size = new System.Drawing.Size(385, 340);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "登录用户操作";
+            // 
+            // btnRestoreUser
+            // 
+            this.btnRestoreUser.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestoreUser.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRestoreUser.DownBack = null;
+            this.btnRestoreUser.Location = new System.Drawing.Point(82, 301);
+            this.btnRestoreUser.MouseBack = null;
+            this.btnRestoreUser.Name = "btnRestoreUser";
+            this.btnRestoreUser.NormlBack = null;
+            this.btnRestoreUser.Size = new System.Drawing.Size(75, 23);
+            this.btnRestoreUser.TabIndex = 6;
+            this.btnRestoreUser.Text = "还原选中项";
+            this.btnRestoreUser.UseVisualStyleBackColor = false;
+            this.btnRestoreUser.Visible = false;
+            this.btnRestoreUser.Click += new System.EventHandler(this.btnRestoreUser_Click);
             // 
             // skinButton3
             // 
@@ -327,8 +345,8 @@
             // splitContainer3.Panel2
             // 
             this.splitContainer3.Panel2.Controls.Add(this.dgvRole);
-            this.splitContainer3.Size = new System.Drawing.Size(1150, 339);
-            this.splitContainer3.SplitterDistance = 338;
+            this.splitContainer3.Size = new System.Drawing.Size(1324, 339);
+            this.splitContainer3.SplitterDistance = 389;
             this.splitContainer3.TabIndex = 0;
             // 
             // groupBox2
@@ -346,10 +364,26 @@
             this.groupBox2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupBox2.Location = new System.Drawing.Point(0, 0);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(338, 339);
+            this.groupBox2.Size = new System.Drawing.Size(389, 339);
             this.groupBox2.TabIndex = 0;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "角色操作";
+            // 
+            // btnRestoreRole
+            // 
+            this.btnRestoreRole.BackColor = System.Drawing.Color.Transparent;
+            this.btnRestoreRole.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnRestoreRole.DownBack = null;
+            this.btnRestoreRole.Location = new System.Drawing.Point(82, 267);
+            this.btnRestoreRole.MouseBack = null;
+            this.btnRestoreRole.Name = "btnRestoreRole";
+            this.btnRestoreRole.NormlBack = null;
+            this.btnRestoreRole.Size = new System.Drawing.Size(75, 23);
+            this.btnRestoreRole.TabIndex = 6;
+            this.btnRestoreRole.Text = "还原选中项";
+            this.btnRestoreRole.UseVisualStyleBackColor = false;
+            this.btnRestoreRole.Visible = false;
+            this.btnRestoreRole.Click += new System.EventHandler(this.btnRestoreRole_Click);
             // 
             // skinButton4
             // 
@@ -473,9 +507,9 @@
             this.dgvRole.AllowUserToAddRows = false;
             this.dgvRole.AllowUserToDeleteRows = false;
             this.dgvRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRole.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dgvRole.BackgroundColor = System.Drawing.Color.White;
-            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRole.ColumnHeadersHeight = 36;
+            this.dgvRole.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvRole.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Role_id,
             this.Role_name,
@@ -495,140 +529,79 @@
             this.dgvRole.ReadOnly = true;
             this.dgvRole.RowTemplate.Height = 23;
             this.dgvRole.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRole.Size = new System.Drawing.Size(808, 339);
+            this.dgvRole.Size = new System.Drawing.Size(931, 339);
             this.dgvRole.TabIndex = 0;
-            // 
-            // btnRestoreUser
-            // 
-            this.btnRestoreUser.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestoreUser.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnRestoreUser.DownBack = null;
-            this.btnRestoreUser.Location = new System.Drawing.Point(82, 301);
-            this.btnRestoreUser.MouseBack = null;
-            this.btnRestoreUser.Name = "btnRestoreUser";
-            this.btnRestoreUser.NormlBack = null;
-            this.btnRestoreUser.Size = new System.Drawing.Size(75, 23);
-            this.btnRestoreUser.TabIndex = 6;
-            this.btnRestoreUser.Text = "还原选中项";
-            this.btnRestoreUser.UseVisualStyleBackColor = false;
-            this.btnRestoreUser.Visible = false;
-            this.btnRestoreUser.Click += new System.EventHandler(this.btnRestoreUser_Click);
-            // 
-            // btnRestoreRole
-            // 
-            this.btnRestoreRole.BackColor = System.Drawing.Color.Transparent;
-            this.btnRestoreRole.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnRestoreRole.DownBack = null;
-            this.btnRestoreRole.Location = new System.Drawing.Point(82, 267);
-            this.btnRestoreRole.MouseBack = null;
-            this.btnRestoreRole.Name = "btnRestoreRole";
-            this.btnRestoreRole.NormlBack = null;
-            this.btnRestoreRole.Size = new System.Drawing.Size(75, 23);
-            this.btnRestoreRole.TabIndex = 6;
-            this.btnRestoreRole.Text = "还原选中项";
-            this.btnRestoreRole.UseVisualStyleBackColor = false;
-            this.btnRestoreRole.Visible = false;
-            this.btnRestoreRole.Click += new System.EventHandler(this.btnRestoreRole_Click);
+            this.dgvRole.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dgvRole_CellFormatting);
             // 
             // Role_id
             // 
-            this.Role_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_id.DataPropertyName = "Id";
-            this.Role_id.Frozen = true;
             this.Role_id.HeaderText = "编号";
             this.Role_id.Name = "Role_id";
             this.Role_id.ReadOnly = true;
-            this.Role_id.Width = 77;
             // 
             // Role_name
             // 
-            this.Role_name.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_name.DataPropertyName = "Name";
-            this.Role_name.Frozen = true;
             this.Role_name.HeaderText = "角色名称";
             this.Role_name.Name = "Role_name";
             this.Role_name.ReadOnly = true;
-            this.Role_name.Width = 76;
             // 
             // Speciality_manage
             // 
-            this.Speciality_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Speciality_manage.DataPropertyName = "Speciality_manage";
-            this.Speciality_manage.Frozen = true;
             this.Speciality_manage.HeaderText = "专业管理";
             this.Speciality_manage.Name = "Speciality_manage";
             this.Speciality_manage.ReadOnly = true;
-            this.Speciality_manage.Width = 77;
             // 
             // Class_manage
             // 
-            this.Class_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Class_manage.DataPropertyName = "Class_manage";
-            this.Class_manage.Frozen = true;
             this.Class_manage.HeaderText = "班级管理";
             this.Class_manage.Name = "Class_manage";
             this.Class_manage.ReadOnly = true;
-            this.Class_manage.Width = 76;
             // 
             // Course_manage
             // 
-            this.Course_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Course_manage.DataPropertyName = "Course_manage";
-            this.Course_manage.Frozen = true;
             this.Course_manage.HeaderText = "课程管理";
             this.Course_manage.Name = "Course_manage";
             this.Course_manage.ReadOnly = true;
-            this.Course_manage.Width = 77;
             // 
             // System_manage
             // 
-            this.System_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.System_manage.DataPropertyName = "System_manage";
-            this.System_manage.Frozen = true;
             this.System_manage.HeaderText = "系统管理";
             this.System_manage.Name = "System_manage";
             this.System_manage.ReadOnly = true;
-            this.System_manage.Width = 76;
             // 
             // Score_manage
             // 
-            this.Score_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Score_manage.DataPropertyName = "Score_manage";
-            this.Score_manage.Frozen = true;
             this.Score_manage.HeaderText = "分数管理";
             this.Score_manage.Name = "Score_manage";
             this.Score_manage.ReadOnly = true;
-            this.Score_manage.Width = 77;
             // 
             // Student_manage
             // 
-            this.Student_manage.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Student_manage.DataPropertyName = "Student_manage";
-            this.Student_manage.Frozen = true;
             this.Student_manage.HeaderText = "学生管理";
             this.Student_manage.Name = "Student_manage";
             this.Student_manage.ReadOnly = true;
-            this.Student_manage.Width = 76;
             // 
             // Role_remark
             // 
-            this.Role_remark.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_remark.DataPropertyName = "Remark";
-            this.Role_remark.Frozen = true;
             this.Role_remark.HeaderText = "备注";
             this.Role_remark.Name = "Role_remark";
             this.Role_remark.ReadOnly = true;
-            this.Role_remark.Width = 77;
             // 
             // Role_submitter_id
             // 
-            this.Role_submitter_id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
             this.Role_submitter_id.DataPropertyName = "Submitter_id";
-            this.Role_submitter_id.Frozen = true;
             this.Role_submitter_id.HeaderText = "提交人编号";
             this.Role_submitter_id.Name = "Role_submitter_id";
             this.Role_submitter_id.ReadOnly = true;
-            this.Role_submitter_id.Width = 76;
             // 
             // Role_delFlag
             // 
@@ -643,7 +616,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(196)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(1150, 683);
+            this.ClientSize = new System.Drawing.Size(1324, 683);
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdvancedOperations";
