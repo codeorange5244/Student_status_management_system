@@ -42,37 +42,7 @@ namespace StudentStatusManageSystem.UI
         //主窗体加载
         private void frmMain_Load(object sender, EventArgs e)
         {
-          
-        }
-        //系统设置
-        private void btnSystemSetting_Click(object sender, EventArgs e)
-        {
-
-        }
-        //专业设置
-        private void btnSpecialitySetting_Click(object sender, EventArgs e)
-        {
-
-        }
-        //班级信息管理
-        private void btnClassInfoManage_Click(object sender, EventArgs e)
-        {
-
-        }
-        //学生信息管理
-        private void btnStudentManage_Click(object sender, EventArgs e)
-        {
-
-        }
-        //课程信息管理
-        private void btnCourseManage_Click(object sender, EventArgs e)
-        {
-
-        }
-        //成绩信息管理
-        private void btnScoreManage_Click(object sender, EventArgs e)
-        {
-
+            skinTabControl1.SelectedIndex = 6;  //初始化选中选项卡位 ”关于“
         }
 
         //然后声明API
@@ -154,7 +124,7 @@ namespace StudentStatusManageSystem.UI
 
         private void btnAddUser_Click(object sender, EventArgs e)
         {
-            if (current_user.current_role.System_manage!=1)
+            if (current_user.current_role.System_manage != 1)
             {
                 Msbox.Show("亲~ 没权限哦--");
                 (sender as Control).Enabled = false;//关闭该控件
@@ -176,7 +146,7 @@ namespace StudentStatusManageSystem.UI
             frmAddRole frm_add_role = new frmAddRole();
             frm_add_role.Show();
         }
-        
+
         private void btnAeroWallpaperChanger_Click(object sender, EventArgs e)
         {
 
@@ -189,6 +159,72 @@ namespace StudentStatusManageSystem.UI
             //显示
             frmAdvancedOperations frm = new frmAdvancedOperations();
             frm.Show();
+        }
+
+        //选择不同的选项卡
+        private void skinTabControl1_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            //if (!(e.TabPage == null))
+            //{
+
+                switch (e.TabPage.Name)
+                {
+                    case "tpSystemSetting": LoadSystemSetting(); break;
+                    case "tpSpecialitySetting": LoadSpecialitySetting(); break;
+                    case "tpClassInfoManage": LoadClassInfoManage(); break;
+                    case "tpStudentManage": LoadStudentManage(); break;
+                    case "tpCourseManage": LoadCourseManage(); break;
+                    case "tpScoreManage": LoadScoreManage(); break;
+                    case "tpAboutMe": LoadAboutMe(); break;
+                }
+           // }
+        }
+        //关于
+        private void LoadAboutMe()
+        {
+
+        }
+        //成绩管理
+        private void LoadScoreManage()
+        {
+
+        }
+        //课程管理
+        private void LoadCourseManage()
+        {
+
+        }
+        //学生管理
+        private void LoadStudentManage()
+        {
+
+        }
+        //班级信息管理
+        private void LoadClassInfoManage()
+        {
+
+        }
+
+        //专业设置
+        private void LoadSpecialitySetting()
+        {
+
+        }
+
+        //系统设置
+        private void LoadSystemSetting()
+        {
+            if (current_user.current_role.System_manage != 1)
+            {
+                Msbox.Show("亲~ 没权限哦--");
+            }
+            else
+            {
+                btnAddUser.Visible = true;
+                btnAddRole.Visible = true;
+                btnAeroWallpaperChanger.Visible = true;
+                btnAdvanced_operations.Visible = true;
+            }
         }
     }
 }
