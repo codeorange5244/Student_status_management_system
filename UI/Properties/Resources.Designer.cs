@@ -63,6 +63,16 @@ namespace StudentStatusManageSystem.UI.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap add1 {
+            get {
+                object obj = ResourceManager.GetObject("add1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap book114 {
             get {
                 object obj = ResourceManager.GetObject("book114", resourceCulture);
@@ -86,6 +96,16 @@ namespace StudentStatusManageSystem.UI.Properties {
         internal static System.Drawing.Bitmap classInfo {
             get {
                 object obj = ResourceManager.GetObject("classInfo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap edit_clear {
+            get {
+                object obj = ResourceManager.GetObject("edit_clear", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -185,6 +205,16 @@ namespace StudentStatusManageSystem.UI.Properties {
         internal static System.Drawing.Bitmap student2 {
             get {
                 object obj = ResourceManager.GetObject("student2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap trashcan_full_icon {
+            get {
+                object obj = ResourceManager.GetObject("trashcan_full_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

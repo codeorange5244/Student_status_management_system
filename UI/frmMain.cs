@@ -26,7 +26,6 @@ namespace StudentStatusManageSystem.UI
         }
         //当前登录用户
         public static User current_user;
-        //private bool isPressDown = false;   //标识1：是否按下了0级的某个选项
 
         private void btnAboutMe_MouseEnter(object sender, EventArgs e)
         {
@@ -167,17 +166,17 @@ namespace StudentStatusManageSystem.UI
             //if (!(e.TabPage == null))
             //{
 
-                switch (e.TabPage.Name)
-                {
-                    case "tpSystemSetting": LoadSystemSetting(); break;
-                    case "tpSpecialitySetting": LoadSpecialitySetting(); break;
-                    case "tpClassInfoManage": LoadClassInfoManage(); break;
-                    case "tpStudentManage": LoadStudentManage(); break;
-                    case "tpCourseManage": LoadCourseManage(); break;
-                    case "tpScoreManage": LoadScoreManage(); break;
-                    case "tpAboutMe": LoadAboutMe(); break;
-                }
-           // }
+            switch (e.TabPage.Name)
+            {
+                case "tpSystemSetting": LoadSystemSetting(); break;
+                case "tpSpecialitySetting": LoadSpecialitySetting(); break;
+                case "tpClassInfoManage": LoadClassInfoManage(); break;
+                case "tpStudentManage": LoadStudentManage(); break;
+                case "tpCourseManage": LoadCourseManage(); break;
+                case "tpScoreManage": LoadScoreManage(); break;
+                case "tpAboutMe": LoadAboutMe(); break;
+            }
+            // }
         }
         //关于
         private void LoadAboutMe()
@@ -225,6 +224,30 @@ namespace StudentStatusManageSystem.UI
                 btnAeroWallpaperChanger.Visible = true;
                 btnAdvanced_operations.Visible = true;
             }
+        }
+
+        private void btnAddSpeciality_MouseEnter(object sender, EventArgs e)
+        {
+            ((SkinButton)sender).BaseColor = Color.FromArgb(249, 252, 250);
+        }
+
+        private void btnAddSpeciality_MouseLeave(object sender, EventArgs e)
+        {
+            ((SkinButton)sender).BaseColor = Color.Transparent;
+        }
+
+        private void picClearRecycleBin_Click(object sender, EventArgs e)
+        {
+            if (CCWin.MessageBoxEx.Show("确定要清空回收站吗？将会永久删除数据", "警告！！", MessageBoxButtons.OKCancel)== DialogResult.OK)
+            {
+
+            }
+        }
+        //查看学院
+        private void btnCollege_Click(object sender, EventArgs e)
+        {
+            frmAddAndDeleteCollege frm = new frmAddAndDeleteCollege();
+            frm.Show();
         }
     }
 }

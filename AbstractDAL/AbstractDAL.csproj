@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="IClassInfoDAL.cs" />
     <Compile Include="IClassroomDAL.cs" />
+    <Compile Include="ICollegeDAL.cs" />
     <Compile Include="ICourseDAL.cs" />
     <Compile Include="IRoleDAL.cs" />
     <Compile Include="ISpecialityDAL.cs" />

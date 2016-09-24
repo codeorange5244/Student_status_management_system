@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="ClassInfoBLL.cs" />
     <Compile Include="ClassroomBLL.cs" />
+    <Compile Include="CollegeBLL.cs" />
     <Compile Include="CourseBLL.cs" />
     <Compile Include="Helper_Class.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

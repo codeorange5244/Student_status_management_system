@@ -56,6 +56,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmAddAndDeleteCollege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddAndDeleteCollege.Designer.cs">
+      <DependentUpon>frmAddAndDeleteCollege.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAddCollege.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCollege.Designer.cs">
+      <DependentUpon>frmAddCollege.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddRole.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,6 +106,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmAddAndDeleteCollege.resx">
+      <DependentUpon>frmAddAndDeleteCollege.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCollege.resx">
+      <DependentUpon>frmAddCollege.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddRole.resx">
       <DependentUpon>frmAddRole.cs</DependentUpon>
     </EmbeddedResource>
@@ -189,6 +207,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\深绿背景.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\trashcan-full-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit-clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

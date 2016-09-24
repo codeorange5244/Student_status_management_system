@@ -43,6 +43,7 @@
     <Compile Include="ClassInfo.cs" />
     <Compile Include="Classroom.cs" />
     <Compile Include="Class_Course.cs" />
+    <Compile Include="College.cs" />
     <Compile Include="Course.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Role.cs" />
