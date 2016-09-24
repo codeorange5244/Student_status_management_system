@@ -15,7 +15,7 @@ namespace StudentStatusManageSystem.Model
         public string Name { get; set; }
         public string Remark { get; set; }
         public int College_id { get; set; }
-        public DateTime Submit_date { get; set; }
+        public DateTime Submit_datetime { get; set; }
         /// <summary>
         /// 删除标识，0---未删除 1---已删除
         /// </summary>

@@ -21,11 +21,21 @@ namespace StudentStatusManageSystem.BLL
         }
 
         /// <summary>
+        /// 得到所有College信息根据删除标识（经处理过的）
+        /// </summary>
+        /// <param name="delFlag">删除标识，默认为0---未删除，1---已删除</param>
+        /// <returns></returns>
+        public object GetAllCollegeByDelFlag(int delFlag,bool isSpecial)
+        {
+            return idal.GetAllCollegeByDelFlag(delFlag);
+        }
+
+        /// <summary>
         /// 得到所有College信息根据删除标识
         /// </summary>
         /// <param name="delFlag">删除标识，默认为0---未删除，1---已删除</param>
         /// <returns></returns>
-        public object GetAllCollegeByDelFlag(int delFlag=0)
+        public List<College> GetAllCollegeByDelFlag(int delFlag)
         {
             return idal.GetAllCollegeByDelFlag(delFlag);
         }

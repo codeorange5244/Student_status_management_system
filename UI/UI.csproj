@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="EditAndDeleteSpeciality.cs">
+    <Compile Include="frmEditAndDeleteSpeciality.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="EditAndDeleteSpeciality.Designer.cs">
-      <DependentUpon>EditAndDeleteSpeciality.cs</DependentUpon>
+    <Compile Include="frmEditAndDeleteSpeciality.Designer.cs">
+      <DependentUpon>frmEditAndDeleteSpeciality.cs</DependentUpon>
     </Compile>
     <Compile Include="frmAddAndDeleteCollege.cs">
       <SubType>Form</SubType>
@@ -118,8 +118,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="EditAndDeleteSpeciality.resx">
-      <DependentUpon>EditAndDeleteSpeciality.cs</DependentUpon>
+    <EmbeddedResource Include="frmEditAndDeleteSpeciality.resx">
+      <DependentUpon>frmEditAndDeleteSpeciality.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmAddAndDeleteCollege.resx">
       <DependentUpon>frmAddAndDeleteCollege.cs</DependentUpon>
@@ -234,6 +234,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book_search.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

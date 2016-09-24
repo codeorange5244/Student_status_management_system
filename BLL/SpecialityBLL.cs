@@ -21,5 +21,25 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.AddSpeciality(model) > 0;
         }
+
+        /// <summary>
+        /// 更新一条数据
+        /// </summary>
+        /// <param name="id">专业Id</param>
+        /// <returns></returns>
+        public bool UpdateSpecialityBySpecialityId(Speciality model)
+        {
+            return idal.UpdateSpecialityBySpecialityId(model) > 0;
+        }
+
+        /// <summary>
+        /// 获取所有"专业"数据，根据删除标识
+        /// </summary>
+        /// <param name="delFlag">0---未删除，1---已删除</param>
+        /// <returns></returns>
+        public List<Speciality> GetAllSpecialityByDelFlag(int delFlag,int college_id)
+        {
+            return idal.GetAllSpecialityByDelFlagAndCollegeId(delFlag,college_id);
+        }
     }
 }

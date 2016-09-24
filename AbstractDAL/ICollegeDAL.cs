@@ -17,11 +17,18 @@ namespace StudentStatusManageSystem.AbstractDAL
         int AddCollege(College model);
 
         /// <summary>
-        /// 得到所有College信息根据删除标识
+        /// 得到所有College信息根据删除标识(经处理过的)
         /// </summary>
         /// <param name="delFlag">删除标识，默认为0---未删除，1---已删除</param>
         /// <returns></returns>
-        object GetAllCollegeByDelFlag(int delFlag);
+        object GetAllCollegeByDelFlag(int delFlag,bool isSpecial);
+
+        /// <summary>
+        /// 得到所有College信息根据删除标识
+        /// </summary>
+        /// <param name="delFlag">0---未删除，1---已删除</param>
+        /// <returns></returns>
+        List<College> GetAllCollegeByDelFlag(int delFlag);
 
         /// <summary>
         /// 根据collegeId进行删除

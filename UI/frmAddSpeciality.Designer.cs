@@ -82,11 +82,12 @@
             // 
             // cbCollege
             // 
-            this.cbCollege.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.cbCollege.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.cbCollege.Font = new System.Drawing.Font("微软雅黑", 11F);
             this.cbCollege.FormattingEnabled = true;
             this.cbCollege.Location = new System.Drawing.Point(111, 16);
             this.cbCollege.Name = "cbCollege";
-            this.cbCollege.Size = new System.Drawing.Size(182, 29);
+            this.cbCollege.Size = new System.Drawing.Size(182, 28);
             this.cbCollege.TabIndex = 9;
             // 
             // label2
@@ -141,6 +142,7 @@
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.Name = "frmAddSpeciality";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "添加或修改专业信息";
             this.Load += new System.EventHandler(this.frmAddSpeciality_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

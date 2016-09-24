@@ -228,7 +228,7 @@ namespace StudentStatusManageSystem.UI
 
         private void btnAddSpeciality_MouseEnter(object sender, EventArgs e)
         {
-            ((SkinButton)sender).BaseColor = Color.FromArgb(249, 252, 250);
+            ((SkinButton)sender).BaseColor = Color.FromArgb(9, 163, 220);
         }
 
         private void btnAddSpeciality_MouseLeave(object sender, EventArgs e)
@@ -254,6 +254,12 @@ namespace StudentStatusManageSystem.UI
         {
             frmAddSpeciality frm = new frmAddSpeciality();
             frm.Text = "新增专业";
+            frm.Show();
+        }
+
+        private void btnSpeciality_Click(object sender, EventArgs e)
+        {
+            frmEditAndDeleteSpeciality frm = new frmEditAndDeleteSpeciality();
             frm.Show();
         }
     }

@@ -73,6 +73,16 @@ namespace StudentStatusManageSystem.UI.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap book_search {
+            get {
+                object obj = ResourceManager.GetObject("book_search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap book114 {
             get {
                 object obj = ResourceManager.GetObject("book114", resourceCulture);
