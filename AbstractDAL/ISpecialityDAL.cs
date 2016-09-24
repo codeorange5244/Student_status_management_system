@@ -11,7 +11,12 @@ namespace StudentStatusManageSystem.AbstractDAL
     {
         Speciality GetSpecialityBySpecialityId();
 
-        int AddSpeciality();
+        /// <summary>
+        /// SpecialityInfo表添加一条数据
+        /// </summary>
+        /// <param name="model">Speciality实例</param>
+        /// <returns></returns>
+        int AddSpeciality(Speciality model);
 
         int DeleteSpecialityBySpecialityId();
 

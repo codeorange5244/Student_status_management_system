@@ -249,5 +249,12 @@ namespace StudentStatusManageSystem.UI
             frmAddAndDeleteCollege frm = new frmAddAndDeleteCollege();
             frm.Show();
         }
+
+        private void btnAddSpeciality_Click(object sender, EventArgs e)
+        {
+            frmAddSpeciality frm = new frmAddSpeciality();
+            frm.Text = "新增专业";
+            frm.Show();
+        }
     }
 }
