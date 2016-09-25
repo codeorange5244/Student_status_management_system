@@ -22,5 +22,16 @@ namespace StudentStatusManageSystem.UI.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=Student_status_manage_system;Integrated Security=Tr" +
+            "ue")]
+        public string Student_status_manage_systemConnectionString {
+            get {
+                return ((string)(this["Student_status_manage_systemConnectionString"]));
+            }
+        }
     }
 }

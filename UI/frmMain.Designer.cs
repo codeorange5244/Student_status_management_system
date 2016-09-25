@@ -45,7 +45,7 @@
             this.btnSpeciality = new CCWin.SkinControl.SkinButton();
             this.btnAddSpeciality = new CCWin.SkinControl.SkinButton();
             this.picClearRecycleBin = new CCWin.SkinControl.SkinPictureBox();
-            this.picRecycleBin = new CCWin.SkinControl.SkinPictureBox();
+            this.picSpecialityRecycleBin = new CCWin.SkinControl.SkinPictureBox();
             this.tpClassInfoManage = new CCWin.SkinControl.SkinTabPage();
             this.tpStudentManage = new CCWin.SkinControl.SkinTabPage();
             this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
@@ -60,7 +60,7 @@
             this.splitContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClearRecycleBin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRecycleBin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSpecialityRecycleBin)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdvanced_operations
@@ -150,7 +150,7 @@
             // skinTabControl1
             // 
             this.skinTabControl1.AnimationStart = true;
-            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.Custom;
+            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.Leaf;
             this.skinTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.skinTabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(202)))), ((int)(((byte)(99)))));
             this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
@@ -237,7 +237,7 @@
             this.splitContainer1.Panel2.Controls.Add(this.btnSpeciality);
             this.splitContainer1.Panel2.Controls.Add(this.btnAddSpeciality);
             this.splitContainer1.Panel2.Controls.Add(this.picClearRecycleBin);
-            this.splitContainer1.Panel2.Controls.Add(this.picRecycleBin);
+            this.splitContainer1.Panel2.Controls.Add(this.picSpecialityRecycleBin);
             this.splitContainer1.Size = new System.Drawing.Size(1129, 558);
             this.splitContainer1.SplitterDistance = 153;
             this.splitContainer1.SplitterWidth = 1;
@@ -282,7 +282,7 @@
             this.labSubmitDate.Name = "labSubmitDate";
             this.labSubmitDate.Size = new System.Drawing.Size(116, 17);
             this.labSubmitDate.TabIndex = 2;
-            this.labSubmitDate.Text = "最近一次提交时间：";
+            this.labSubmitDate.Text = "最近一次操作时间：";
             // 
             // skinLabel1
             // 
@@ -358,17 +358,22 @@
             this.picClearRecycleBin.TabIndex = 5;
             this.picClearRecycleBin.TabStop = false;
             this.picClearRecycleBin.Click += new System.EventHandler(this.picClearRecycleBin_Click);
+            this.picClearRecycleBin.MouseEnter += new System.EventHandler(this.picClearRecycleBin_MouseEnter);
+            this.picClearRecycleBin.MouseLeave += new System.EventHandler(this.picClearRecycleBin_MouseLeave);
             // 
-            // picRecycleBin
+            // picSpecialityRecycleBin
             // 
-            this.picRecycleBin.BackColor = System.Drawing.Color.Transparent;
-            this.picRecycleBin.Image = global::StudentStatusManageSystem.UI.Properties.Resources.trashcan_full_icon;
-            this.picRecycleBin.Location = new System.Drawing.Point(33, 317);
-            this.picRecycleBin.Name = "picRecycleBin";
-            this.picRecycleBin.Size = new System.Drawing.Size(76, 66);
-            this.picRecycleBin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.picRecycleBin.TabIndex = 5;
-            this.picRecycleBin.TabStop = false;
+            this.picSpecialityRecycleBin.BackColor = System.Drawing.Color.Transparent;
+            this.picSpecialityRecycleBin.Image = global::StudentStatusManageSystem.UI.Properties.Resources.trashcan_full_icon;
+            this.picSpecialityRecycleBin.Location = new System.Drawing.Point(33, 317);
+            this.picSpecialityRecycleBin.Name = "picSpecialityRecycleBin";
+            this.picSpecialityRecycleBin.Size = new System.Drawing.Size(76, 66);
+            this.picSpecialityRecycleBin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picSpecialityRecycleBin.TabIndex = 5;
+            this.picSpecialityRecycleBin.TabStop = false;
+            this.picSpecialityRecycleBin.Click += new System.EventHandler(this.picSpecialityRecycleBin_Click);
+            this.picSpecialityRecycleBin.MouseEnter += new System.EventHandler(this.picClearRecycleBin_MouseEnter);
+            this.picSpecialityRecycleBin.MouseLeave += new System.EventHandler(this.picClearRecycleBin_MouseLeave);
             // 
             // tpClassInfoManage
             // 
@@ -435,8 +440,10 @@
             this.ClientSize = new System.Drawing.Size(1137, 703);
             this.CloseBoxSize = new System.Drawing.Size(32, 27);
             this.Controls.Add(this.skinTabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MaximizeBox = false;
             this.MaxSize = new System.Drawing.Size(32, 27);
             this.MiniSize = new System.Drawing.Size(32, 27);
             this.Name = "frmMain";
@@ -444,6 +451,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Tag = "currentUser";
             this.Text = "";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMain_FormClosed);
             this.Load += new System.EventHandler(this.frmMain_Load);
             this.skinTabControl1.ResumeLayout(false);
             this.tpSystemSetting.ResumeLayout(false);
@@ -455,7 +463,7 @@
             this.splitContainer1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClearRecycleBin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.picRecycleBin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picSpecialityRecycleBin)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -477,7 +485,7 @@
         private CCWin.SkinControl.SkinLabel skinLabel1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private CCWin.SkinControl.SkinPictureBox picRecycleBin;
+        private CCWin.SkinControl.SkinPictureBox picSpecialityRecycleBin;
         private CCWin.SkinControl.SkinButton btnAddSpeciality;
         private CCWin.SkinControl.SkinButton btnCollege;
         private CCWin.SkinControl.SkinButton btnSpeciality;

@@ -46,9 +46,9 @@
             this.skinTabControl1.HeadBack = null;
             this.skinTabControl1.ImgSize = new System.Drawing.Size(50, 50);
             this.skinTabControl1.ImgTxtOffset = new System.Drawing.Point(0, 0);
-            this.skinTabControl1.ItemSize = new System.Drawing.Size(434, 80);
+            this.skinTabControl1.ItemSize = new System.Drawing.Size(430, 80);
             this.skinTabControl1.ItemStretch = true;
-            this.skinTabControl1.Location = new System.Drawing.Point(0, 0);
+            this.skinTabControl1.Location = new System.Drawing.Point(4, 28);
             this.skinTabControl1.Name = "skinTabControl1";
             this.skinTabControl1.PageArrowDown = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowDown")));
             this.skinTabControl1.PageArrowHover = ((System.Drawing.Image)(resources.GetObject("skinTabControl1.PageArrowHover")));
@@ -61,7 +61,7 @@
             this.skinTabControl1.PagePalace = true;
             this.skinTabControl1.PageTextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.skinTabControl1.SelectedIndex = 0;
-            this.skinTabControl1.Size = new System.Drawing.Size(872, 654);
+            this.skinTabControl1.Size = new System.Drawing.Size(864, 622);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 0;
             // 
@@ -71,7 +71,7 @@
             this.skinTabPage1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage1.Location = new System.Drawing.Point(0, 80);
             this.skinTabPage1.Name = "skinTabPage1";
-            this.skinTabPage1.Size = new System.Drawing.Size(872, 574);
+            this.skinTabPage1.Size = new System.Drawing.Size(864, 542);
             this.skinTabPage1.TabIndex = 0;
             this.skinTabPage1.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.book114;
             this.skinTabPage1.Text = "课程";
@@ -82,7 +82,7 @@
             this.skinTabPage2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabPage2.Location = new System.Drawing.Point(0, 80);
             this.skinTabPage2.Name = "skinTabPage2";
-            this.skinTabPage2.Size = new System.Drawing.Size(832, 574);
+            this.skinTabPage2.Size = new System.Drawing.Size(872, 574);
             this.skinTabPage2.TabIndex = 1;
             this.skinTabPage2.TabItemImage = null;
             this.skinTabPage2.Text = "skinTabPage2";

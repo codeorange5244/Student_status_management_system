@@ -57,9 +57,10 @@
             this.ClientSize = new System.Drawing.Size(332, 50);
             this.Controls.Add(this.txtAddCollegeName);
             this.Controls.Add(this.btnOk);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "frmAddCollege";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "新开设学院名";
             this.TopMost = true;
             this.Load += new System.EventHandler(this.frmAddCollege_Load);

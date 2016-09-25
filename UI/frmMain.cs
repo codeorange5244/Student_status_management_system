@@ -15,6 +15,7 @@ using CCWin.SkinControl;
 // 首先引用命名空间
 using System.Runtime.InteropServices;
 using SelfForm;
+using System.Configuration;
 
 namespace StudentStatusManageSystem.UI
 {
@@ -207,8 +208,8 @@ namespace StudentStatusManageSystem.UI
         //专业设置
         private void LoadSpecialitySetting()
         {
-
-        }
+            labSubmitDate.Text+= ConfigurationManager.AppSettings["lastOperateSpecialityDatetime"].ToString();  //最后一次操作时间
+    }
 
         //系统设置
         private void LoadSystemSetting()
@@ -240,6 +241,14 @@ namespace StudentStatusManageSystem.UI
         {
             if (CCWin.MessageBoxEx.Show("确定要清空回收站吗？将会永久删除数据", "警告！！", MessageBoxButtons.OKCancel)== DialogResult.OK)
             {
+                SpecialityBLL bll = new SpecialityBLL();
+                if (bll.DeleteAllDeletedSpeciality(frmMain.current_user.Id))
+                {
+                    CCWin.MessageBoxEx.Show("清空成功！！");
+                }else
+                {
+                    CCWin.MessageBoxEx.Show("清空失败，请刷新后重试");                   
+                }
 
             }
         }
@@ -261,6 +270,32 @@ namespace StudentStatusManageSystem.UI
         {
             frmEditAndDeleteSpeciality frm = new frmEditAndDeleteSpeciality();
             frm.Show();
+        }
+        
+        //专业回收站
+        private void picSpecialityRecycleBin_Click(object sender, EventArgs e)
+        {
+            frmSpecialityRecycleBin frm = new frmSpecialityRecycleBin();
+            frm.Show();
+        }
+
+        private void picClearRecycleBin_MouseEnter(object sender, EventArgs e)
+        {
+            var pic = sender as PictureBox;
+            pic.BackColor = Color.FromArgb(249, 252, 250);
+            pic.BorderStyle = BorderStyle.FixedSingle;
+        }
+
+        private void picClearRecycleBin_MouseLeave(object sender, EventArgs e)
+        {
+            var pic = sender as PictureBox;
+            pic.BackColor = Color.Transparent;
+            pic.BorderStyle = BorderStyle.None;
+        }
+
+        private void frmMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            DateTime time = DateTime.UtcNow;    //存时间            
         }
     }
 }

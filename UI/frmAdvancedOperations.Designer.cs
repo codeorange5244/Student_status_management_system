@@ -506,6 +506,7 @@
             // 
             this.dgvRole.AllowUserToAddRows = false;
             this.dgvRole.AllowUserToDeleteRows = false;
+            this.dgvRole.AllowUserToOrderColumns = true;
             this.dgvRole.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRole.BackgroundColor = System.Drawing.Color.White;
             this.dgvRole.ColumnHeadersHeight = 36;
@@ -620,6 +621,7 @@
             this.Controls.Add(this.splitContainer1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAdvancedOperations";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "高级操作";
             this.Load += new System.EventHandler(this.frmAdvancedOperations_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();

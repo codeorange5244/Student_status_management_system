@@ -27,7 +27,7 @@ namespace StudentStatusManageSystem.BLL
         /// <returns></returns>
         public object GetAllCollegeByDelFlag(int delFlag,bool isSpecial)
         {
-            return idal.GetAllCollegeByDelFlag(delFlag);
+            return idal.GetAllCollegeByDelFlag(delFlag,true);
         }
 
         /// <summary>

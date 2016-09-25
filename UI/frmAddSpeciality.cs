@@ -62,6 +62,7 @@ namespace StudentStatusManageSystem.UI
         internal void FormToEdit(Speciality model)
         {
             //填值
+            cbCollege.SelectedValue = model.College_id;
             txtSpecialityName.Text = model.Name;
             txtRemark.Text = model.Remark;
             //卸载事件
@@ -73,14 +74,14 @@ namespace StudentStatusManageSystem.UI
                   //取值
                   Model.Speciality model_speciality = GetModelByUI();
                   model_speciality.Id = model.Id;  //传递model的Id
-                  if (bll.UpdateSpecialityBySpecialityId(model))
+                  if (bll.UpdateSpecialityBySpecialityId(model_speciality))
                   {
                       CCWin.MessageBoxEx.Show("修改成功！！！");
                       this.DialogResult = DialogResult.OK;
                       this.Close();
                   }else
                   {
-                      CCWin.MessageBoxEx.Show("修改失败，该数据可能已被损坏或服务器连接中断，请刷新后重试！");
+                      CCWin.MessageBoxEx.Show("修改失败，该数据可能已被删除或服务器连接中断，请刷新后重试！");
                   }
               });
         }

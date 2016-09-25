@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.skinSplitContainer1 = new CCWin.SkinControl.SkinSplitContainer();
             this.label1 = new System.Windows.Forms.Label();
             this.txtSearchSpeciality = new System.Windows.Forms.TextBox();
@@ -42,6 +42,7 @@
             this.skinLabel1 = new CCWin.SkinControl.SkinLabel();
             this.cbCollege = new CCWin.SkinControl.SkinComboBox();
             this.dgvSepciality = new CCWin.SkinControl.SkinDataGridView();
+            this.specialityId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpecialityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SpecialityRemark = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SubmitterId = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,10 +92,12 @@
             // 
             // txtSearchSpeciality
             // 
+            this.txtSearchSpeciality.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtSearchSpeciality.Location = new System.Drawing.Point(487, 35);
             this.txtSearchSpeciality.Name = "txtSearchSpeciality";
             this.txtSearchSpeciality.Size = new System.Drawing.Size(126, 21);
             this.txtSearchSpeciality.TabIndex = 3;
+            this.txtSearchSpeciality.TextChanged += new System.EventHandler(this.txtSearchSpeciality_TextChanged);
             // 
             // btnDeleteSpeciality
             // 
@@ -109,6 +112,7 @@
             this.btnDeleteSpeciality.TabIndex = 2;
             this.btnDeleteSpeciality.Text = "删除选中";
             this.btnDeleteSpeciality.UseVisualStyleBackColor = false;
+            this.btnDeleteSpeciality.Click += new System.EventHandler(this.btnDeleteSpeciality_Click);
             // 
             // btnEditSpeciality
             // 
@@ -138,6 +142,7 @@
             this.btnSearchSpeciality.TabIndex = 2;
             this.btnSearchSpeciality.Text = "搜索";
             this.btnSearchSpeciality.UseVisualStyleBackColor = false;
+            this.btnSearchSpeciality.Click += new System.EventHandler(this.btnSearchSpeciality_Click);
             // 
             // skinLabel1
             // 
@@ -168,37 +173,39 @@
             // 
             this.dgvSepciality.AllowUserToAddRows = false;
             this.dgvSepciality.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.dgvSepciality.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgvSepciality.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.dgvSepciality.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvSepciality.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvSepciality.BackgroundColor = System.Drawing.SystemColors.Window;
             this.dgvSepciality.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvSepciality.ColumnFont = null;
             this.dgvSepciality.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvSepciality.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvSepciality.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvSepciality.ColumnHeadersHeight = 26;
             this.dgvSepciality.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dgvSepciality.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.specialityId,
             this.SpecialityName,
             this.SpecialityRemark,
             this.SubmitterId,
             this.SubmitDatetime});
             this.dgvSepciality.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvSepciality.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvSepciality.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvSepciality.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvSepciality.EnableHeadersVisualStyles = false;
             this.dgvSepciality.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
@@ -209,11 +216,11 @@
             this.dgvSepciality.ReadOnly = true;
             this.dgvSepciality.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgvSepciality.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.dgvSepciality.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvSepciality.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvSepciality.RowTemplate.Height = 23;
             this.dgvSepciality.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvSepciality.Size = new System.Drawing.Size(813, 373);
@@ -221,6 +228,14 @@
             this.dgvSepciality.TitleBack = null;
             this.dgvSepciality.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvSepciality.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // specialityId
+            // 
+            this.specialityId.DataPropertyName = "Id";
+            this.specialityId.HeaderText = "专业Id";
+            this.specialityId.Name = "specialityId";
+            this.specialityId.ReadOnly = true;
+            this.specialityId.Visible = false;
             // 
             // SpecialityName
             // 
@@ -259,6 +274,7 @@
             this.Controls.Add(this.skinSplitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "frmEditAndDeleteSpeciality";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "查看专业";
             this.Load += new System.EventHandler(this.EditAndDeleteSpeciality_Load);
             this.skinSplitContainer1.Panel1.ResumeLayout(false);
@@ -282,6 +298,7 @@
         private CCWin.SkinControl.SkinButton btnEditSpeciality;
         private CCWin.SkinControl.SkinButton btnSearchSpeciality;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn specialityId;
         private System.Windows.Forms.DataGridViewTextBoxColumn SpecialityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn SpecialityRemark;
         private System.Windows.Forms.DataGridViewTextBoxColumn SubmitterId;

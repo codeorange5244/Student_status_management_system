@@ -29,8 +29,12 @@ namespace StudentStatusManageSystem.UI
 
         private void LoadAllCollegeByDelFlag(int delFalg)
         {
-            BLL.CollegeBLL bll = new BLL.CollegeBLL();
-            dgvCollege.DataSource = bll.GetAllCollegeByDelFlag(delFalg);
+            BLL.CollegeBLL bll = new BLL.CollegeBLL();            
+            dgvCollege.DataSource = bll.GetAllCollegeByDelFlag(delFalg, true);
+            if (dgvCollege.Rows.Count > 0)
+            {
+                dgvCollege.Rows[0].Selected = false;
+            }
         }
 
         private void frmAddAndDeleteCollege_Load(object sender, EventArgs e)
@@ -41,10 +45,10 @@ namespace StudentStatusManageSystem.UI
 
         private void btnDeleteCollege_Click(object sender, EventArgs e)
         {
-            var selected_row = dgvCollege.SelectedRows[0];
             if (dgvCollege.SelectedRows.Count > 0)
             {
-                if (CCWin.MessageBoxEx.Show("是否要删除  " + selected_row.Cells[1].Value.ToString(),"警告",MessageBoxButtons.OKCancel) == DialogResult.OK)
+                var selected_row = dgvCollege.SelectedRows[0];
+                if (CCWin.MessageBoxEx.Show("是否要删除  " + selected_row.Cells[1].Value.ToString(), "警告", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     BLL.CollegeBLL bll = new BLL.CollegeBLL();
                     if (bll.DeleteCollegeByCollegeId(Convert.ToInt32(selected_row.Cells[0].Value), frmMain.current_user.Id))
@@ -54,7 +58,7 @@ namespace StudentStatusManageSystem.UI
                     }
                     else
                     {
-                        CCWin.MessageBoxEx.Show("删除失败，请刷新后重试");
+                        CCWin.MessageBoxEx.Show("删除失败，可能该数据已被删除或服务器异常请刷新后重试");
                     }
 
                 }

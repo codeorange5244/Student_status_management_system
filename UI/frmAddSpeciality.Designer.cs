@@ -58,7 +58,7 @@
             this.btnOk.NormlBack = null;
             this.btnOk.Size = new System.Drawing.Size(107, 36);
             this.btnOk.TabIndex = 11;
-            this.btnOk.Text = "确认添加";
+            this.btnOk.Text = "确认";
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
@@ -140,8 +140,9 @@
             this.Controls.Add(this.txtSpecialityName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.ImeMode = System.Windows.Forms.ImeMode.Off;
+            this.MaximizeBox = false;
             this.Name = "frmAddSpeciality";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "添加或修改专业信息";
             this.Load += new System.EventHandler(this.frmAddSpeciality_Load);
             this.ResumeLayout(false);

@@ -43,6 +43,7 @@
       <HintPath>..\..\自定义控件\WindowsFormsApplication1\bin\Debug\SelfForm.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Xml.Linq" />
@@ -116,6 +117,12 @@
     <Compile Include="frmOther.Designer.cs">
       <DependentUpon>frmOther.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmSpecialityRecycleBin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSpecialityRecycleBin.Designer.cs">
+      <DependentUpon>frmSpecialityRecycleBin.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmEditAndDeleteSpeciality.resx">
@@ -147,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOther.resx">
       <DependentUpon>frmOther.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSpecialityRecycleBin.resx">
+      <DependentUpon>frmSpecialityRecycleBin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
