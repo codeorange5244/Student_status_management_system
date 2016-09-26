@@ -297,5 +297,11 @@ namespace StudentStatusManageSystem.UI
         {
             DateTime time = DateTime.UtcNow;    //存时间            
         }
+
+        private void btnClassInfo_Click(object sender, EventArgs e)
+        {
+            frmAddClassInfo frm = new frmAddClassInfo();
+            frm.Show();
+        }
     }
 }

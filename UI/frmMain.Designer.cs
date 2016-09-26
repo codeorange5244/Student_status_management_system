@@ -47,6 +47,30 @@
             this.picClearRecycleBin = new CCWin.SkinControl.SkinPictureBox();
             this.picSpecialityRecycleBin = new CCWin.SkinControl.SkinPictureBox();
             this.tpClassInfoManage = new CCWin.SkinControl.SkinTabPage();
+            this.skinSplitContainer1 = new CCWin.SkinControl.SkinSplitContainer();
+            this.btnAddClassInfo = new CCWin.SkinControl.SkinButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.skinLabel2 = new CCWin.SkinControl.SkinLabel();
+            this.splitContainer2 = new System.Windows.Forms.SplitContainer();
+            this.tvClassInfo = new CCWin.SkinControl.SkinTreeView();
+            this.imgListTv = new System.Windows.Forms.ImageList(this.components);
+            this.btnClassInfoDelete = new CCWin.SkinControl.SkinButton();
+            this.btnClassInfoCancel = new CCWin.SkinControl.SkinButton();
+            this.btnClassInfoOk = new CCWin.SkinControl.SkinButton();
+            this.labClassInfoId = new System.Windows.Forms.Label();
+            this.dtEnrolmentSchool = new System.Windows.Forms.DateTimePicker();
+            this.cbClassInfoSpeciality = new System.Windows.Forms.ComboBox();
+            this.txtSchollReform = new System.Windows.Forms.TextBox();
+            this.txtClassroom = new System.Windows.Forms.TextBox();
+            this.txtHeadTeacher = new System.Windows.Forms.TextBox();
+            this.txtClassInfoName = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.tpStudentManage = new CCWin.SkinControl.SkinTabPage();
             this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
             this.tpScoreManage = new CCWin.SkinControl.SkinTabPage();
@@ -61,6 +85,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClearRecycleBin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSpecialityRecycleBin)).BeginInit();
+            this.tpClassInfoManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).BeginInit();
+            this.skinSplitContainer1.Panel1.SuspendLayout();
+            this.skinSplitContainer1.Panel2.SuspendLayout();
+            this.skinSplitContainer1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
+            this.splitContainer2.Panel1.SuspendLayout();
+            this.splitContainer2.Panel2.SuspendLayout();
+            this.splitContainer2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdvanced_operations
@@ -250,7 +284,7 @@
             this.btnCollege.DownBack = null;
             this.btnCollege.Font = new System.Drawing.Font("微软雅黑", 12F);
             this.btnCollege.ForeColor = System.Drawing.Color.White;
-            this.btnCollege.Location = new System.Drawing.Point(811, 33);
+            this.btnCollege.Location = new System.Drawing.Point(811, 36);
             this.btnCollege.MouseBack = null;
             this.btnCollege.Name = "btnCollege";
             this.btnCollege.NormlBack = null;
@@ -278,11 +312,11 @@
             // 
             this.labSubmitDate.AutoSize = true;
             this.labSubmitDate.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSubmitDate.Location = new System.Drawing.Point(257, 87);
+            this.labSubmitDate.Location = new System.Drawing.Point(271, 85);
             this.labSubmitDate.Name = "labSubmitDate";
-            this.labSubmitDate.Size = new System.Drawing.Size(116, 17);
+            this.labSubmitDate.Size = new System.Drawing.Size(194, 17);
             this.labSubmitDate.TabIndex = 2;
-            this.labSubmitDate.Text = "最近一次操作时间：";
+            this.labSubmitDate.Text = "开设新学院、新专业、修改专业......";
             // 
             // skinLabel1
             // 
@@ -293,9 +327,9 @@
             this.skinLabel1.ForeColor = System.Drawing.Color.Gray;
             this.skinLabel1.Location = new System.Drawing.Point(254, 33);
             this.skinLabel1.Name = "skinLabel1";
-            this.skinLabel1.Size = new System.Drawing.Size(171, 35);
+            this.skinLabel1.Size = new System.Drawing.Size(119, 35);
             this.skinLabel1.TabIndex = 1;
-            this.skinLabel1.Text = "各大专业操作";
+            this.skinLabel1.Text = "专业管理";
             // 
             // btnSpeciality
             // 
@@ -309,6 +343,7 @@
             this.btnSpeciality.Image = global::StudentStatusManageSystem.UI.Properties.Resources.book_search;
             this.btnSpeciality.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnSpeciality.ImageSize = new System.Drawing.Size(100, 100);
+            this.btnSpeciality.IsDrawBorder = false;
             this.btnSpeciality.Location = new System.Drawing.Point(581, 136);
             this.btnSpeciality.MouseBack = null;
             this.btnSpeciality.Name = "btnSpeciality";
@@ -334,6 +369,7 @@
             this.btnAddSpeciality.Image = global::StudentStatusManageSystem.UI.Properties.Resources.add1;
             this.btnAddSpeciality.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnAddSpeciality.ImageSize = new System.Drawing.Size(90, 90);
+            this.btnAddSpeciality.IsDrawBorder = false;
             this.btnAddSpeciality.Location = new System.Drawing.Point(258, 136);
             this.btnAddSpeciality.MouseBack = null;
             this.btnAddSpeciality.Name = "btnAddSpeciality";
@@ -378,6 +414,7 @@
             // tpClassInfoManage
             // 
             this.tpClassInfoManage.BackColor = System.Drawing.Color.White;
+            this.tpClassInfoManage.Controls.Add(this.skinSplitContainer1);
             this.tpClassInfoManage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpClassInfoManage.Location = new System.Drawing.Point(0, 113);
             this.tpClassInfoManage.Name = "tpClassInfoManage";
@@ -385,6 +422,315 @@
             this.tpClassInfoManage.TabIndex = 2;
             this.tpClassInfoManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.classInfo;
             this.tpClassInfoManage.Text = "班级信息管理";
+            // 
+            // skinSplitContainer1
+            // 
+            this.skinSplitContainer1.Cursor = System.Windows.Forms.Cursors.Default;
+            this.skinSplitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinSplitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
+            this.skinSplitContainer1.Location = new System.Drawing.Point(0, 0);
+            this.skinSplitContainer1.Name = "skinSplitContainer1";
+            this.skinSplitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // skinSplitContainer1.Panel1
+            // 
+            this.skinSplitContainer1.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.skinSplitContainer1.Panel1.Controls.Add(this.btnAddClassInfo);
+            this.skinSplitContainer1.Panel1.Controls.Add(this.pictureBox2);
+            this.skinSplitContainer1.Panel1.Controls.Add(this.label1);
+            this.skinSplitContainer1.Panel1.Controls.Add(this.skinLabel2);
+            // 
+            // skinSplitContainer1.Panel2
+            // 
+            this.skinSplitContainer1.Panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.skinSplitContainer1.Panel2.Controls.Add(this.splitContainer2);
+            this.skinSplitContainer1.Size = new System.Drawing.Size(1129, 558);
+            this.skinSplitContainer1.SplitterDistance = 153;
+            this.skinSplitContainer1.SplitterWidth = 1;
+            this.skinSplitContainer1.TabIndex = 0;
+            // 
+            // btnAddClassInfo
+            // 
+            this.btnAddClassInfo.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddClassInfo.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAddClassInfo.DownBack = null;
+            this.btnAddClassInfo.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnAddClassInfo.ForeColor = System.Drawing.Color.White;
+            this.btnAddClassInfo.Location = new System.Drawing.Point(811, 36);
+            this.btnAddClassInfo.MouseBack = null;
+            this.btnAddClassInfo.Name = "btnAddClassInfo";
+            this.btnAddClassInfo.NormlBack = null;
+            this.btnAddClassInfo.Radius = 60;
+            this.btnAddClassInfo.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAddClassInfo.Size = new System.Drawing.Size(182, 59);
+            this.btnAddClassInfo.TabIndex = 6;
+            this.btnAddClassInfo.Text = "开设新班级";
+            this.btnAddClassInfo.UseVisualStyleBackColor = false;
+            this.btnAddClassInfo.Click += new System.EventHandler(this.btnClassInfo_Click);
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(243)))), ((int)(((byte)(130)))));
+            this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox2.Image = global::StudentStatusManageSystem.UI.Properties.Resources.classInfo;
+            this.pictureBox2.Location = new System.Drawing.Point(70, 21);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(123, 97);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 3;
+            this.pictureBox2.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(271, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(260, 17);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "新增班级，修改班级会议室，更换班主任............";
+            // 
+            // skinLabel2
+            // 
+            this.skinLabel2.AutoSize = true;
+            this.skinLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel2.BorderColor = System.Drawing.Color.White;
+            this.skinLabel2.Font = new System.Drawing.Font("微软雅黑", 19F);
+            this.skinLabel2.ForeColor = System.Drawing.Color.Gray;
+            this.skinLabel2.Location = new System.Drawing.Point(254, 33);
+            this.skinLabel2.Name = "skinLabel2";
+            this.skinLabel2.Size = new System.Drawing.Size(119, 35);
+            this.skinLabel2.TabIndex = 4;
+            this.skinLabel2.Text = "班级管理";
+            // 
+            // splitContainer2
+            // 
+            this.splitContainer2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer2.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer2.Name = "splitContainer2";
+            // 
+            // splitContainer2.Panel1
+            // 
+            this.splitContainer2.Panel1.Controls.Add(this.tvClassInfo);
+            // 
+            // splitContainer2.Panel2
+            // 
+            this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoDelete);
+            this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoCancel);
+            this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoOk);
+            this.splitContainer2.Panel2.Controls.Add(this.labClassInfoId);
+            this.splitContainer2.Panel2.Controls.Add(this.dtEnrolmentSchool);
+            this.splitContainer2.Panel2.Controls.Add(this.cbClassInfoSpeciality);
+            this.splitContainer2.Panel2.Controls.Add(this.txtSchollReform);
+            this.splitContainer2.Panel2.Controls.Add(this.txtClassroom);
+            this.splitContainer2.Panel2.Controls.Add(this.txtHeadTeacher);
+            this.splitContainer2.Panel2.Controls.Add(this.txtClassInfoName);
+            this.splitContainer2.Panel2.Controls.Add(this.label7);
+            this.splitContainer2.Panel2.Controls.Add(this.label6);
+            this.splitContainer2.Panel2.Controls.Add(this.label5);
+            this.splitContainer2.Panel2.Controls.Add(this.label4);
+            this.splitContainer2.Panel2.Controls.Add(this.label3);
+            this.splitContainer2.Panel2.Controls.Add(this.label2);
+            this.splitContainer2.Size = new System.Drawing.Size(1129, 404);
+            this.splitContainer2.SplitterDistance = 376;
+            this.splitContainer2.TabIndex = 0;
+            // 
+            // tvClassInfo
+            // 
+            this.tvClassInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tvClassInfo.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.tvClassInfo.ImageIndex = 0;
+            this.tvClassInfo.ImageList = this.imgListTv;
+            this.tvClassInfo.Indent = 21;
+            this.tvClassInfo.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.tvClassInfo.Location = new System.Drawing.Point(0, 0);
+            this.tvClassInfo.Name = "tvClassInfo";
+            this.tvClassInfo.SelectedImageIndex = 0;
+            this.tvClassInfo.Size = new System.Drawing.Size(376, 404);
+            this.tvClassInfo.TabIndex = 0;
+            // 
+            // imgListTv
+            // 
+            this.imgListTv.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imgListTv.ImageStream")));
+            this.imgListTv.TransparentColor = System.Drawing.Color.Transparent;
+            this.imgListTv.Images.SetKeyName(0, "speciality.png");
+            this.imgListTv.Images.SetKeyName(1, "open129.png");
+            // 
+            // btnClassInfoDelete
+            // 
+            this.btnClassInfoDelete.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassInfoDelete.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnClassInfoDelete.DownBack = null;
+            this.btnClassInfoDelete.ForeColor = System.Drawing.Color.White;
+            this.btnClassInfoDelete.Location = new System.Drawing.Point(663, 349);
+            this.btnClassInfoDelete.MouseBack = null;
+            this.btnClassInfoDelete.Name = "btnClassInfoDelete";
+            this.btnClassInfoDelete.NormlBack = null;
+            this.btnClassInfoDelete.Radius = 20;
+            this.btnClassInfoDelete.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnClassInfoDelete.Size = new System.Drawing.Size(76, 22);
+            this.btnClassInfoDelete.TabIndex = 7;
+            this.btnClassInfoDelete.Text = "删除该班级";
+            this.btnClassInfoDelete.UseVisualStyleBackColor = false;
+            // 
+            // btnClassInfoCancel
+            // 
+            this.btnClassInfoCancel.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassInfoCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnClassInfoCancel.DownBack = null;
+            this.btnClassInfoCancel.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnClassInfoCancel.ForeColor = System.Drawing.Color.White;
+            this.btnClassInfoCancel.Location = new System.Drawing.Point(324, 345);
+            this.btnClassInfoCancel.MouseBack = null;
+            this.btnClassInfoCancel.Name = "btnClassInfoCancel";
+            this.btnClassInfoCancel.NormlBack = null;
+            this.btnClassInfoCancel.Radius = 35;
+            this.btnClassInfoCancel.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnClassInfoCancel.Size = new System.Drawing.Size(112, 33);
+            this.btnClassInfoCancel.TabIndex = 7;
+            this.btnClassInfoCancel.Text = "取消修改";
+            this.btnClassInfoCancel.UseVisualStyleBackColor = false;
+            // 
+            // btnClassInfoOk
+            // 
+            this.btnClassInfoOk.BackColor = System.Drawing.Color.Transparent;
+            this.btnClassInfoOk.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnClassInfoOk.DownBack = null;
+            this.btnClassInfoOk.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnClassInfoOk.ForeColor = System.Drawing.Color.White;
+            this.btnClassInfoOk.Location = new System.Drawing.Point(158, 345);
+            this.btnClassInfoOk.MouseBack = null;
+            this.btnClassInfoOk.Name = "btnClassInfoOk";
+            this.btnClassInfoOk.NormlBack = null;
+            this.btnClassInfoOk.Radius = 35;
+            this.btnClassInfoOk.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnClassInfoOk.Size = new System.Drawing.Size(112, 33);
+            this.btnClassInfoOk.TabIndex = 7;
+            this.btnClassInfoOk.Text = "确认修改";
+            this.btnClassInfoOk.UseVisualStyleBackColor = false;
+            // 
+            // labClassInfoId
+            // 
+            this.labClassInfoId.AutoSize = true;
+            this.labClassInfoId.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labClassInfoId.ForeColor = System.Drawing.Color.White;
+            this.labClassInfoId.Location = new System.Drawing.Point(247, 24);
+            this.labClassInfoId.Name = "labClassInfoId";
+            this.labClassInfoId.Size = new System.Drawing.Size(112, 27);
+            this.labClassInfoId.TabIndex = 4;
+            this.labClassInfoId.Text = "班级编号：";
+            // 
+            // dtEnrolmentSchool
+            // 
+            this.dtEnrolmentSchool.Location = new System.Drawing.Point(498, 261);
+            this.dtEnrolmentSchool.Name = "dtEnrolmentSchool";
+            this.dtEnrolmentSchool.Size = new System.Drawing.Size(145, 21);
+            this.dtEnrolmentSchool.TabIndex = 3;
+            // 
+            // cbClassInfoSpeciality
+            // 
+            this.cbClassInfoSpeciality.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.cbClassInfoSpeciality.FormattingEnabled = true;
+            this.cbClassInfoSpeciality.Location = new System.Drawing.Point(498, 76);
+            this.cbClassInfoSpeciality.Name = "cbClassInfoSpeciality";
+            this.cbClassInfoSpeciality.Size = new System.Drawing.Size(145, 28);
+            this.cbClassInfoSpeciality.TabIndex = 2;
+            // 
+            // txtSchollReform
+            // 
+            this.txtSchollReform.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtSchollReform.Location = new System.Drawing.Point(498, 168);
+            this.txtSchollReform.Multiline = true;
+            this.txtSchollReform.Name = "txtSchollReform";
+            this.txtSchollReform.Size = new System.Drawing.Size(145, 31);
+            this.txtSchollReform.TabIndex = 1;
+            // 
+            // txtClassroom
+            // 
+            this.txtClassroom.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtClassroom.Location = new System.Drawing.Point(129, 168);
+            this.txtClassroom.Multiline = true;
+            this.txtClassroom.Name = "txtClassroom";
+            this.txtClassroom.Size = new System.Drawing.Size(145, 31);
+            this.txtClassroom.TabIndex = 1;
+            // 
+            // txtHeadTeacher
+            // 
+            this.txtHeadTeacher.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtHeadTeacher.Location = new System.Drawing.Point(129, 259);
+            this.txtHeadTeacher.Multiline = true;
+            this.txtHeadTeacher.Name = "txtHeadTeacher";
+            this.txtHeadTeacher.Size = new System.Drawing.Size(145, 31);
+            this.txtHeadTeacher.TabIndex = 1;
+            // 
+            // txtClassInfoName
+            // 
+            this.txtClassInfoName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtClassInfoName.Location = new System.Drawing.Point(129, 77);
+            this.txtClassInfoName.Multiline = true;
+            this.txtClassInfoName.Name = "txtClassInfoName";
+            this.txtClassInfoName.Size = new System.Drawing.Size(145, 31);
+            this.txtClassInfoName.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(408, 262);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(65, 20);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "入校时间";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(37, 265);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.TabIndex = 0;
+            this.label6.Text = "班主任编号";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label5.Location = new System.Drawing.Point(421, 174);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(37, 20);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "学制";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label4.Location = new System.Drawing.Point(51, 174);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(51, 20);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "会议室";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(406, 80);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 20);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "所属专业";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(44, 83);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(65, 20);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "班级名称";
             // 
             // tpStudentManage
             // 
@@ -464,6 +810,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picClearRecycleBin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picSpecialityRecycleBin)).EndInit();
+            this.tpClassInfoManage.ResumeLayout(false);
+            this.skinSplitContainer1.Panel1.ResumeLayout(false);
+            this.skinSplitContainer1.Panel1.PerformLayout();
+            this.skinSplitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinSplitContainer1)).EndInit();
+            this.skinSplitContainer1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.splitContainer2.Panel1.ResumeLayout(false);
+            this.splitContainer2.Panel2.ResumeLayout(false);
+            this.splitContainer2.Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
+            this.splitContainer2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -490,5 +848,29 @@
         private CCWin.SkinControl.SkinButton btnCollege;
         private CCWin.SkinControl.SkinButton btnSpeciality;
         private CCWin.SkinControl.SkinPictureBox picClearRecycleBin;
+        private CCWin.SkinControl.SkinSplitContainer skinSplitContainer1;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private CCWin.SkinControl.SkinLabel skinLabel2;
+        private CCWin.SkinControl.SkinButton btnAddClassInfo;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private CCWin.SkinControl.SkinTreeView tvClassInfo;
+        private System.Windows.Forms.ImageList imgListTv;
+        private System.Windows.Forms.ComboBox cbClassInfoSpeciality;
+        private System.Windows.Forms.TextBox txtSchollReform;
+        private System.Windows.Forms.TextBox txtClassroom;
+        private System.Windows.Forms.TextBox txtClassInfoName;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labClassInfoId;
+        private System.Windows.Forms.DateTimePicker dtEnrolmentSchool;
+        private System.Windows.Forms.TextBox txtHeadTeacher;
+        private System.Windows.Forms.Label label7;
+        private CCWin.SkinControl.SkinButton btnClassInfoCancel;
+        private CCWin.SkinControl.SkinButton btnClassInfoOk;
+        private CCWin.SkinControl.SkinButton btnClassInfoDelete;
     }
 }
