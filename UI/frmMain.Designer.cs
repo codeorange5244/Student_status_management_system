@@ -626,6 +626,7 @@
             // 
             // dtEnrolmentSchool
             // 
+            this.dtEnrolmentSchool.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.dtEnrolmentSchool.Location = new System.Drawing.Point(498, 261);
             this.dtEnrolmentSchool.Name = "dtEnrolmentSchool";
             this.dtEnrolmentSchool.Size = new System.Drawing.Size(145, 21);
@@ -635,6 +636,7 @@
             // 
             this.cbClassInfoSpeciality.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbClassInfoSpeciality.FormattingEnabled = true;
+            this.cbClassInfoSpeciality.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.cbClassInfoSpeciality.Location = new System.Drawing.Point(498, 76);
             this.cbClassInfoSpeciality.Name = "cbClassInfoSpeciality";
             this.cbClassInfoSpeciality.Size = new System.Drawing.Size(145, 28);
@@ -643,6 +645,7 @@
             // txtSchollReform
             // 
             this.txtSchollReform.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtSchollReform.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtSchollReform.Location = new System.Drawing.Point(498, 168);
             this.txtSchollReform.Multiline = true;
             this.txtSchollReform.Name = "txtSchollReform";
@@ -652,6 +655,7 @@
             // txtRoomName
             // 
             this.txtRoomName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtRoomName.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtRoomName.Location = new System.Drawing.Point(129, 168);
             this.txtRoomName.Multiline = true;
             this.txtRoomName.Name = "txtRoomName";
@@ -661,6 +665,7 @@
             // txtHeadTeacher
             // 
             this.txtHeadTeacher.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtHeadTeacher.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtHeadTeacher.Location = new System.Drawing.Point(129, 259);
             this.txtHeadTeacher.Multiline = true;
             this.txtHeadTeacher.Name = "txtHeadTeacher";
@@ -670,6 +675,7 @@
             // txtClassInfoName
             // 
             this.txtClassInfoName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtClassInfoName.ImeMode = System.Windows.Forms.ImeMode.Disable;
             this.txtClassInfoName.Location = new System.Drawing.Point(129, 77);
             this.txtClassInfoName.Multiline = true;
             this.txtClassInfoName.Name = "txtClassInfoName";

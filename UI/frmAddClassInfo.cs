@@ -12,17 +12,26 @@ using System.Windows.Forms;
 namespace StudentStatusManageSystem.UI
 {
     public partial class frmAddClassInfo : CCWin.CCSkinMain
-    {
+    {  
         public frmAddClassInfo()
         {
             InitializeComponent();
-        }
-        public frmAddClassInfo(Action<string> delegate_y):this()
+        } 
+
+        public frmAddClassInfo(Action<string> delegate_y, Func<object, ClassInfo> delegate_u) : this()
         {
             this.delegate_y = delegate_y;
+            this.delegate_u = delegate_u;
         }
 
+        /// <summary>
+        /// 检查是否存在会议室
+        /// </summary>
         private Action<string> delegate_y;
+        /// <summary>
+        /// 取值->生成model_ClassInfo
+        /// </summary>
+        private Func<object, ClassInfo> delegate_u;
 
         private void frmAddClassInfo_Load(object sender, EventArgs e)
         {
@@ -51,14 +60,7 @@ namespace StudentStatusManageSystem.UI
                 if (CCWin.MessageBoxEx.Show("确认要新增该班级吗？请注意核对各项信息", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     //取值生成 model对象
-                    ClassInfo model = new ClassInfo();
-                    model.Name = txtClassInfoName.Text.Trim();
-                    model.Room_name = txtRoomName.Text.Trim();
-                    model.School_reform = txtSchollReform.Text.Trim();
-                    model.Specility_id = Convert.ToInt32(cbClassInfoSpeciality.SelectedValue);
-                    model.Headteacher = txtHeadTeacher.Text.Trim();
-                    model.Enrolment_time = dtEnrolmentSchool.Value;
-                    model.Submitter_id = frmMain.current_user.Id;
+                    ClassInfo model = delegate_u(this);                  
                 }
             }
         }

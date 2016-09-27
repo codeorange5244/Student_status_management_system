@@ -16,10 +16,11 @@ using CCWin.SkinControl;
 using System.Runtime.InteropServices;
 using SelfForm;
 using System.Configuration;
+using System.Reflection;
 
 namespace StudentStatusManageSystem.UI
 {
-  //  public delegate ClassInfo GMFUI(object sender);
+    //  public delegate ClassInfo GMFUI(object sender);
     public partial class frmMain : CCSkinMain
     {
         public frmMain()
@@ -210,7 +211,7 @@ namespace StudentStatusManageSystem.UI
         //专业设置
         private void LoadSpecialitySetting()
         {
-            
+
         }
 
         //系统设置
@@ -237,20 +238,20 @@ namespace StudentStatusManageSystem.UI
         /// <returns></returns>
         //private ClassInfo GetModelFormUI(object sender)
         //{
-            //unsafe
-            //{
+        //unsafe
+        //{
 
-                //Form this_form = (Form)sender;
-                //ClassInfo model = new ClassInfo();
-                //model.Name =this_form.txtClassInfoName.Text.Trim(); 
-                //model.Room_name = this_form.txtRoomName.Text.Trim();
-                //model.School_reform = this_form.txtSchollReform.Text.Trim();
-                //model.Specility_id = Convert.ToInt32(this_form.cbClassInfoSpeciality.SelectedValue);
-                //model.Headteacher = this_form.txtHeadTeacher.Text.Trim();
-                //model.Enrolment_time = this_form.dtEnrolmentSchool.Value;
-                //model.Submitter_id = frmMain.current_user.Id;
-                //return model;
-          //  }
+        //Form this_form = (Form)sender;
+        //ClassInfo model = new ClassInfo();
+        //model.Name =this_form.txtClassInfoName.Text.Trim(); 
+        //model.Room_name = this_form.txtRoomName.Text.Trim();
+        //model.School_reform = this_form.txtSchollReform.Text.Trim();
+        //model.Specility_id = Convert.ToInt32(this_form.cbClassInfoSpeciality.SelectedValue);
+        //model.Headteacher = this_form.txtHeadTeacher.Text.Trim();
+        //model.Enrolment_time = this_form.dtEnrolmentSchool.Value;
+        //model.Submitter_id = frmMain.current_user.Id;
+        //return model;
+        //  }
         //}
 
         private void btnAddSpeciality_MouseEnter(object sender, EventArgs e)
@@ -328,7 +329,8 @@ namespace StudentStatusManageSystem.UI
         private void btnClassInfo_Click(object sender, EventArgs e)
         {
             Action<string> delegate_y = new Action<string>(CheckRoomByRoomName);
-            frmAddClassInfo frm = new frmAddClassInfo(delegate_y);
+            Func<object, ClassInfo> delegate_u = new Func<object, ClassInfo>(GetPrivateField);
+            frmAddClassInfo frm = new frmAddClassInfo(delegate_y,delegate_u);
             frm.Show();
         }
 
@@ -344,17 +346,49 @@ namespace StudentStatusManageSystem.UI
                 if (CCWin.MessageBoxEx.Show("确认要新增该班级吗？请注意核对各项信息", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     //取值生成 model对象
-                    ClassInfo model = new ClassInfo();
-                    model.Name = txtClassInfoName.Text.Trim();
-                    model.Room_name = txtRoomName.Text.Trim();
-                    model.School_reform = txtSchollReform.Text.Trim();
-                    model.Specility_id = Convert.ToInt32(cbClassInfoSpeciality.SelectedValue);
-                    model.Headteacher = txtHeadTeacher.Text.Trim();
-                    model.Enrolment_time = dtEnrolmentSchool.Value;
-                    model.Submitter_id = frmMain.current_user.Id;
+                    ClassInfo model = GetPrivateField(this);
+
                 }
-            }        
+            }
+
+
+          
+
+            
+        }    
+
+        /// <summary>
+        /// 两个窗体有相同的控件，利用反射取值建模model，共用一个该方法
+        /// </summary>
+        /// <param name="instance">需要从哪一个窗体取值</param>
+        /// <returns>model</returns>
+        public ClassInfo GetPrivateField(object instance)
+        {
+            ClassInfo model = new ClassInfo();  
+
+            BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;    //搜索的范围
+            Type type = instance.GetType(); //获得窗体类型
+
+            //得到6个控件
+            FieldInfo txtClassInfoName = type.GetField("txtClassInfoName", flags);  //得到窗体上的控件
+            FieldInfo cbClassInfoSpeciality = type.GetField("cbClassInfoSpeciality", flags);
+            FieldInfo txtHeadTeacher = type.GetField("txtHeadTeacher", flags);
+            FieldInfo txtRoomName = type.GetField("txtRoomName", flags);
+            FieldInfo txtSchollReform = type.GetField("txtSchollReform", flags);
+            FieldInfo dtEnrolmentSchool = type.GetField("dtEnrolmentSchool", flags);
+
+            //赋值
+            model.Name = (txtClassInfoName.GetValue(instance) as TextBox).Text.Trim();  //得到的控件强转、取值
+            model.Specility_id = (int)(cbClassInfoSpeciality.GetValue(instance) as ComboBox).SelectedValue;
+            model.Headteacher = (txtHeadTeacher.GetValue(instance) as TextBox).Text.Trim();
+            model.Room_name = (txtRoomName.GetValue(instance) as TextBox).Text.Trim();
+            model.School_reform = (txtSchollReform.GetValue(instance) as TextBox).Text.Trim();
+            model.Enrolment_time = (dtEnrolmentSchool.GetValue(instance) as DateTimePicker).Value;
+
+            model.Submitter_id = frmMain.current_user.Id;
+            return model;   
         }
+
         //检查用户输入
         private bool CheckTxt_classInfo()
         {

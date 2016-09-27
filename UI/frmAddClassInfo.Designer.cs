@@ -88,6 +88,7 @@
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(145, 25);
             this.txtRoomName.TabIndex = 24;
+            this.txtRoomName.Text = "得到了吗";
             // 
             // txtHeadTeacher
             // 
