@@ -62,7 +62,7 @@
             this.dtEnrolmentSchool = new System.Windows.Forms.DateTimePicker();
             this.cbClassInfoSpeciality = new System.Windows.Forms.ComboBox();
             this.txtSchollReform = new System.Windows.Forms.TextBox();
-            this.txtClassroom = new System.Windows.Forms.TextBox();
+            this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtHeadTeacher = new System.Windows.Forms.TextBox();
             this.txtClassInfoName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@
             this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
             this.tpScoreManage = new CCWin.SkinControl.SkinTabPage();
             this.tpAboutMe = new CCWin.SkinControl.SkinTabPage();
+            this.lbCheckRoom = new System.Windows.Forms.Label();
             this.skinTabControl1.SuspendLayout();
             this.tpSystemSetting.SuspendLayout();
             this.tpSpecialitySetting.SuspendLayout();
@@ -214,7 +215,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageNormlTxtColor = System.Drawing.Color.White;
-            this.skinTabControl1.SelectedIndex = 1;
+            this.skinTabControl1.SelectedIndex = 2;
             this.skinTabControl1.Size = new System.Drawing.Size(1129, 671);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 1;
@@ -414,6 +415,7 @@
             // tpClassInfoManage
             // 
             this.tpClassInfoManage.BackColor = System.Drawing.Color.White;
+            this.tpClassInfoManage.BorderColor = System.Drawing.Color.White;
             this.tpClassInfoManage.Controls.Add(this.skinSplitContainer1);
             this.tpClassInfoManage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpClassInfoManage.Location = new System.Drawing.Point(0, 113);
@@ -515,6 +517,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.lbCheckRoom);
             this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoDelete);
             this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoCancel);
             this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoOk);
@@ -522,7 +525,7 @@
             this.splitContainer2.Panel2.Controls.Add(this.dtEnrolmentSchool);
             this.splitContainer2.Panel2.Controls.Add(this.cbClassInfoSpeciality);
             this.splitContainer2.Panel2.Controls.Add(this.txtSchollReform);
-            this.splitContainer2.Panel2.Controls.Add(this.txtClassroom);
+            this.splitContainer2.Panel2.Controls.Add(this.txtRoomName);
             this.splitContainer2.Panel2.Controls.Add(this.txtHeadTeacher);
             this.splitContainer2.Panel2.Controls.Add(this.txtClassInfoName);
             this.splitContainer2.Panel2.Controls.Add(this.label7);
@@ -608,6 +611,7 @@
             this.btnClassInfoOk.TabIndex = 7;
             this.btnClassInfoOk.Text = "确认修改";
             this.btnClassInfoOk.UseVisualStyleBackColor = false;
+            this.btnClassInfoOk.Click += new System.EventHandler(this.btnClassInfoOk_Click);
             // 
             // labClassInfoId
             // 
@@ -645,14 +649,14 @@
             this.txtSchollReform.Size = new System.Drawing.Size(145, 31);
             this.txtSchollReform.TabIndex = 1;
             // 
-            // txtClassroom
+            // txtRoomName
             // 
-            this.txtClassroom.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.txtClassroom.Location = new System.Drawing.Point(129, 168);
-            this.txtClassroom.Multiline = true;
-            this.txtClassroom.Name = "txtClassroom";
-            this.txtClassroom.Size = new System.Drawing.Size(145, 31);
-            this.txtClassroom.TabIndex = 1;
+            this.txtRoomName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtRoomName.Location = new System.Drawing.Point(129, 168);
+            this.txtRoomName.Multiline = true;
+            this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.Size = new System.Drawing.Size(145, 31);
+            this.txtRoomName.TabIndex = 1;
             // 
             // txtHeadTeacher
             // 
@@ -686,11 +690,11 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(37, 265);
+            this.label6.Location = new System.Drawing.Point(48, 265);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 0;
-            this.label6.Text = "班主任编号";
+            this.label6.Text = "班主任";
             // 
             // label5
             // 
@@ -706,7 +710,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(51, 174);
+            this.label4.Location = new System.Drawing.Point(48, 174);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 0;
@@ -726,7 +730,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(44, 83);
+            this.label2.Location = new System.Drawing.Point(41, 83);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 0;
@@ -777,6 +781,17 @@
             this.tpAboutMe.TabIndex = 6;
             this.tpAboutMe.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.question11;
             this.tpAboutMe.Text = "关于";
+            // 
+            // lbCheckRoom
+            // 
+            this.lbCheckRoom.AutoSize = true;
+            this.lbCheckRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCheckRoom.Location = new System.Drawing.Point(291, 180);
+            this.lbCheckRoom.Name = "lbCheckRoom";
+            this.lbCheckRoom.Size = new System.Drawing.Size(53, 12);
+            this.lbCheckRoom.TabIndex = 32;
+            this.lbCheckRoom.Text = "点击校验";
+            this.lbCheckRoom.Click += new System.EventHandler(this.lbCheckRoom_Click);
             // 
             // frmMain
             // 
@@ -858,7 +873,7 @@
         private System.Windows.Forms.ImageList imgListTv;
         private System.Windows.Forms.ComboBox cbClassInfoSpeciality;
         private System.Windows.Forms.TextBox txtSchollReform;
-        private System.Windows.Forms.TextBox txtClassroom;
+        private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.TextBox txtClassInfoName;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -872,5 +887,6 @@
         private CCWin.SkinControl.SkinButton btnClassInfoCancel;
         private CCWin.SkinControl.SkinButton btnClassInfoOk;
         private CCWin.SkinControl.SkinButton btnClassInfoDelete;
+        private System.Windows.Forms.Label lbCheckRoom;
     }
 }

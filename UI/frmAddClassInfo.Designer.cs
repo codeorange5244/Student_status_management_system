@@ -33,7 +33,7 @@
             this.dtEnrolmentSchool = new System.Windows.Forms.DateTimePicker();
             this.cbClassInfoSpeciality = new System.Windows.Forms.ComboBox();
             this.txtSchollReform = new System.Windows.Forms.TextBox();
-            this.txtClassroom = new System.Windows.Forms.TextBox();
+            this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtHeadTeacher = new System.Windows.Forms.TextBox();
             this.txtClassInfoName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -43,6 +43,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.lbCheckRoom = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOk
@@ -54,6 +55,7 @@
             this.btnOk.TabIndex = 30;
             this.btnOk.Text = "确认";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // dtEnrolmentSchool
             // 
@@ -75,36 +77,32 @@
             // 
             this.txtSchollReform.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.txtSchollReform.Location = new System.Drawing.Point(127, 297);
-            this.txtSchollReform.Multiline = true;
             this.txtSchollReform.Name = "txtSchollReform";
-            this.txtSchollReform.Size = new System.Drawing.Size(145, 31);
+            this.txtSchollReform.Size = new System.Drawing.Size(145, 25);
             this.txtSchollReform.TabIndex = 23;
             // 
-            // txtClassroom
+            // txtRoomName
             // 
-            this.txtClassroom.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.txtClassroom.Location = new System.Drawing.Point(127, 232);
-            this.txtClassroom.Multiline = true;
-            this.txtClassroom.Name = "txtClassroom";
-            this.txtClassroom.Size = new System.Drawing.Size(145, 31);
-            this.txtClassroom.TabIndex = 24;
+            this.txtRoomName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtRoomName.Location = new System.Drawing.Point(127, 232);
+            this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.Size = new System.Drawing.Size(145, 25);
+            this.txtRoomName.TabIndex = 24;
             // 
             // txtHeadTeacher
             // 
             this.txtHeadTeacher.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.txtHeadTeacher.Location = new System.Drawing.Point(127, 167);
-            this.txtHeadTeacher.Multiline = true;
             this.txtHeadTeacher.Name = "txtHeadTeacher";
-            this.txtHeadTeacher.Size = new System.Drawing.Size(145, 31);
+            this.txtHeadTeacher.Size = new System.Drawing.Size(145, 25);
             this.txtHeadTeacher.TabIndex = 25;
             // 
             // txtClassInfoName
             // 
             this.txtClassInfoName.Font = new System.Drawing.Font("微软雅黑", 10F);
             this.txtClassInfoName.Location = new System.Drawing.Point(127, 40);
-            this.txtClassInfoName.Multiline = true;
             this.txtClassInfoName.Name = "txtClassInfoName";
-            this.txtClassInfoName.Size = new System.Drawing.Size(145, 31);
+            this.txtClassInfoName.Size = new System.Drawing.Size(145, 25);
             this.txtClassInfoName.TabIndex = 26;
             // 
             // label7
@@ -121,17 +119,17 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(35, 172);
+            this.label6.Location = new System.Drawing.Point(44, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(79, 20);
+            this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 18;
-            this.label6.Text = "班主任编号";
+            this.label6.Text = "班主任";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(50, 298);
+            this.label5.Location = new System.Drawing.Point(51, 298);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 20);
             this.label5.TabIndex = 19;
@@ -141,7 +139,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(49, 235);
+            this.label4.Location = new System.Drawing.Point(44, 235);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(51, 20);
             this.label4.TabIndex = 20;
@@ -151,7 +149,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(35, 109);
+            this.label3.Location = new System.Drawing.Point(37, 109);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(65, 20);
             this.label3.TabIndex = 21;
@@ -161,7 +159,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(42, 46);
+            this.label2.Location = new System.Drawing.Point(37, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 22;
@@ -178,18 +176,30 @@
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // lbCheckRoom
+            // 
+            this.lbCheckRoom.AutoSize = true;
+            this.lbCheckRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCheckRoom.Location = new System.Drawing.Point(279, 239);
+            this.lbCheckRoom.Name = "lbCheckRoom";
+            this.lbCheckRoom.Size = new System.Drawing.Size(53, 12);
+            this.lbCheckRoom.TabIndex = 31;
+            this.lbCheckRoom.Text = "点击校验";
+            this.lbCheckRoom.Click += new System.EventHandler(this.lbCheckRoom_Click);
+            // 
             // frmAddClassInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(255)))));
             this.ClientSize = new System.Drawing.Size(349, 493);
+            this.Controls.Add(this.lbCheckRoom);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dtEnrolmentSchool);
             this.Controls.Add(this.cbClassInfoSpeciality);
             this.Controls.Add(this.txtSchollReform);
-            this.Controls.Add(this.txtClassroom);
+            this.Controls.Add(this.txtRoomName);
             this.Controls.Add(this.txtHeadTeacher);
             this.Controls.Add(this.txtClassInfoName);
             this.Controls.Add(this.label7);
@@ -214,7 +224,7 @@
         private System.Windows.Forms.DateTimePicker dtEnrolmentSchool;
         private System.Windows.Forms.ComboBox cbClassInfoSpeciality;
         private System.Windows.Forms.TextBox txtSchollReform;
-        private System.Windows.Forms.TextBox txtClassroom;
+        private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.TextBox txtHeadTeacher;
         private System.Windows.Forms.TextBox txtClassInfoName;
         private System.Windows.Forms.Label label7;
@@ -224,5 +234,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnCancel;
+        private System.Windows.Forms.Label lbCheckRoom;
     }
 }

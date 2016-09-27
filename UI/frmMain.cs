@@ -19,6 +19,7 @@ using System.Configuration;
 
 namespace StudentStatusManageSystem.UI
 {
+  //  public delegate ClassInfo GMFUI(object sender);
     public partial class frmMain : CCSkinMain
     {
         public frmMain()
@@ -202,14 +203,15 @@ namespace StudentStatusManageSystem.UI
         //班级信息管理
         private void LoadClassInfoManage()
         {
-
+            //加载专业信息
+            SpecialityBLL bll = new SpecialityBLL();
         }
 
         //专业设置
         private void LoadSpecialitySetting()
         {
-            labSubmitDate.Text+= ConfigurationManager.AppSettings["lastOperateSpecialityDatetime"].ToString();  //最后一次操作时间
-    }
+            
+        }
 
         //系统设置
         private void LoadSystemSetting()
@@ -227,6 +229,30 @@ namespace StudentStatusManageSystem.UI
             }
         }
 
+        /// <summary>
+        /// 根据用户输入界面的值得到“班级”对象
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        /// <returns></returns>
+        //private ClassInfo GetModelFormUI(object sender)
+        //{
+            //unsafe
+            //{
+
+                //Form this_form = (Form)sender;
+                //ClassInfo model = new ClassInfo();
+                //model.Name =this_form.txtClassInfoName.Text.Trim(); 
+                //model.Room_name = this_form.txtRoomName.Text.Trim();
+                //model.School_reform = this_form.txtSchollReform.Text.Trim();
+                //model.Specility_id = Convert.ToInt32(this_form.cbClassInfoSpeciality.SelectedValue);
+                //model.Headteacher = this_form.txtHeadTeacher.Text.Trim();
+                //model.Enrolment_time = this_form.dtEnrolmentSchool.Value;
+                //model.Submitter_id = frmMain.current_user.Id;
+                //return model;
+          //  }
+        //}
+
         private void btnAddSpeciality_MouseEnter(object sender, EventArgs e)
         {
             ((SkinButton)sender).BaseColor = Color.FromArgb(9, 163, 220);
@@ -239,15 +265,16 @@ namespace StudentStatusManageSystem.UI
 
         private void picClearRecycleBin_Click(object sender, EventArgs e)
         {
-            if (CCWin.MessageBoxEx.Show("确定要清空回收站吗？将会永久删除数据", "警告！！", MessageBoxButtons.OKCancel)== DialogResult.OK)
+            if (CCWin.MessageBoxEx.Show("确定要清空回收站吗？将会永久删除数据", "警告！！", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
                 SpecialityBLL bll = new SpecialityBLL();
                 if (bll.DeleteAllDeletedSpeciality(frmMain.current_user.Id))
                 {
                     CCWin.MessageBoxEx.Show("清空成功！！");
-                }else
+                }
+                else
                 {
-                    CCWin.MessageBoxEx.Show("清空失败，请刷新后重试");                   
+                    CCWin.MessageBoxEx.Show("清空失败，请刷新后重试");
                 }
 
             }
@@ -271,7 +298,7 @@ namespace StudentStatusManageSystem.UI
             frmEditAndDeleteSpeciality frm = new frmEditAndDeleteSpeciality();
             frm.Show();
         }
-        
+
         //专业回收站
         private void picSpecialityRecycleBin_Click(object sender, EventArgs e)
         {
@@ -297,11 +324,68 @@ namespace StudentStatusManageSystem.UI
         {
             DateTime time = DateTime.UtcNow;    //存时间            
         }
-
+        //开设新班级
         private void btnClassInfo_Click(object sender, EventArgs e)
         {
-            frmAddClassInfo frm = new frmAddClassInfo();
+            Action<string> delegate_y = new Action<string>(CheckRoomByRoomName);
+            frmAddClassInfo frm = new frmAddClassInfo(delegate_y);
             frm.Show();
+        }
+
+        #region 效果设置
+
+        #endregion
+        //确认修改班级信息
+        private void btnClassInfoOk_Click(object sender, EventArgs e)
+        {
+            //检查用户输入
+            if (CheckTxt_classInfo())
+            {
+                if (CCWin.MessageBoxEx.Show("确认要新增该班级吗？请注意核对各项信息", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                {
+                    //取值生成 model对象
+                    ClassInfo model = new ClassInfo();
+                    model.Name = txtClassInfoName.Text.Trim();
+                    model.Room_name = txtRoomName.Text.Trim();
+                    model.School_reform = txtSchollReform.Text.Trim();
+                    model.Specility_id = Convert.ToInt32(cbClassInfoSpeciality.SelectedValue);
+                    model.Headteacher = txtHeadTeacher.Text.Trim();
+                    model.Enrolment_time = dtEnrolmentSchool.Value;
+                    model.Submitter_id = frmMain.current_user.Id;
+                }
+            }        
+        }
+        //检查用户输入
+        private bool CheckTxt_classInfo()
+        {
+            string msg = "";
+            if (string.IsNullOrEmpty(txtClassInfoName.Text))
+            {
+                msg += "请输入班级名称\r\n";
+            }
+            if (string.IsNullOrEmpty(txtRoomName.Text))
+            {
+                msg += "请输入班级固定会议室地点\r\n";
+            }
+            if (msg == "")
+            {
+                return true;
+            }
+            else
+            {
+                CCWin.MessageBoxEx.Show(msg);
+                return false;
+            }
+        }
+        //校验是否存在 会议室
+        private void lbCheckRoom_Click(object sender, EventArgs e)
+        {
+            CheckRoomByRoomName(txtRoomName.Text);
+        }
+        //根据会议室名检查存在性
+        private void CheckRoomByRoomName(string name)
+        {
+            MessageBox.Show("检查会议室存在性");
         }
     }
 }
