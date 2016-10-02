@@ -85,5 +85,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.DeleteAllDeletedSpeciality(submitter_id) > 0;
         }
+
+        /// <summary>
+        ///获取所有“专业” 的Id-Name 键值对
+        /// </summary>
+        /// <param name="delFlag">删除标识：0---未删除，1---已删除</param>
+        /// <returns></returns>
+        public Dictionary<int, string> GetAllspecialityIdAndNameByDelFlag(int delFlag)
+        {
+            return idal.GetAllspecialityIdAndNameByDelFlag(delFlag);
+        }
     }
 }

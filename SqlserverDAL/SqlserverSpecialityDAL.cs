@@ -149,5 +149,20 @@ namespace StudentStatusManageSystem.SqlserverDAL
             string sql = "Update SpecialityInfo set [DelFlag]=2 ,[Submitter_id]=" + submitter_id + ",[Submit_datetime]=getdate()";
             return SqlserverHelper.ExecuteNonQuery(sql);
         }
+
+        public Dictionary<int, string> GetAllspecialityIdAndNameByDelFlag(int delFlag)
+        {
+            string sql = "select [Id],[Name] from SpecialityInfo where [DelFlag]=" + delFlag;
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dictionary.Add(Convert.ToInt32(dr[0]), dr[1].ToString());
+                }
+            }
+            return dictionary;
+        }
     }
 }

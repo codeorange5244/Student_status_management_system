@@ -1,4 +1,5 @@
-﻿using StudentStatusManageSystem.Model;
+﻿using StudentStatusManageSystem.BLL;
+using StudentStatusManageSystem.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,7 +37,7 @@ namespace StudentStatusManageSystem.UI
         private void frmAddClassInfo_Load(object sender, EventArgs e)
         {
             
-            //145, 31
+            ///145, 31
             foreach (Control ctl in Controls)
             {
                 if (ctl is TextBox)
@@ -45,6 +46,21 @@ namespace StudentStatusManageSystem.UI
                     ctl.Size = new Size(145, 31);
                 }
             }
+            ///加载所有专业
+            LoadAllSpecialityByDelFlag();            
+        }
+
+        private void LoadAllSpecialityByDelFlag()
+        {
+            SpecialityBLL bll = new SpecialityBLL();
+
+            cbClassInfoSpeciality.DataSource = bll.GetAllspecialityIdAndNameByDelFlag(0).ToList();
+            cbClassInfoSpeciality.DisplayMember = "Value";
+            cbClassInfoSpeciality.ValueMember = "Key";
+
+          //  cbClassInfoSpeciality.DataSource = bll.GetAllSpecialityByDelFlag(0);
+            //cbClassInfoSpeciality.DisplayMember = "Name";
+            //cbClassInfoSpeciality.ValueMember = "Id";            
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -60,7 +76,16 @@ namespace StudentStatusManageSystem.UI
                 if (CCWin.MessageBoxEx.Show("确认要新增该班级吗？请注意核对各项信息", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
                 {
                     //取值生成 model对象
-                    ClassInfo model = delegate_u(this);                  
+                    ClassInfo model = delegate_u(this);
+                    ClassInfoBLL bll = new ClassInfoBLL();
+                    if(bll.AddClassInfo(model))
+                    {
+                        CCWin.MessageBoxEx.Show("添加  " + model.Name + "  班级成功！");
+                        this.Dispose();
+                    }else
+                    {
+                        CCWin.MessageBoxEx.Show("添加失败，请检查数据后重试");
+                    }
                 }
             }
         }

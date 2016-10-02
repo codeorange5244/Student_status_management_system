@@ -64,6 +64,12 @@
     <Compile Include="frmAddClassInfo.Designer.cs">
       <DependentUpon>frmAddClassInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddCourse.Designer.cs">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditAndDeleteSpeciality.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAddClassInfo.resx">
       <DependentUpon>frmAddClassInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddCourse.resx">
+      <DependentUpon>frmAddCourse.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditAndDeleteSpeciality.resx">
       <DependentUpon>frmEditAndDeleteSpeciality.cs</DependentUpon>
@@ -259,6 +268,7 @@
   <ItemGroup>
     <None Include="Resources\book_search.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

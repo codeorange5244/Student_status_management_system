@@ -32,7 +32,7 @@
             this.btnOk = new System.Windows.Forms.Button();
             this.dtEnrolmentSchool = new System.Windows.Forms.DateTimePicker();
             this.cbClassInfoSpeciality = new System.Windows.Forms.ComboBox();
-            this.txtSchollReform = new System.Windows.Forms.TextBox();
+            this.txtSchoolReform = new System.Windows.Forms.TextBox();
             this.txtRoomName = new System.Windows.Forms.TextBox();
             this.txtHeadTeacher = new System.Windows.Forms.TextBox();
             this.txtClassInfoName = new System.Windows.Forms.TextBox();
@@ -68,43 +68,51 @@
             // 
             this.cbClassInfoSpeciality.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.cbClassInfoSpeciality.FormattingEnabled = true;
+            this.cbClassInfoSpeciality.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbClassInfoSpeciality.Location = new System.Drawing.Point(127, 105);
             this.cbClassInfoSpeciality.Name = "cbClassInfoSpeciality";
             this.cbClassInfoSpeciality.Size = new System.Drawing.Size(145, 28);
             this.cbClassInfoSpeciality.TabIndex = 27;
             // 
-            // txtSchollReform
+            // txtSchoolReform
             // 
-            this.txtSchollReform.Font = new System.Drawing.Font("微软雅黑", 10F);
-            this.txtSchollReform.Location = new System.Drawing.Point(127, 297);
-            this.txtSchollReform.Name = "txtSchollReform";
-            this.txtSchollReform.Size = new System.Drawing.Size(145, 25);
-            this.txtSchollReform.TabIndex = 23;
+            this.txtSchoolReform.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtSchoolReform.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtSchoolReform.Location = new System.Drawing.Point(127, 297);
+            this.txtSchoolReform.Name = "txtSchoolReform";
+            this.txtSchoolReform.Size = new System.Drawing.Size(145, 25);
+            this.txtSchoolReform.TabIndex = 23;
+            this.txtSchoolReform.Text = "2016-2020";
             // 
             // txtRoomName
             // 
             this.txtRoomName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtRoomName.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtRoomName.Location = new System.Drawing.Point(127, 232);
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(145, 25);
             this.txtRoomName.TabIndex = 24;
-            this.txtRoomName.Text = "得到了吗";
+            this.txtRoomName.Text = "开会";
             // 
             // txtHeadTeacher
             // 
             this.txtHeadTeacher.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtHeadTeacher.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtHeadTeacher.Location = new System.Drawing.Point(127, 167);
             this.txtHeadTeacher.Name = "txtHeadTeacher";
             this.txtHeadTeacher.Size = new System.Drawing.Size(145, 25);
             this.txtHeadTeacher.TabIndex = 25;
+            this.txtHeadTeacher.Text = "不知";
             // 
             // txtClassInfoName
             // 
             this.txtClassInfoName.Font = new System.Drawing.Font("微软雅黑", 10F);
+            this.txtClassInfoName.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtClassInfoName.Location = new System.Drawing.Point(127, 40);
             this.txtClassInfoName.Name = "txtClassInfoName";
             this.txtClassInfoName.Size = new System.Drawing.Size(145, 25);
             this.txtClassInfoName.TabIndex = 26;
+            this.txtClassInfoName.Text = "测试班";
             // 
             // label7
             // 
@@ -199,7 +207,7 @@
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.dtEnrolmentSchool);
             this.Controls.Add(this.cbClassInfoSpeciality);
-            this.Controls.Add(this.txtSchollReform);
+            this.Controls.Add(this.txtSchoolReform);
             this.Controls.Add(this.txtRoomName);
             this.Controls.Add(this.txtHeadTeacher);
             this.Controls.Add(this.txtClassInfoName);
@@ -211,8 +219,10 @@
             this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.On;
             this.MaximizeBox = false;
             this.Name = "frmAddClassInfo";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "开设新班";
             this.Load += new System.EventHandler(this.frmAddClassInfo_Load);
             this.ResumeLayout(false);
@@ -224,7 +234,7 @@
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.DateTimePicker dtEnrolmentSchool;
         private System.Windows.Forms.ComboBox cbClassInfoSpeciality;
-        private System.Windows.Forms.TextBox txtSchollReform;
+        private System.Windows.Forms.TextBox txtSchoolReform;
         private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.TextBox txtHeadTeacher;
         private System.Windows.Forms.TextBox txtClassInfoName;

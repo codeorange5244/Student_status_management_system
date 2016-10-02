@@ -30,6 +30,8 @@ namespace StudentStatusManageSystem.UI
         //当前登录用户
         public static User current_user;
 
+        private SpecialityBLL bll_speciality = new SpecialityBLL();
+
         private void btnAboutMe_MouseEnter(object sender, EventArgs e)
         {
             Button currentButton = sender as Button;
@@ -194,8 +196,76 @@ namespace StudentStatusManageSystem.UI
         //课程管理
         private void LoadCourseManage()
         {
-
+            //根据学院加载课程
+            LoadAllCourseBySpeciality();
         }
+            
+        //根据学院加载课程
+        private void LoadAllCourseBySpeciality()
+        {        
+            //得到“专业”的id和名称的键值对
+            Dictionary<int, string> dictionary = bll_speciality.GetAllspecialityIdAndNameByDelFlag(0);
+            tbClassInfo.Selecting-=tbClassInfo_Selecting;   //清除tabpages之前要先卸载选项卡改变事件
+            tbClassInfo.TabPages.Clear();   //清除tabpage
+            tbClassInfo.Selecting += tbClassInfo_Selecting; //重新注册事件
+            //生成tabpage
+            foreach (int key in dictionary.Keys)
+            {
+                TabPage page = new TabPage(dictionary[key]);                
+                page.Tag = key;       
+                page.Controls.Add(CreatedgvCourse());   //加入datagridview
+                tbClassInfo.TabPages.Add(page);
+
+            }
+            this.Text = tbClassInfo.TabPages[1].Controls.Count.ToString();
+        }
+        //生成“课程”DatagridView
+        private DataGridView CreatedgvCourse()
+        {
+            //生成page中的Datagridview
+            DataGridView dgvCourse = new DataGridView();
+            dgvCourse.Name = "dgvCourse";   //设置该控件在代码中的Name
+            dgvCourse.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   //列宽度
+            dgvCourse.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;   //列高度
+            dgvCourse.SelectionMode = DataGridViewSelectionMode.FullRowSelect;  //选中单元行的模式：整行选中
+            dgvCourse.AutoGenerateColumns = false;  //关闭自动生成列
+            dgvCourse.ReadOnly = false; //关闭单元格上的编辑
+            dgvCourse.Dock = DockStyle.Fill;
+            //编辑列
+            DataGridViewTextBoxColumn[] cols =
+            {
+                    new DataGridViewTextBoxColumn(){HeaderText="编号", DataPropertyName="Id"},
+                    new  DataGridViewTextBoxColumn() {HeaderText="课程名",DataPropertyName="Name" }   ,
+                    new DataGridViewTextBoxColumn() {HeaderText="所属专业编号",DataPropertyName="Speciality_id" }    ,
+                    new    DataGridViewTextBoxColumn() {HeaderText="上课地点",DataPropertyName="Room_name" },
+                    new DataGridViewTextBoxColumn() {HeaderText="学期",DataPropertyName="Semester" }
+             };
+            //dgv注册删除事件
+            dgvCourse.Columns.AddRange(cols);
+            dgvCourse.CellContextMenuStripNeeded += new DataGridViewCellContextMenuStripNeededEventHandler((a, b) =>
+            {
+                ContextMenuStrip rightMenu = new ContextMenuStrip();    //右键菜单
+                //注册删除事件
+                rightMenu.Items.Add("删除", null, new EventHandler((c, d) =>
+                {
+                    if(MessageBoxEx.Show("是否删除该课程？？","警告",MessageBoxButtons.OKCancel)!= DialogResult.OK)
+                    {
+                        return;
+                    }
+                    CourseBLL bll_course = new CourseBLL();
+                    int course_id = Convert.ToInt32(dgvCourse.Rows[b.RowIndex].Cells[0].Value); //得到班级Id                    
+                    bool result = bll_course.SoftDeleteById(course_id, frmMain.current_user.Id);
+                    MessageBoxEx.Show(result ? "删除成功！" : "删除失败,该数据不存在请重试！！");
+                    (dgvCourse.DataSource as List<Course>).RemoveAll(model =>
+                    {
+                        return model.Id == course_id;
+                    });
+                }));
+                dgvCourse.ContextMenuStrip = rightMenu; //dgvCourser加入右键菜单
+            });
+            return dgvCourse;
+        }
+
         //学生管理
         private void LoadStudentManage()
         {
@@ -204,8 +274,31 @@ namespace StudentStatusManageSystem.UI
         //班级信息管理
         private void LoadClassInfoManage()
         {
-            //加载专业信息
-            SpecialityBLL bll = new SpecialityBLL();
+            //加载信息
+            LoadAllClassInfoToTreeViewAndAllSpecialityInfoToComobox();
+        }
+        //加载所有班级信息
+        private void LoadAllClassInfoToTreeViewAndAllSpecialityInfoToComobox()
+        {
+            //  SpecialityBLL bll = new SpecialityBLL();
+            ClassInfoBLL bll_classInfo = new ClassInfoBLL();
+
+            Dictionary<int, string> dictionary = bll_speciality.GetAllspecialityIdAndNameByDelFlag(0);
+            //加载专业到下拉框
+            cbClassInfoSpeciality.DataSource = dictionary.ToList();
+            cbClassInfoSpeciality.DisplayMember = "Value";
+            cbClassInfoSpeciality.ValueMember = "Key";
+            //加载班级到TreeView
+            var keys = dictionary.Keys;
+            foreach (int key in keys)
+            {
+                var node = tvClassInfo.Nodes.Add(dictionary[key]);
+                List<ClassInfo> list = bll_classInfo.GetClassInfosBySpecialityId(key);
+                for (int i = 0; i < list.Count; i++)
+                {
+                    node.Nodes.Add(list[i].Name).Tag = list[i]; //添加专业节点下的班级子节点
+                }
+            }
         }
 
         //专业设置
@@ -230,30 +323,6 @@ namespace StudentStatusManageSystem.UI
             }
         }
 
-        /// <summary>
-        /// 根据用户输入界面的值得到“班级”对象
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        /// <returns></returns>
-        //private ClassInfo GetModelFormUI(object sender)
-        //{
-        //unsafe
-        //{
-
-        //Form this_form = (Form)sender;
-        //ClassInfo model = new ClassInfo();
-        //model.Name =this_form.txtClassInfoName.Text.Trim(); 
-        //model.Room_name = this_form.txtRoomName.Text.Trim();
-        //model.School_reform = this_form.txtSchollReform.Text.Trim();
-        //model.Specility_id = Convert.ToInt32(this_form.cbClassInfoSpeciality.SelectedValue);
-        //model.Headteacher = this_form.txtHeadTeacher.Text.Trim();
-        //model.Enrolment_time = this_form.dtEnrolmentSchool.Value;
-        //model.Submitter_id = frmMain.current_user.Id;
-        //return model;
-        //  }
-        //}
-
         private void btnAddSpeciality_MouseEnter(object sender, EventArgs e)
         {
             ((SkinButton)sender).BaseColor = Color.FromArgb(9, 163, 220);
@@ -268,8 +337,8 @@ namespace StudentStatusManageSystem.UI
         {
             if (CCWin.MessageBoxEx.Show("确定要清空回收站吗？将会永久删除数据", "警告！！", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                SpecialityBLL bll = new SpecialityBLL();
-                if (bll.DeleteAllDeletedSpeciality(frmMain.current_user.Id))
+                //SpecialityBLL bll = new SpecialityBLL();
+                if (bll_speciality.DeleteAllDeletedSpeciality(frmMain.current_user.Id))
                 {
                     CCWin.MessageBoxEx.Show("清空成功！！");
                 }
@@ -330,7 +399,7 @@ namespace StudentStatusManageSystem.UI
         {
             Action<string> delegate_y = new Action<string>(CheckRoomByRoomName);
             Func<object, ClassInfo> delegate_u = new Func<object, ClassInfo>(GetPrivateField);
-            frmAddClassInfo frm = new frmAddClassInfo(delegate_y,delegate_u);
+            frmAddClassInfo frm = new frmAddClassInfo(delegate_y, delegate_u);
             frm.Show();
         }
 
@@ -347,15 +416,19 @@ namespace StudentStatusManageSystem.UI
                 {
                     //取值生成 model对象
                     ClassInfo model = GetPrivateField(this);
-
+                    ClassInfoBLL bll = new ClassInfoBLL();
+                    if (bll.UpdateClassInfoByDelFlag(model))
+                    {
+                        MessageBoxEx.Show("更新成功！!");
+                        LoadAllClassInfoToTreeViewAndAllSpecialityInfoToComobox();
+                    }
+                    else
+                    {
+                        MessageBoxEx.Show("更新失败，请检查数据后重试");
+                    }
                 }
             }
-
-
-          
-
-            
-        }    
+        }
 
         /// <summary>
         /// 两个窗体有相同的控件，利用反射取值建模model，共用一个该方法
@@ -364,7 +437,7 @@ namespace StudentStatusManageSystem.UI
         /// <returns>model</returns>
         public ClassInfo GetPrivateField(object instance)
         {
-            ClassInfo model = new ClassInfo();  
+            ClassInfo model = new ClassInfo();
 
             BindingFlags flags = BindingFlags.Instance | BindingFlags.NonPublic;    //搜索的范围
             Type type = instance.GetType(); //获得窗体类型
@@ -374,7 +447,7 @@ namespace StudentStatusManageSystem.UI
             FieldInfo cbClassInfoSpeciality = type.GetField("cbClassInfoSpeciality", flags);
             FieldInfo txtHeadTeacher = type.GetField("txtHeadTeacher", flags);
             FieldInfo txtRoomName = type.GetField("txtRoomName", flags);
-            FieldInfo txtSchollReform = type.GetField("txtSchollReform", flags);
+            FieldInfo txtSchoolReform = type.GetField("txtSchoolReform", flags);
             FieldInfo dtEnrolmentSchool = type.GetField("dtEnrolmentSchool", flags);
 
             //赋值
@@ -382,11 +455,11 @@ namespace StudentStatusManageSystem.UI
             model.Specility_id = (int)(cbClassInfoSpeciality.GetValue(instance) as ComboBox).SelectedValue;
             model.Headteacher = (txtHeadTeacher.GetValue(instance) as TextBox).Text.Trim();
             model.Room_name = (txtRoomName.GetValue(instance) as TextBox).Text.Trim();
-            model.School_reform = (txtSchollReform.GetValue(instance) as TextBox).Text.Trim();
+            model.School_reform = (txtSchoolReform.GetValue(instance) as TextBox).Text.Trim();
             model.Enrolment_time = (dtEnrolmentSchool.GetValue(instance) as DateTimePicker).Value;
 
             model.Submitter_id = frmMain.current_user.Id;
-            return model;   
+            return model;
         }
 
         //检查用户输入
@@ -420,6 +493,73 @@ namespace StudentStatusManageSystem.UI
         private void CheckRoomByRoomName(string name)
         {
             MessageBox.Show("检查会议室存在性");
+        }
+
+        private void closeAnimationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            skinTabControl1.AnimationStart = false;
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            openanimToolStripMenuItem.DropDownItems.Clear();
+
+            for (int i = 0; i <= 13; i++)
+            {
+                openanimToolStripMenuItem.DropDownItems.Add(((AnimationType)i).ToString());
+                openanimToolStripMenuItem.DropDownItems[i].Tag = i;
+                openanimToolStripMenuItem.DropDownItems[i].Click += new EventHandler((a, b) =>
+                {
+                    skinTabControl1.AnimatorType = (AnimationType)i;
+                    skinTabControl1.AnimationStart = true;
+                });
+            }
+        }
+        //双击节点
+        private void tvClassInfo_NodeMouseDoubleClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+            if (e.Node.Tag is ClassInfo)
+            {
+                var model = e.Node.Tag as ClassInfo;
+                labClassInfoId.Text = model.Id.ToString();
+                txtClassInfoName.Text = model.Name;
+                txtRoomName.Text = model.Room_name;
+                txtHeadTeacher.Text = model.Headteacher;
+                cbClassInfoSpeciality.SelectedValue = model.Specility_id;
+                txtSchollReform.Text = model.School_reform;
+                dtEnrolmentSchool.Value = (DateTime)model.Enrolment_time;
+            }
+        }
+
+        //删除班级
+        private void btnClassInfoDelete_Click(object sender, EventArgs e)
+        {
+            if (MessageBoxEx.Show("是否删除  " + txtClassInfoName.Text + "   此班级？？", "警告！", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                ClassInfoBLL bll = new ClassInfoBLL();
+                MessageBoxEx.Show(bll.DeleteClassInfoByClassInfoId(Convert.ToInt32(labClassInfoId.Text), frmMain.current_user.Id) ? "删除成功!" : "删除失败，请刷新后重试");
+                LoadAllClassInfoToTreeViewAndAllSpecialityInfoToComobox();
+            }
+
+        }
+
+        //开设新课
+        private void btnAddCourse_Click(object sender, EventArgs e)
+        {
+            frmAddCourse frm = new frmAddCourse();
+            frm.Show();
+        }
+
+        //tabControl的选项卡改变时发生（即为选择的专业改变了）
+        private void tbClassInfo_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            int speciality_id = (int)e.TabPage.Tag; //获取当前选中“专业”page的Id;
+            CourseBLL bll_course = new CourseBLL();
+            List<Course> list =bll_course.GetCoursesBySpecialityId(speciality_id);
+            //绑定数据
+            DataGridView dgvCourse = e.TabPage.Controls["dgvCourse"] as DataGridView;
+            dgvCourse.DataSource = list;
+
         }
     }
 }

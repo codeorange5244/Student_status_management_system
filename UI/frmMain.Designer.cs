@@ -55,8 +55,8 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tvClassInfo = new CCWin.SkinControl.SkinTreeView();
             this.imgListTv = new System.Windows.Forms.ImageList(this.components);
+            this.lbCheckRoom = new System.Windows.Forms.Label();
             this.btnClassInfoDelete = new CCWin.SkinControl.SkinButton();
-            this.btnClassInfoCancel = new CCWin.SkinControl.SkinButton();
             this.btnClassInfoOk = new CCWin.SkinControl.SkinButton();
             this.labClassInfoId = new System.Windows.Forms.Label();
             this.dtEnrolmentSchool = new System.Windows.Forms.DateTimePicker();
@@ -71,11 +71,31 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.tpStudentManage = new CCWin.SkinControl.SkinTabPage();
-            this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
             this.tpScoreManage = new CCWin.SkinControl.SkinTabPage();
+            this.button2 = new System.Windows.Forms.Button();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.btnAddCourse = new CCWin.SkinControl.SkinButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.skinLabel3 = new CCWin.SkinControl.SkinLabel();
+            this.tbClassInfo = new System.Windows.Forms.TabControl();
+            this.tpStudentManage = new CCWin.SkinControl.SkinTabPage();
             this.tpAboutMe = new CCWin.SkinControl.SkinTabPage();
-            this.lbCheckRoom = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.openanimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeAnimationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.skinTabControl1.SuspendLayout();
             this.tpSystemSetting.SuspendLayout();
             this.tpSpecialitySetting.SuspendLayout();
@@ -96,6 +116,15 @@
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            this.tpScoreManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tpCourseManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdvanced_operations
@@ -184,17 +213,16 @@
             // 
             // skinTabControl1
             // 
-            this.skinTabControl1.AnimationStart = true;
-            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.Leaf;
+            this.skinTabControl1.AnimatorType = CCWin.SkinControl.AnimationType.HorizSlide;
             this.skinTabControl1.Appearance = System.Windows.Forms.TabAppearance.FlatButtons;
             this.skinTabControl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(202)))), ((int)(((byte)(99)))));
             this.skinTabControl1.CloseRect = new System.Drawing.Rectangle(2, 2, 12, 12);
             this.skinTabControl1.Controls.Add(this.tpSystemSetting);
             this.skinTabControl1.Controls.Add(this.tpSpecialitySetting);
             this.skinTabControl1.Controls.Add(this.tpClassInfoManage);
-            this.skinTabControl1.Controls.Add(this.tpStudentManage);
-            this.skinTabControl1.Controls.Add(this.tpCourseManage);
             this.skinTabControl1.Controls.Add(this.tpScoreManage);
+            this.skinTabControl1.Controls.Add(this.tpCourseManage);
+            this.skinTabControl1.Controls.Add(this.tpStudentManage);
             this.skinTabControl1.Controls.Add(this.tpAboutMe);
             this.skinTabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.skinTabControl1.HeadBack = null;
@@ -215,7 +243,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageNormlTxtColor = System.Drawing.Color.White;
-            this.skinTabControl1.SelectedIndex = 2;
+            this.skinTabControl1.SelectedIndex = 4;
             this.skinTabControl1.Size = new System.Drawing.Size(1129, 671);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 1;
@@ -226,6 +254,7 @@
             this.tpSystemSetting.BackColor = System.Drawing.Color.White;
             this.tpSystemSetting.BackgroundImage = global::StudentStatusManageSystem.UI.Properties.Resources.上海海洋大学;
             this.tpSystemSetting.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.tpSystemSetting.BorderColor = System.Drawing.Color.White;
             this.tpSystemSetting.Controls.Add(this.btnAdvanced_operations);
             this.tpSystemSetting.Controls.Add(this.btnAddUser);
             this.tpSystemSetting.Controls.Add(this.btnAddRole);
@@ -241,6 +270,7 @@
             // tpSpecialitySetting
             // 
             this.tpSpecialitySetting.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(208)))), ((int)(((byte)(255)))));
+            this.tpSpecialitySetting.BorderColor = System.Drawing.Color.White;
             this.tpSpecialitySetting.Controls.Add(this.splitContainer1);
             this.tpSpecialitySetting.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpSpecialitySetting.Location = new System.Drawing.Point(0, 113);
@@ -519,7 +549,6 @@
             // 
             this.splitContainer2.Panel2.Controls.Add(this.lbCheckRoom);
             this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoDelete);
-            this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoCancel);
             this.splitContainer2.Panel2.Controls.Add(this.btnClassInfoOk);
             this.splitContainer2.Panel2.Controls.Add(this.labClassInfoId);
             this.splitContainer2.Panel2.Controls.Add(this.dtEnrolmentSchool);
@@ -551,6 +580,7 @@
             this.tvClassInfo.SelectedImageIndex = 0;
             this.tvClassInfo.Size = new System.Drawing.Size(376, 404);
             this.tvClassInfo.TabIndex = 0;
+            this.tvClassInfo.NodeMouseDoubleClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.tvClassInfo_NodeMouseDoubleClick);
             // 
             // imgListTv
             // 
@@ -559,13 +589,24 @@
             this.imgListTv.Images.SetKeyName(0, "speciality.png");
             this.imgListTv.Images.SetKeyName(1, "open129.png");
             // 
+            // lbCheckRoom
+            // 
+            this.lbCheckRoom.AutoSize = true;
+            this.lbCheckRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbCheckRoom.Location = new System.Drawing.Point(291, 180);
+            this.lbCheckRoom.Name = "lbCheckRoom";
+            this.lbCheckRoom.Size = new System.Drawing.Size(53, 12);
+            this.lbCheckRoom.TabIndex = 32;
+            this.lbCheckRoom.Text = "点击校验";
+            this.lbCheckRoom.Click += new System.EventHandler(this.lbCheckRoom_Click);
+            // 
             // btnClassInfoDelete
             // 
             this.btnClassInfoDelete.BackColor = System.Drawing.Color.Transparent;
             this.btnClassInfoDelete.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnClassInfoDelete.DownBack = null;
             this.btnClassInfoDelete.ForeColor = System.Drawing.Color.White;
-            this.btnClassInfoDelete.Location = new System.Drawing.Point(663, 349);
+            this.btnClassInfoDelete.Location = new System.Drawing.Point(367, 356);
             this.btnClassInfoDelete.MouseBack = null;
             this.btnClassInfoDelete.Name = "btnClassInfoDelete";
             this.btnClassInfoDelete.NormlBack = null;
@@ -575,24 +616,7 @@
             this.btnClassInfoDelete.TabIndex = 7;
             this.btnClassInfoDelete.Text = "删除该班级";
             this.btnClassInfoDelete.UseVisualStyleBackColor = false;
-            // 
-            // btnClassInfoCancel
-            // 
-            this.btnClassInfoCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnClassInfoCancel.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnClassInfoCancel.DownBack = null;
-            this.btnClassInfoCancel.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btnClassInfoCancel.ForeColor = System.Drawing.Color.White;
-            this.btnClassInfoCancel.Location = new System.Drawing.Point(324, 345);
-            this.btnClassInfoCancel.MouseBack = null;
-            this.btnClassInfoCancel.Name = "btnClassInfoCancel";
-            this.btnClassInfoCancel.NormlBack = null;
-            this.btnClassInfoCancel.Radius = 35;
-            this.btnClassInfoCancel.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnClassInfoCancel.Size = new System.Drawing.Size(112, 33);
-            this.btnClassInfoCancel.TabIndex = 7;
-            this.btnClassInfoCancel.Text = "取消修改";
-            this.btnClassInfoCancel.UseVisualStyleBackColor = false;
+            this.btnClassInfoDelete.Click += new System.EventHandler(this.btnClassInfoDelete_Click);
             // 
             // btnClassInfoOk
             // 
@@ -742,20 +766,131 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "班级名称";
             // 
-            // tpStudentManage
+            // tpScoreManage
             // 
-            this.tpStudentManage.BackColor = System.Drawing.Color.White;
-            this.tpStudentManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpStudentManage.Location = new System.Drawing.Point(0, 113);
-            this.tpStudentManage.Name = "tpStudentManage";
-            this.tpStudentManage.Size = new System.Drawing.Size(1129, 558);
-            this.tpStudentManage.TabIndex = 3;
-            this.tpStudentManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.student2;
-            this.tpStudentManage.Text = "学生信息管理";
+            this.tpScoreManage.BackColor = System.Drawing.Color.White;
+            this.tpScoreManage.BorderColor = System.Drawing.Color.White;
+            this.tpScoreManage.Controls.Add(this.button2);
+            this.tpScoreManage.Controls.Add(this.textBox2);
+            this.tpScoreManage.Controls.Add(this.label11);
+            this.tpScoreManage.Controls.Add(this.label9);
+            this.tpScoreManage.Controls.Add(this.label8);
+            this.tpScoreManage.Controls.Add(this.button1);
+            this.tpScoreManage.Controls.Add(this.textBox1);
+            this.tpScoreManage.Controls.Add(this.dataGridView1);
+            this.tpScoreManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tpScoreManage.Location = new System.Drawing.Point(0, 113);
+            this.tpScoreManage.Name = "tpScoreManage";
+            this.tpScoreManage.Size = new System.Drawing.Size(1129, 558);
+            this.tpScoreManage.TabIndex = 5;
+            this.tpScoreManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.score;
+            this.tpScoreManage.Text = "成绩信息管理";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(966, 125);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(83, 29);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "搜索";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(796, 125);
+            this.textBox2.Multiline = true;
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(155, 29);
+            this.textBox2.TabIndex = 8;
+            this.textBox2.Text = "课程编号";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label11.Location = new System.Drawing.Point(473, 431);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(65, 12);
+            this.label11.TabIndex = 7;
+            this.label11.Text = "不及格人数";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label9.Location = new System.Drawing.Point(318, 431);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(53, 12);
+            this.label9.TabIndex = 5;
+            this.label9.Text = "及格人数";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(245, 127);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(95, 12);
+            this.label8.TabIndex = 4;
+            this.label8.Text = "课程名+授课教师";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(386, 65);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(83, 29);
+            this.button1.TabIndex = 3;
+            this.button1.Text = "搜索";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(216, 65);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(155, 29);
+            this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "课程编号";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3});
+            this.dataGridView1.Location = new System.Drawing.Point(215, 157);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(348, 240);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "学生编号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "分数";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "是否及格";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
             // tpCourseManage
             // 
             this.tpCourseManage.BackColor = System.Drawing.Color.White;
+            this.tpCourseManage.BorderColor = System.Drawing.Color.White;
+            this.tpCourseManage.Controls.Add(this.splitContainer3);
             this.tpCourseManage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpCourseManage.Location = new System.Drawing.Point(0, 113);
             this.tpCourseManage.Name = "tpCourseManage";
@@ -764,16 +899,107 @@
             this.tpCourseManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.book114;
             this.tpCourseManage.Text = "课程信息管理";
             // 
-            // tpScoreManage
+            // splitContainer3
             // 
-            this.tpScoreManage.BackColor = System.Drawing.Color.White;
-            this.tpScoreManage.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tpScoreManage.Location = new System.Drawing.Point(0, 113);
-            this.tpScoreManage.Name = "tpScoreManage";
-            this.tpScoreManage.Size = new System.Drawing.Size(1129, 558);
-            this.tpScoreManage.TabIndex = 5;
-            this.tpScoreManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.score;
-            this.tpScoreManage.Text = "成绩信息管理";
+            this.splitContainer3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer3.Panel1
+            // 
+            this.splitContainer3.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.splitContainer3.Panel1.Controls.Add(this.btnAddCourse);
+            this.splitContainer3.Panel1.Controls.Add(this.pictureBox3);
+            this.splitContainer3.Panel1.Controls.Add(this.label10);
+            this.splitContainer3.Panel1.Controls.Add(this.skinLabel3);
+            // 
+            // splitContainer3.Panel2
+            // 
+            this.splitContainer3.Panel2.BackColor = System.Drawing.Color.White;
+            this.splitContainer3.Panel2.Controls.Add(this.tbClassInfo);
+            this.splitContainer3.Size = new System.Drawing.Size(1129, 558);
+            this.splitContainer3.SplitterDistance = 153;
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // btnAddCourse
+            // 
+            this.btnAddCourse.BackColor = System.Drawing.Color.Transparent;
+            this.btnAddCourse.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnAddCourse.DownBack = null;
+            this.btnAddCourse.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnAddCourse.ForeColor = System.Drawing.Color.White;
+            this.btnAddCourse.Location = new System.Drawing.Point(811, 36);
+            this.btnAddCourse.MouseBack = null;
+            this.btnAddCourse.Name = "btnAddCourse";
+            this.btnAddCourse.NormlBack = null;
+            this.btnAddCourse.Radius = 60;
+            this.btnAddCourse.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnAddCourse.Size = new System.Drawing.Size(182, 59);
+            this.btnAddCourse.TabIndex = 10;
+            this.btnAddCourse.Text = "开设新课";
+            this.btnAddCourse.UseVisualStyleBackColor = false;
+            this.btnAddCourse.Click += new System.EventHandler(this.btnAddCourse_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(243)))), ((int)(((byte)(130)))));
+            this.pictureBox3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox3.Image = global::StudentStatusManageSystem.UI.Properties.Resources.book114;
+            this.pictureBox3.Location = new System.Drawing.Point(70, 21);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(123, 97);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(275, 92);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(182, 17);
+            this.label10.TabIndex = 9;
+            this.label10.Text = "开设课程、结束课程、修改..........";
+            // 
+            // skinLabel3
+            // 
+            this.skinLabel3.AutoSize = true;
+            this.skinLabel3.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel3.BorderColor = System.Drawing.Color.White;
+            this.skinLabel3.Font = new System.Drawing.Font("微软雅黑", 19F);
+            this.skinLabel3.ForeColor = System.Drawing.Color.Gray;
+            this.skinLabel3.Location = new System.Drawing.Point(254, 33);
+            this.skinLabel3.Name = "skinLabel3";
+            this.skinLabel3.Size = new System.Drawing.Size(67, 35);
+            this.skinLabel3.TabIndex = 8;
+            this.skinLabel3.Text = "课程";
+            // 
+            // tbClassInfo
+            // 
+            this.tbClassInfo.Alignment = System.Windows.Forms.TabAlignment.Left;
+            this.tbClassInfo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tbClassInfo.ItemSize = new System.Drawing.Size(10, 10);
+            this.tbClassInfo.Location = new System.Drawing.Point(0, 0);
+            this.tbClassInfo.Multiline = true;
+            this.tbClassInfo.Name = "tbClassInfo";
+            this.tbClassInfo.SelectedIndex = 0;
+            this.tbClassInfo.Size = new System.Drawing.Size(1129, 401);
+            this.tbClassInfo.TabIndex = 0;
+            this.tbClassInfo.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.tbClassInfo_Selecting);
+            // 
+            // tpStudentManage
+            // 
+            this.tpStudentManage.BackColor = System.Drawing.Color.White;
+            this.tpStudentManage.BorderColor = System.Drawing.Color.White;
+            this.tpStudentManage.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tpStudentManage.Location = new System.Drawing.Point(0, 113);
+            this.tpStudentManage.Name = "tpStudentManage";
+            this.tpStudentManage.Size = new System.Drawing.Size(1129, 558);
+            this.tpStudentManage.TabIndex = 3;
+            this.tpStudentManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.student2;
+            this.tpStudentManage.Text = "学生信息管理";
             // 
             // tpAboutMe
             // 
@@ -788,16 +1014,33 @@
             this.tpAboutMe.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.question11;
             this.tpAboutMe.Text = "关于";
             // 
-            // lbCheckRoom
+            // contextMenuStrip1
             // 
-            this.lbCheckRoom.AutoSize = true;
-            this.lbCheckRoom.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbCheckRoom.Location = new System.Drawing.Point(291, 180);
-            this.lbCheckRoom.Name = "lbCheckRoom";
-            this.lbCheckRoom.Size = new System.Drawing.Size(53, 12);
-            this.lbCheckRoom.TabIndex = 32;
-            this.lbCheckRoom.Text = "点击校验";
-            this.lbCheckRoom.Click += new System.EventHandler(this.lbCheckRoom_Click);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openanimToolStripMenuItem,
+            this.closeAnimationToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(149, 48);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // openanimToolStripMenuItem
+            // 
+            this.openanimToolStripMenuItem.Name = "openanimToolStripMenuItem";
+            this.openanimToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.openanimToolStripMenuItem.Text = "开启切换动画";
+            // 
+            // closeAnimationToolStripMenuItem
+            // 
+            this.closeAnimationToolStripMenuItem.Name = "closeAnimationToolStripMenuItem";
+            this.closeAnimationToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.closeAnimationToolStripMenuItem.Text = "关闭动画切换";
+            this.closeAnimationToolStripMenuItem.Click += new System.EventHandler(this.closeAnimationToolStripMenuItem_Click);
+            // 
+            // toolTip1
+            // 
+            this.toolTip1.AutoPopDelay = 5000;
+            this.toolTip1.InitialDelay = 0;
+            this.toolTip1.ReshowDelay = 100;
             // 
             // frmMain
             // 
@@ -806,6 +1049,7 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1137, 703);
             this.CloseBoxSize = new System.Drawing.Size(32, 27);
+            this.ContextMenuStrip = this.contextMenuStrip1;
             this.Controls.Add(this.skinTabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -843,6 +1087,17 @@
             this.splitContainer2.Panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            this.tpScoreManage.ResumeLayout(false);
+            this.tpScoreManage.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tpCourseManage.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -890,9 +1145,29 @@
         private System.Windows.Forms.DateTimePicker dtEnrolmentSchool;
         private System.Windows.Forms.TextBox txtHeadTeacher;
         private System.Windows.Forms.Label label7;
-        private CCWin.SkinControl.SkinButton btnClassInfoCancel;
         private CCWin.SkinControl.SkinButton btnClassInfoOk;
         private CCWin.SkinControl.SkinButton btnClassInfoDelete;
         private System.Windows.Forms.Label lbCheckRoom;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem openanimToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeAnimationToolStripMenuItem;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.SplitContainer splitContainer3;
+        private CCWin.SkinControl.SkinButton btnAddCourse;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label10;
+        private CCWin.SkinControl.SkinLabel skinLabel3;
+        private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TabControl tbClassInfo;
     }
 }

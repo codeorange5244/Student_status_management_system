@@ -68,5 +68,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="submitter_id">执行人Id</param>
         /// <returns></returns>
         int DeleteAllDeletedSpeciality(int submitter_id);
+
+        /// <summary>
+        ///获取所有“专业” 的Id-Name 键值对
+        /// </summary>
+        /// <param name="delFlag">删除标识：0---未删除，1---已删除</param>
+        /// <returns></returns>
+        Dictionary<int, string> GetAllspecialityIdAndNameByDelFlag(int delFlag);
     }
 }
