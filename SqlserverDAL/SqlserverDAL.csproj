@@ -48,6 +48,7 @@
     <Compile Include="SqlserverCourseDAL.cs" />
     <Compile Include="SqlserverHelper.cs" />
     <Compile Include="SqlserverRoleDAL.cs" />
+    <Compile Include="SqlserverScoreDAL.cs" />
     <Compile Include="SqlserverSpecialityDAL.cs" />
     <Compile Include="SqlserverStudentDAL.cs" />
     <Compile Include="SqlserverUserDAL.cs" />

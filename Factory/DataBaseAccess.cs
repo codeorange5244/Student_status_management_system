@@ -72,6 +72,11 @@ namespace StudentStatusManageSystem.SimpleFactory
         {
             return (ICollegeDAL)System.Reflection.Assembly.Load(assemblyName).CreateInstance("StudentStatusManageSystem." + assemblyName + "." + dbName + "CollegeDAL", false);
         }
+
+        public static IScoreDAL CreateScoreInfoDAL()
+        {
+            return (IScoreDAL)System.Reflection.Assembly.Load(assemblyName).CreateInstance("StudentStatusManageSystem." + assemblyName + "." + dbName + "ScoreDAL", false);
+        }
     }
 
 }

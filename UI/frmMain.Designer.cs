@@ -80,6 +80,34 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tpScoreManage = new CCWin.SkinControl.SkinTabPage();
+            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
+            this.btnEditScore = new CCWin.SkinControl.SkinButton();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
+            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
+            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
+            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TeacherNeme = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ScoreNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.IsPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.labSearch0 = new CCWin.SkinControl.SkinLabel();
+            this.btnSearchScore0 = new CCWin.SkinControl.SkinButton();
+            this.txtSearchScore0 = new System.Windows.Forms.TextBox();
+            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
+            this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.labStudent1 = new CCWin.SkinControl.SkinLabel();
+            this.txtSearchScore1 = new System.Windows.Forms.TextBox();
+            this.btnSearchScore1 = new CCWin.SkinControl.SkinButton();
             this.tpCourseManage = new CCWin.SkinControl.SkinTabPage();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.btnAddCourse = new CCWin.SkinControl.SkinButton();
@@ -93,34 +121,11 @@
             this.openanimToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeAnimationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.splitContainer4 = new System.Windows.Forms.SplitContainer();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.skinLabel4 = new CCWin.SkinControl.SkinLabel();
-            this.btnEditScore = new CCWin.SkinControl.SkinButton();
-            this.splitContainer5 = new System.Windows.Forms.SplitContainer();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.skinGroupBox1 = new CCWin.SkinControl.SkinGroupBox();
-            this.skinGroupBox2 = new CCWin.SkinControl.SkinGroupBox();
-            this.skinDataGridView1 = new CCWin.SkinControl.SkinDataGridView();
-            this.txtSearchScore0 = new System.Windows.Forms.TextBox();
-            this.btnSearchScore0 = new CCWin.SkinControl.SkinButton();
-            this.labSearch0 = new CCWin.SkinControl.SkinLabel();
-            this.txtSearchScore1 = new System.Windows.Forms.TextBox();
-            this.btnSearchScore1 = new CCWin.SkinControl.SkinButton();
-            this.labStudent1 = new CCWin.SkinControl.SkinLabel();
-            this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TeacherNeme = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ScoreNum = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.IsPass = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.skinDataGridView2 = new CCWin.SkinControl.SkinDataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.splitContainer6 = new System.Windows.Forms.SplitContainer();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.skinLabel5 = new CCWin.SkinControl.SkinLabel();
+            this.skinButton1 = new CCWin.SkinControl.SkinButton();
             this.skinTabControl1.SuspendLayout();
             this.tpSystemSetting.SuspendLayout();
             this.tpSpecialitySetting.SuspendLayout();
@@ -142,13 +147,6 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             this.tpScoreManage.SuspendLayout();
-            this.tpCourseManage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
-            this.splitContainer3.Panel1.SuspendLayout();
-            this.splitContainer3.Panel2.SuspendLayout();
-            this.splitContainer3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer4)).BeginInit();
             this.splitContainer4.Panel1.SuspendLayout();
             this.splitContainer4.Panel2.SuspendLayout();
@@ -158,12 +156,24 @@
             this.splitContainer5.Panel1.SuspendLayout();
             this.splitContainer5.Panel2.SuspendLayout();
             this.splitContainer5.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.skinGroupBox1.SuspendLayout();
-            this.skinGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.skinGroupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).BeginInit();
+            this.groupBox2.SuspendLayout();
+            this.tpCourseManage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
+            this.splitContainer3.Panel1.SuspendLayout();
+            this.splitContainer3.Panel2.SuspendLayout();
+            this.splitContainer3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.tpStudentManage.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).BeginInit();
+            this.splitContainer6.Panel1.SuspendLayout();
+            this.splitContainer6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdvanced_operations
@@ -282,7 +292,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageNormlTxtColor = System.Drawing.Color.White;
-            this.skinTabControl1.SelectedIndex = 3;
+            this.skinTabControl1.SelectedIndex = 5;
             this.skinTabControl1.Size = new System.Drawing.Size(1129, 671);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 1;
@@ -818,6 +828,413 @@
             this.tpScoreManage.TabItemImage = global::StudentStatusManageSystem.UI.Properties.Resources.score;
             this.tpScoreManage.Text = "成绩信息管理";
             // 
+            // splitContainer4
+            // 
+            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer4.Name = "splitContainer4";
+            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            // 
+            // splitContainer4.Panel1
+            // 
+            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.splitContainer4.Panel1.Controls.Add(this.btnEditScore);
+            this.splitContainer4.Panel1.Controls.Add(this.pictureBox4);
+            this.splitContainer4.Panel1.Controls.Add(this.label12);
+            this.splitContainer4.Panel1.Controls.Add(this.skinLabel4);
+            // 
+            // splitContainer4.Panel2
+            // 
+            this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
+            this.splitContainer4.Size = new System.Drawing.Size(1129, 558);
+            this.splitContainer4.SplitterDistance = 153;
+            this.splitContainer4.SplitterWidth = 1;
+            this.splitContainer4.TabIndex = 8;
+            // 
+            // btnEditScore
+            // 
+            this.btnEditScore.BackColor = System.Drawing.Color.Transparent;
+            this.btnEditScore.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnEditScore.DownBack = null;
+            this.btnEditScore.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.btnEditScore.ForeColor = System.Drawing.Color.White;
+            this.btnEditScore.Location = new System.Drawing.Point(819, 48);
+            this.btnEditScore.MouseBack = null;
+            this.btnEditScore.Name = "btnEditScore";
+            this.btnEditScore.NormlBack = null;
+            this.btnEditScore.Radius = 60;
+            this.btnEditScore.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.btnEditScore.Size = new System.Drawing.Size(182, 59);
+            this.btnEditScore.TabIndex = 7;
+            this.btnEditScore.Text = "修改成绩";
+            this.toolTip1.SetToolTip(this.btnEditScore, "负责各个课程老师的成绩管理");
+            this.btnEditScore.UseVisualStyleBackColor = false;
+            this.btnEditScore.Click += new System.EventHandler(this.btnEditScore_Click);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(243)))), ((int)(((byte)(130)))));
+            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox4.Image = global::StudentStatusManageSystem.UI.Properties.Resources.score;
+            this.pictureBox4.Location = new System.Drawing.Point(70, 21);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(123, 97);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 3;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label12.Location = new System.Drawing.Point(270, 90);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(224, 17);
+            this.label12.TabIndex = 5;
+            this.label12.Text = "查询成绩、录入成绩、修改成绩。。。。";
+            // 
+            // skinLabel4
+            // 
+            this.skinLabel4.AutoSize = true;
+            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel4.BorderColor = System.Drawing.Color.White;
+            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 19F);
+            this.skinLabel4.ForeColor = System.Drawing.Color.Gray;
+            this.skinLabel4.Location = new System.Drawing.Point(254, 33);
+            this.skinLabel4.Name = "skinLabel4";
+            this.skinLabel4.Size = new System.Drawing.Size(119, 35);
+            this.skinLabel4.TabIndex = 4;
+            this.skinLabel4.Text = "成绩管理";
+            // 
+            // splitContainer5
+            // 
+            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer5.Name = "splitContainer5";
+            // 
+            // splitContainer5.Panel1
+            // 
+            this.splitContainer5.Panel1.Controls.Add(this.skinGroupBox1);
+            this.splitContainer5.Panel1.Controls.Add(this.groupBox1);
+            // 
+            // splitContainer5.Panel2
+            // 
+            this.splitContainer5.Panel2.Controls.Add(this.skinGroupBox2);
+            this.splitContainer5.Panel2.Controls.Add(this.groupBox2);
+            this.splitContainer5.Size = new System.Drawing.Size(1129, 404);
+            this.splitContainer5.SplitterDistance = 530;
+            this.splitContainer5.TabIndex = 0;
+            // 
+            // skinGroupBox1
+            // 
+            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox1.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox1.Controls.Add(this.skinDataGridView1);
+            this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
+            this.skinGroupBox1.Location = new System.Drawing.Point(3, 106);
+            this.skinGroupBox1.Name = "skinGroupBox1";
+            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox1.Size = new System.Drawing.Size(524, 296);
+            this.skinGroupBox1.TabIndex = 2;
+            this.skinGroupBox1.TabStop = false;
+            this.skinGroupBox1.Text = "成绩";
+            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinDataGridView1
+            // 
+            this.skinDataGridView1.AllowUserToAddRows = false;
+            this.skinDataGridView1.AllowUserToDeleteRows = false;
+            this.skinDataGridView1.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.skinDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.skinDataGridView1.ColumnFont = null;
+            this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.skinDataGridView1.ColumnHeadersHeight = 26;
+            this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.skinDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.StudentId,
+            this.CourseName,
+            this.TeacherNeme,
+            this.ScoreNum,
+            this.IsPass});
+            this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinDataGridView1.EnableHeadersVisualStyles = false;
+            this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.skinDataGridView1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinDataGridView1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView1.Location = new System.Drawing.Point(3, 17);
+            this.skinDataGridView1.Name = "skinDataGridView1";
+            this.skinDataGridView1.ReadOnly = true;
+            this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.skinDataGridView1.RowTemplate.Height = 23;
+            this.skinDataGridView1.Size = new System.Drawing.Size(518, 276);
+            this.skinDataGridView1.TabIndex = 0;
+            this.skinDataGridView1.TitleBack = null;
+            this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
+            this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // StudentId
+            // 
+            this.StudentId.HeaderText = "学生编号";
+            this.StudentId.Name = "StudentId";
+            this.StudentId.ReadOnly = true;
+            // 
+            // CourseName
+            // 
+            this.CourseName.HeaderText = "课程名";
+            this.CourseName.Name = "CourseName";
+            this.CourseName.ReadOnly = true;
+            // 
+            // TeacherNeme
+            // 
+            this.TeacherNeme.HeaderText = "授课教师";
+            this.TeacherNeme.Name = "TeacherNeme";
+            this.TeacherNeme.ReadOnly = true;
+            // 
+            // ScoreNum
+            // 
+            this.ScoreNum.HeaderText = "分数";
+            this.ScoreNum.Name = "ScoreNum";
+            this.ScoreNum.ReadOnly = true;
+            // 
+            // IsPass
+            // 
+            this.IsPass.HeaderText = "是否及格";
+            this.IsPass.Name = "IsPass";
+            this.IsPass.ReadOnly = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Controls.Add(this.labSearch0);
+            this.groupBox1.Controls.Add(this.btnSearchScore0);
+            this.groupBox1.Controls.Add(this.txtSearchScore0);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(524, 100);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "搜索课程";
+            // 
+            // labSearch0
+            // 
+            this.labSearch0.AutoSize = true;
+            this.labSearch0.BackColor = System.Drawing.Color.Transparent;
+            this.labSearch0.BorderColor = System.Drawing.Color.White;
+            this.labSearch0.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labSearch0.Location = new System.Drawing.Point(346, 51);
+            this.labSearch0.Name = "labSearch0";
+            this.labSearch0.Size = new System.Drawing.Size(44, 17);
+            this.labSearch0.TabIndex = 2;
+            this.labSearch0.Text = "课程：";
+            // 
+            // btnSearchScore0
+            // 
+            this.btnSearchScore0.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchScore0.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnSearchScore0.DownBack = null;
+            this.btnSearchScore0.Location = new System.Drawing.Point(208, 47);
+            this.btnSearchScore0.MouseBack = null;
+            this.btnSearchScore0.Name = "btnSearchScore0";
+            this.btnSearchScore0.NormlBack = null;
+            this.btnSearchScore0.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchScore0.TabIndex = 1;
+            this.btnSearchScore0.Text = "搜索";
+            this.toolTip1.SetToolTip(this.btnSearchScore0, "输入课程编号或课程名");
+            this.btnSearchScore0.UseVisualStyleBackColor = false;
+            // 
+            // txtSearchScore0
+            // 
+            this.txtSearchScore0.Location = new System.Drawing.Point(67, 48);
+            this.txtSearchScore0.Name = "txtSearchScore0";
+            this.txtSearchScore0.Size = new System.Drawing.Size(114, 21);
+            this.txtSearchScore0.TabIndex = 0;
+            // 
+            // skinGroupBox2
+            // 
+            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
+            this.skinGroupBox2.BorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox2.Controls.Add(this.skinDataGridView2);
+            this.skinGroupBox2.ForeColor = System.Drawing.Color.Blue;
+            this.skinGroupBox2.Location = new System.Drawing.Point(3, 106);
+            this.skinGroupBox2.Name = "skinGroupBox2";
+            this.skinGroupBox2.RectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinGroupBox2.Size = new System.Drawing.Size(589, 298);
+            this.skinGroupBox2.TabIndex = 2;
+            this.skinGroupBox2.TabStop = false;
+            this.skinGroupBox2.Text = "成绩";
+            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Red;
+            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.White;
+            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
+            // 
+            // skinDataGridView2
+            // 
+            this.skinDataGridView2.AllowUserToAddRows = false;
+            this.skinDataGridView2.AllowUserToDeleteRows = false;
+            this.skinDataGridView2.AllowUserToOrderColumns = true;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
+            this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+            this.skinDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.skinDataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
+            this.skinDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.skinDataGridView2.ColumnFont = null;
+            this.skinDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.skinDataGridView2.ColumnHeadersHeight = 26;
+            this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.skinDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Blue;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.skinDataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
+            this.skinDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.skinDataGridView2.EnableHeadersVisualStyles = false;
+            this.skinDataGridView2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
+            this.skinDataGridView2.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.skinDataGridView2.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView2.Location = new System.Drawing.Point(3, 17);
+            this.skinDataGridView2.Name = "skinDataGridView2";
+            this.skinDataGridView2.ReadOnly = true;
+            this.skinDataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.skinDataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            this.skinDataGridView2.RowTemplate.Height = 23;
+            this.skinDataGridView2.Size = new System.Drawing.Size(583, 278);
+            this.skinDataGridView2.TabIndex = 0;
+            this.skinDataGridView2.TitleBack = null;
+            this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
+            this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "学生编号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.HeaderText = "课程名";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "授课教师";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "分数";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "是否及格";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Controls.Add(this.labStudent1);
+            this.groupBox2.Controls.Add(this.txtSearchScore1);
+            this.groupBox2.Controls.Add(this.btnSearchScore1);
+            this.groupBox2.Location = new System.Drawing.Point(3, 3);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(589, 100);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "搜索学生";
+            // 
+            // labStudent1
+            // 
+            this.labStudent1.AutoSize = true;
+            this.labStudent1.BackColor = System.Drawing.Color.Transparent;
+            this.labStudent1.BorderColor = System.Drawing.Color.White;
+            this.labStudent1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labStudent1.Location = new System.Drawing.Point(380, 52);
+            this.labStudent1.Name = "labStudent1";
+            this.labStudent1.Size = new System.Drawing.Size(44, 17);
+            this.labStudent1.TabIndex = 2;
+            this.labStudent1.Text = "学生：";
+            // 
+            // txtSearchScore1
+            // 
+            this.txtSearchScore1.Location = new System.Drawing.Point(101, 50);
+            this.txtSearchScore1.Name = "txtSearchScore1";
+            this.txtSearchScore1.Size = new System.Drawing.Size(114, 21);
+            this.txtSearchScore1.TabIndex = 0;
+            // 
+            // btnSearchScore1
+            // 
+            this.btnSearchScore1.BackColor = System.Drawing.Color.Transparent;
+            this.btnSearchScore1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.btnSearchScore1.DownBack = null;
+            this.btnSearchScore1.Location = new System.Drawing.Point(242, 49);
+            this.btnSearchScore1.MouseBack = null;
+            this.btnSearchScore1.Name = "btnSearchScore1";
+            this.btnSearchScore1.NormlBack = null;
+            this.btnSearchScore1.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchScore1.TabIndex = 1;
+            this.btnSearchScore1.Text = "搜索";
+            this.toolTip1.SetToolTip(this.btnSearchScore1, "输入学生编号或学生姓名");
+            this.btnSearchScore1.UseVisualStyleBackColor = false;
+            // 
             // tpCourseManage
             // 
             this.tpCourseManage.BackColor = System.Drawing.Color.White;
@@ -925,6 +1342,7 @@
             // 
             this.tpStudentManage.BackColor = System.Drawing.Color.White;
             this.tpStudentManage.BorderColor = System.Drawing.Color.White;
+            this.tpStudentManage.Controls.Add(this.splitContainer6);
             this.tpStudentManage.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tpStudentManage.Location = new System.Drawing.Point(0, 113);
             this.tpStudentManage.Name = "tpStudentManage";
@@ -974,411 +1392,77 @@
             this.toolTip1.InitialDelay = 0;
             this.toolTip1.ReshowDelay = 100;
             // 
-            // splitContainer4
+            // splitContainer6
             // 
-            this.splitContainer4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer4.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer4.Name = "splitContainer4";
-            this.splitContainer4.Orientation = System.Windows.Forms.Orientation.Horizontal;
+            this.splitContainer6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer6.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer6.Name = "splitContainer6";
+            this.splitContainer6.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
-            // splitContainer4.Panel1
+            // splitContainer6.Panel1
             // 
-            this.splitContainer4.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
-            this.splitContainer4.Panel1.Controls.Add(this.btnEditScore);
-            this.splitContainer4.Panel1.Controls.Add(this.pictureBox4);
-            this.splitContainer4.Panel1.Controls.Add(this.label12);
-            this.splitContainer4.Panel1.Controls.Add(this.skinLabel4);
+            this.splitContainer6.Panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(241)))), ((int)(((byte)(249)))), ((int)(((byte)(241)))));
+            this.splitContainer6.Panel1.Controls.Add(this.skinButton1);
+            this.splitContainer6.Panel1.Controls.Add(this.pictureBox5);
+            this.splitContainer6.Panel1.Controls.Add(this.label8);
+            this.splitContainer6.Panel1.Controls.Add(this.skinLabel5);
+            this.splitContainer6.Size = new System.Drawing.Size(1129, 558);
+            this.splitContainer6.SplitterDistance = 153;
+            this.splitContainer6.SplitterWidth = 1;
+            this.splitContainer6.TabIndex = 0;
             // 
-            // splitContainer4.Panel2
+            // pictureBox5
             // 
-            this.splitContainer4.Panel2.Controls.Add(this.splitContainer5);
-            this.splitContainer4.Size = new System.Drawing.Size(1129, 558);
-            this.splitContainer4.SplitterDistance = 153;
-            this.splitContainer4.SplitterWidth = 1;
-            this.splitContainer4.TabIndex = 8;
+            this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(243)))), ((int)(((byte)(130)))));
+            this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox5.Image = global::StudentStatusManageSystem.UI.Properties.Resources.student2;
+            this.pictureBox5.Location = new System.Drawing.Point(70, 21);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(123, 97);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 6;
+            this.pictureBox5.TabStop = false;
             // 
-            // pictureBox4
+            // label8
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(243)))), ((int)(((byte)(130)))));
-            this.pictureBox4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox4.Image = global::StudentStatusManageSystem.UI.Properties.Resources.score;
-            this.pictureBox4.Location = new System.Drawing.Point(70, 21);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(123, 97);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 3;
-            this.pictureBox4.TabStop = false;
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(274, 101);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(164, 17);
+            this.label8.TabIndex = 8;
+            this.label8.Text = "录入新生、修改资料、、、、";
             // 
-            // label12
+            // skinLabel5
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(270, 90);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(224, 17);
-            this.label12.TabIndex = 5;
-            this.label12.Text = "查询成绩、录入成绩、修改成绩。。。。";
+            this.skinLabel5.AutoSize = true;
+            this.skinLabel5.BackColor = System.Drawing.Color.Transparent;
+            this.skinLabel5.BorderColor = System.Drawing.Color.White;
+            this.skinLabel5.Font = new System.Drawing.Font("微软雅黑", 19F);
+            this.skinLabel5.ForeColor = System.Drawing.Color.Gray;
+            this.skinLabel5.Location = new System.Drawing.Point(254, 33);
+            this.skinLabel5.Name = "skinLabel5";
+            this.skinLabel5.Size = new System.Drawing.Size(119, 35);
+            this.skinLabel5.TabIndex = 7;
+            this.skinLabel5.Text = "学生管理";
             // 
-            // skinLabel4
+            // skinButton1
             // 
-            this.skinLabel4.AutoSize = true;
-            this.skinLabel4.BackColor = System.Drawing.Color.Transparent;
-            this.skinLabel4.BorderColor = System.Drawing.Color.White;
-            this.skinLabel4.Font = new System.Drawing.Font("微软雅黑", 19F);
-            this.skinLabel4.ForeColor = System.Drawing.Color.Gray;
-            this.skinLabel4.Location = new System.Drawing.Point(254, 33);
-            this.skinLabel4.Name = "skinLabel4";
-            this.skinLabel4.Size = new System.Drawing.Size(119, 35);
-            this.skinLabel4.TabIndex = 4;
-            this.skinLabel4.Text = "成绩管理";
-            // 
-            // btnEditScore
-            // 
-            this.btnEditScore.BackColor = System.Drawing.Color.Transparent;
-            this.btnEditScore.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnEditScore.DownBack = null;
-            this.btnEditScore.Font = new System.Drawing.Font("微软雅黑", 12F);
-            this.btnEditScore.ForeColor = System.Drawing.Color.White;
-            this.btnEditScore.Location = new System.Drawing.Point(819, 48);
-            this.btnEditScore.MouseBack = null;
-            this.btnEditScore.Name = "btnEditScore";
-            this.btnEditScore.NormlBack = null;
-            this.btnEditScore.Radius = 60;
-            this.btnEditScore.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.btnEditScore.Size = new System.Drawing.Size(182, 59);
-            this.btnEditScore.TabIndex = 7;
-            this.btnEditScore.Text = "修改成绩";
-            this.toolTip1.SetToolTip(this.btnEditScore, "负责各个课程老师的成绩管理");
-            this.btnEditScore.UseVisualStyleBackColor = false;
-            // 
-            // splitContainer5
-            // 
-            this.splitContainer5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer5.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer5.Name = "splitContainer5";
-            // 
-            // splitContainer5.Panel1
-            // 
-            this.splitContainer5.Panel1.Controls.Add(this.skinGroupBox1);
-            this.splitContainer5.Panel1.Controls.Add(this.groupBox1);
-            // 
-            // splitContainer5.Panel2
-            // 
-            this.splitContainer5.Panel2.Controls.Add(this.skinGroupBox2);
-            this.splitContainer5.Panel2.Controls.Add(this.groupBox2);
-            this.splitContainer5.Size = new System.Drawing.Size(1129, 404);
-            this.splitContainer5.SplitterDistance = 530;
-            this.splitContainer5.TabIndex = 0;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox1.Controls.Add(this.labSearch0);
-            this.groupBox1.Controls.Add(this.btnSearchScore0);
-            this.groupBox1.Controls.Add(this.txtSearchScore0);
-            this.groupBox1.Location = new System.Drawing.Point(3, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(524, 100);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "搜索课程";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.labStudent1);
-            this.groupBox2.Controls.Add(this.txtSearchScore1);
-            this.groupBox2.Controls.Add(this.btnSearchScore1);
-            this.groupBox2.Location = new System.Drawing.Point(3, 3);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(589, 100);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "搜索学生";
-            // 
-            // skinGroupBox1
-            // 
-            this.skinGroupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox1.BorderColor = System.Drawing.Color.Red;
-            this.skinGroupBox1.Controls.Add(this.skinDataGridView1);
-            this.skinGroupBox1.ForeColor = System.Drawing.Color.Blue;
-            this.skinGroupBox1.Location = new System.Drawing.Point(3, 106);
-            this.skinGroupBox1.Name = "skinGroupBox1";
-            this.skinGroupBox1.RectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox1.Size = new System.Drawing.Size(524, 296);
-            this.skinGroupBox1.TabIndex = 2;
-            this.skinGroupBox1.TabStop = false;
-            this.skinGroupBox1.Text = "成绩";
-            this.skinGroupBox1.TitleBorderColor = System.Drawing.Color.Red;
-            this.skinGroupBox1.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox1.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // skinGroupBox2
-            // 
-            this.skinGroupBox2.BackColor = System.Drawing.Color.Transparent;
-            this.skinGroupBox2.BorderColor = System.Drawing.Color.Red;
-            this.skinGroupBox2.Controls.Add(this.skinDataGridView2);
-            this.skinGroupBox2.ForeColor = System.Drawing.Color.Blue;
-            this.skinGroupBox2.Location = new System.Drawing.Point(3, 106);
-            this.skinGroupBox2.Name = "skinGroupBox2";
-            this.skinGroupBox2.RectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox2.RoundStyle = CCWin.SkinClass.RoundStyle.All;
-            this.skinGroupBox2.Size = new System.Drawing.Size(589, 298);
-            this.skinGroupBox2.TabIndex = 2;
-            this.skinGroupBox2.TabStop = false;
-            this.skinGroupBox2.Text = "成绩";
-            this.skinGroupBox2.TitleBorderColor = System.Drawing.Color.Red;
-            this.skinGroupBox2.TitleRectBackColor = System.Drawing.Color.White;
-            this.skinGroupBox2.TitleRoundStyle = CCWin.SkinClass.RoundStyle.All;
-            // 
-            // skinDataGridView1
-            // 
-            this.skinDataGridView1.AllowUserToAddRows = false;
-            this.skinDataGridView1.AllowUserToDeleteRows = false;
-            this.skinDataGridView1.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.skinDataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.skinDataGridView1.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView1.ColumnFont = null;
-            this.skinDataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.skinDataGridView1.ColumnHeadersHeight = 26;
-            this.skinDataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.skinDataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.StudentId,
-            this.CourseName,
-            this.TeacherNeme,
-            this.ScoreNum,
-            this.IsPass});
-            this.skinDataGridView1.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
-            this.skinDataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView1.EnableHeadersVisualStyles = false;
-            this.skinDataGridView1.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView1.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView1.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.Location = new System.Drawing.Point(3, 17);
-            this.skinDataGridView1.Name = "skinDataGridView1";
-            this.skinDataGridView1.ReadOnly = true;
-            this.skinDataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle4;
-            this.skinDataGridView1.RowTemplate.Height = 23;
-            this.skinDataGridView1.Size = new System.Drawing.Size(518, 276);
-            this.skinDataGridView1.TabIndex = 0;
-            this.skinDataGridView1.TitleBack = null;
-            this.skinDataGridView1.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView1.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            // 
-            // txtSearchScore0
-            // 
-            this.txtSearchScore0.Location = new System.Drawing.Point(67, 48);
-            this.txtSearchScore0.Name = "txtSearchScore0";
-            this.txtSearchScore0.Size = new System.Drawing.Size(114, 21);
-            this.txtSearchScore0.TabIndex = 0;
-            // 
-            // btnSearchScore0
-            // 
-            this.btnSearchScore0.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchScore0.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSearchScore0.DownBack = null;
-            this.btnSearchScore0.Location = new System.Drawing.Point(208, 47);
-            this.btnSearchScore0.MouseBack = null;
-            this.btnSearchScore0.Name = "btnSearchScore0";
-            this.btnSearchScore0.NormlBack = null;
-            this.btnSearchScore0.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchScore0.TabIndex = 1;
-            this.btnSearchScore0.Text = "搜索";
-            this.toolTip1.SetToolTip(this.btnSearchScore0, "输入课程编号或课程名");
-            this.btnSearchScore0.UseVisualStyleBackColor = false;
-            // 
-            // labSearch0
-            // 
-            this.labSearch0.AutoSize = true;
-            this.labSearch0.BackColor = System.Drawing.Color.Transparent;
-            this.labSearch0.BorderColor = System.Drawing.Color.White;
-            this.labSearch0.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labSearch0.Location = new System.Drawing.Point(346, 51);
-            this.labSearch0.Name = "labSearch0";
-            this.labSearch0.Size = new System.Drawing.Size(44, 17);
-            this.labSearch0.TabIndex = 2;
-            this.labSearch0.Text = "课程：";
-            // 
-            // txtSearchScore1
-            // 
-            this.txtSearchScore1.Location = new System.Drawing.Point(101, 50);
-            this.txtSearchScore1.Name = "txtSearchScore1";
-            this.txtSearchScore1.Size = new System.Drawing.Size(114, 21);
-            this.txtSearchScore1.TabIndex = 0;
-            // 
-            // btnSearchScore1
-            // 
-            this.btnSearchScore1.BackColor = System.Drawing.Color.Transparent;
-            this.btnSearchScore1.ControlState = CCWin.SkinClass.ControlState.Normal;
-            this.btnSearchScore1.DownBack = null;
-            this.btnSearchScore1.Location = new System.Drawing.Point(242, 49);
-            this.btnSearchScore1.MouseBack = null;
-            this.btnSearchScore1.Name = "btnSearchScore1";
-            this.btnSearchScore1.NormlBack = null;
-            this.btnSearchScore1.Size = new System.Drawing.Size(75, 23);
-            this.btnSearchScore1.TabIndex = 1;
-            this.btnSearchScore1.Text = "搜索";
-            this.toolTip1.SetToolTip(this.btnSearchScore1, "输入学生编号或学生姓名");
-            this.btnSearchScore1.UseVisualStyleBackColor = false;
-            // 
-            // labStudent1
-            // 
-            this.labStudent1.AutoSize = true;
-            this.labStudent1.BackColor = System.Drawing.Color.Transparent;
-            this.labStudent1.BorderColor = System.Drawing.Color.White;
-            this.labStudent1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labStudent1.Location = new System.Drawing.Point(380, 52);
-            this.labStudent1.Name = "labStudent1";
-            this.labStudent1.Size = new System.Drawing.Size(44, 17);
-            this.labStudent1.TabIndex = 2;
-            this.labStudent1.Text = "学生：";
-            // 
-            // StudentId
-            // 
-            this.StudentId.HeaderText = "学生编号";
-            this.StudentId.Name = "StudentId";
-            this.StudentId.ReadOnly = true;
-            // 
-            // CourseName
-            // 
-            this.CourseName.HeaderText = "课程名";
-            this.CourseName.Name = "CourseName";
-            this.CourseName.ReadOnly = true;
-            // 
-            // TeacherNeme
-            // 
-            this.TeacherNeme.HeaderText = "授课教师";
-            this.TeacherNeme.Name = "TeacherNeme";
-            this.TeacherNeme.ReadOnly = true;
-            // 
-            // ScoreNum
-            // 
-            this.ScoreNum.HeaderText = "分数";
-            this.ScoreNum.Name = "ScoreNum";
-            this.ScoreNum.ReadOnly = true;
-            // 
-            // IsPass
-            // 
-            this.IsPass.HeaderText = "是否及格";
-            this.IsPass.Name = "IsPass";
-            this.IsPass.ReadOnly = true;
-            // 
-            // skinDataGridView2
-            // 
-            this.skinDataGridView2.AllowUserToAddRows = false;
-            this.skinDataGridView2.AllowUserToDeleteRows = false;
-            this.skinDataGridView2.AllowUserToOrderColumns = true;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(246)))), ((int)(((byte)(253)))));
-            this.skinDataGridView2.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
-            this.skinDataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.skinDataGridView2.BackgroundColor = System.Drawing.SystemColors.Window;
-            this.skinDataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.skinDataGridView2.ColumnFont = null;
-            this.skinDataGridView2.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(246)))), ((int)(((byte)(239)))));
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.skinDataGridView2.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle6;
-            this.skinDataGridView2.ColumnHeadersHeight = 26;
-            this.skinDataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.skinDataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2,
-            this.dataGridViewTextBoxColumn3,
-            this.dataGridViewTextBoxColumn4,
-            this.dataGridViewTextBoxColumn5});
-            this.skinDataGridView2.ColumnSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Blue;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(59)))), ((int)(((byte)(188)))), ((int)(((byte)(240)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.skinDataGridView2.DefaultCellStyle = dataGridViewCellStyle7;
-            this.skinDataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.skinDataGridView2.EnableHeadersVisualStyles = false;
-            this.skinDataGridView2.GridColor = System.Drawing.SystemColors.GradientActiveCaption;
-            this.skinDataGridView2.HeadFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.skinDataGridView2.HeadSelectForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView2.Location = new System.Drawing.Point(3, 17);
-            this.skinDataGridView2.Name = "skinDataGridView2";
-            this.skinDataGridView2.ReadOnly = true;
-            this.skinDataGridView2.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.skinDataGridView2.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            this.skinDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle8;
-            this.skinDataGridView2.RowTemplate.Height = 23;
-            this.skinDataGridView2.Size = new System.Drawing.Size(583, 278);
-            this.skinDataGridView2.TabIndex = 0;
-            this.skinDataGridView2.TitleBack = null;
-            this.skinDataGridView2.TitleBackColorBegin = System.Drawing.Color.White;
-            this.skinDataGridView2.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "学生编号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "课程名";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "授课教师";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "分数";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "是否及格";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            this.skinButton1.BackColor = System.Drawing.Color.Transparent;
+            this.skinButton1.ControlState = CCWin.SkinClass.ControlState.Normal;
+            this.skinButton1.DownBack = null;
+            this.skinButton1.Font = new System.Drawing.Font("微软雅黑", 12F);
+            this.skinButton1.ForeColor = System.Drawing.Color.White;
+            this.skinButton1.Location = new System.Drawing.Point(811, 36);
+            this.skinButton1.MouseBack = null;
+            this.skinButton1.Name = "skinButton1";
+            this.skinButton1.NormlBack = null;
+            this.skinButton1.Radius = 60;
+            this.skinButton1.RoundStyle = CCWin.SkinClass.RoundStyle.All;
+            this.skinButton1.Size = new System.Drawing.Size(182, 59);
+            this.skinButton1.TabIndex = 11;
+            this.skinButton1.Text = "录入新生";
+            this.skinButton1.UseVisualStyleBackColor = false;
             // 
             // frmMain
             // 
@@ -1426,14 +1510,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             this.tpScoreManage.ResumeLayout(false);
-            this.tpCourseManage.ResumeLayout(false);
-            this.splitContainer3.Panel1.ResumeLayout(false);
-            this.splitContainer3.Panel1.PerformLayout();
-            this.splitContainer3.Panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
-            this.splitContainer3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.contextMenuStrip1.ResumeLayout(false);
             this.splitContainer4.Panel1.ResumeLayout(false);
             this.splitContainer4.Panel1.PerformLayout();
             this.splitContainer4.Panel2.ResumeLayout(false);
@@ -1444,14 +1520,28 @@
             this.splitContainer5.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer5)).EndInit();
             this.splitContainer5.ResumeLayout(false);
+            this.skinGroupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.skinGroupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            this.skinGroupBox1.ResumeLayout(false);
-            this.skinGroupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.skinDataGridView2)).EndInit();
+            this.tpCourseManage.ResumeLayout(false);
+            this.splitContainer3.Panel1.ResumeLayout(false);
+            this.splitContainer3.Panel1.PerformLayout();
+            this.splitContainer3.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
+            this.splitContainer3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.tpStudentManage.ResumeLayout(false);
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.splitContainer6.Panel1.ResumeLayout(false);
+            this.splitContainer6.Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer6)).EndInit();
+            this.splitContainer6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1540,5 +1630,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.SplitContainer splitContainer6;
+        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.Label label8;
+        private CCWin.SkinControl.SkinLabel skinLabel5;
+        private CCWin.SkinControl.SkinButton skinButton1;
     }
 }

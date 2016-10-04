@@ -45,6 +45,7 @@
     <Compile Include="ICollegeDAL.cs" />
     <Compile Include="ICourseDAL.cs" />
     <Compile Include="IRoleDAL.cs" />
+    <Compile Include="IScoreDAL.cs" />
     <Compile Include="ISpecialityDAL.cs" />
     <Compile Include="IStudentDAL.cs" />
     <Compile Include="IUserDAL.cs" />

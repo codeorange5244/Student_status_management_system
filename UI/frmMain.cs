@@ -561,5 +561,11 @@ namespace StudentStatusManageSystem.UI
             dgvCourse.DataSource = list;
 
         }
+        //修改分数
+        private void btnEditScore_Click(object sender, EventArgs e)
+        {
+            frmEditScore frm = new UI.frmEditScore();
+            frm.Show();
+        }
     }
 }
