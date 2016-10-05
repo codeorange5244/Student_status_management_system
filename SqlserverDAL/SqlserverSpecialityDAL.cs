@@ -164,5 +164,20 @@ namespace StudentStatusManageSystem.SqlserverDAL
             }
             return dictionary;
         }
+
+        public Dictionary<int, string> GetAllSpecialityIdAndNameByCollegeId(int college_id)
+        {
+           string sql= "select [Id],[Name] from SpecialityInfo where [DelFlag]=0 AND [College_id]=" +college_id;
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow dr in dt.Rows)
+                {
+                    dictionary.Add(Convert.ToInt32(dr[0]), dr[1].ToString());
+                }
+            }
+            return dictionary;
+        }
     }
 }

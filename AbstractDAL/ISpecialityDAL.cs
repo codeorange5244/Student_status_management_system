@@ -75,5 +75,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="delFlag">删除标识：0---未删除，1---已删除</param>
         /// <returns></returns>
         Dictionary<int, string> GetAllspecialityIdAndNameByDelFlag(int delFlag);
+
+        /// <summary>
+        /// 获得所有 “专业” Id—Name键值对，根据学院Id
+        /// </summary>
+        /// <param name="college_id">学院Id</param>
+        /// <returns></returns>
+        Dictionary<int, string> GetAllSpecialityIdAndNameByCollegeId(int college_id);
     }
 }

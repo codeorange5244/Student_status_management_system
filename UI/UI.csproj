@@ -58,6 +58,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="dgvStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="dgvStudent.Designer.cs">
+      <DependentUpon>dgvStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAddClassInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -142,8 +148,17 @@
     <Compile Include="frmSpecialityRecycleBin.Designer.cs">
       <DependentUpon>frmSpecialityRecycleBin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStudent.Designer.cs">
+      <DependentUpon>frmStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dgvStudent.resx">
+      <DependentUpon>dgvStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAddClassInfo.resx">
       <DependentUpon>frmAddClassInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -185,6 +200,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmSpecialityRecycleBin.resx">
       <DependentUpon>frmSpecialityRecycleBin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStudent.resx">
+      <DependentUpon>frmStudent.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

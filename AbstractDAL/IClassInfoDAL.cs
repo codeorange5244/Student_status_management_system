@@ -36,5 +36,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="model"></param>
         /// <returns></returns>
         int UpdateClassInfoByDelFlag(ClassInfo model);
+
+        /// <summary>
+        /// 根据专业得到班级
+        /// </summary>
+        /// <param name="speciality_id">专业Id</param>
+        /// <returns></returns>
+        Dictionary<int, string> GetAllClassInfoIdAndNameBySpecialityId(int speciality_id);
     }
 }

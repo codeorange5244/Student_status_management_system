@@ -34,6 +34,16 @@ namespace StudentStatusManageSystem.BLL
         }
 
         /// <summary>
+        /// 根据专业得到班级
+        /// </summary>
+        /// <param name="speciality_id">专业Id</param>
+        /// <returns></returns>
+        public Dictionary<int, string> GetAllClassInfoIdAndNameBySpecialityId(int speciality_id)
+        {
+            return idal.GetAllClassInfoIdAndNameBySpecialityId(speciality_id);
+        }
+
+        /// <summary>
         /// 更新
         /// </summary>
         /// <param name="model"></param>

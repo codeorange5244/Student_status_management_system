@@ -87,5 +87,20 @@ namespace StudentStatusManageSystem.SqlserverDAL
             };
             return SqlserverHelper.ExecuteNonQuery(sql,ps);
         }
+
+        public Dictionary<int, string> GetAllClassInfoIdAndNameBySpecialityId(int speciality_id)
+        {
+            string sql= "SELECT [Id],[Name]  FROM[dbo].[ClassInfo] where [DelFlag]=0 and [Speciality_id]=" + speciality_id;
+            Dictionary<int, string> dictonary = new Dictionary<int, string>();
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dictonary.Add(Convert.ToInt32(dr[0]), dr[1].ToString());
+                }
+            }
+            return dictonary;
+        }
     }
 }

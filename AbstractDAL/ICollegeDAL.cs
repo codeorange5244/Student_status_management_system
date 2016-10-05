@@ -36,5 +36,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="college_id"></param>
         /// <returns></returns>
         int DeleteCollegeByCollegeId(int college_id,int submitter_id,int delFlag=1);
+
+        /// <summary>
+        /// 获得Id-Name键值对，根据删除标识
+        /// </summary>
+        /// <param name="delFlag">0---已删除，1---删除</param>
+        /// <returns></returns>
+        Dictionary<int, string> GetAllSpecialityIdAndNameByDelFlag(int delFlag);
     }
 }

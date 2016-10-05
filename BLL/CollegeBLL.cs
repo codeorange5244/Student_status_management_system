@@ -50,5 +50,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.DeleteCollegeByCollegeId(college_id,submitter_id,delFlag) > 0;
         }
+
+        /// <summary>
+        /// 获得Id-Name键值对，根据删除标识
+        /// </summary>
+        /// <param name="delFlag">0---已删除，1---删除</param>
+        /// <returns></returns>
+        public Dictionary<int, string> GetAllSpecialityIdAndNameByDelFlag(int delFlag)
+        {
+            return idal.GetAllSpecialityIdAndNameByDelFlag(delFlag);
+        }
     }
 }

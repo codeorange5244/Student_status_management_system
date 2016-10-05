@@ -235,8 +235,8 @@ namespace StudentStatusManageSystem.UI
             DataGridViewTextBoxColumn[] cols =
             {
                     new DataGridViewTextBoxColumn(){HeaderText="编号", DataPropertyName="Id"},
-                    new  DataGridViewTextBoxColumn() {HeaderText="课程名",DataPropertyName="Name" }   ,
-                    new DataGridViewTextBoxColumn() {HeaderText="所属专业编号",DataPropertyName="Speciality_id" }    ,
+                    new  DataGridViewTextBoxColumn() {HeaderText="课程名",DataPropertyName="Name" },
+                    new DataGridViewTextBoxColumn() {HeaderText="所属专业编号",DataPropertyName="Speciality_id" },
                     new    DataGridViewTextBoxColumn() {HeaderText="上课地点",DataPropertyName="Room_name" },
                     new DataGridViewTextBoxColumn() {HeaderText="学期",DataPropertyName="Semester" }
              };
@@ -269,8 +269,32 @@ namespace StudentStatusManageSystem.UI
         //学生管理
         private void LoadStudentManage()
         {
-
+            //加载所有专业
+            LoadAllSpeciality();
         }
+        //加载所有专业
+        private void LoadAllSpeciality()
+        {
+            tbSpeciality2.Controls.Clear(); //清除控件   
+            CollegeBLL bll_college = new CollegeBLL();
+           Dictionary<int,string> dictionary= bll_speciality.GetAllspecialityIdAndNameByDelFlag(0); //专业键值对
+            Dictionary<int, string> dictionary_college = bll_college.GetAllSpecialityIdAndNameByDelFlag(0); //学院键值对
+            //建立 ”学院“tabpage
+            foreach(int key in dictionary_college.Keys)
+            {
+                TabPage tp = new TabPage(dictionary_college[key]);
+                tp.Tag = key;   //选项卡储存学院Id
+                ListView lv = new ListView();   //tabpage中添加listvie
+                lv.Dock = DockStyle.Fill;
+                lv.LargeImageList = imageList1;
+                lv.MultiSelect = false;
+                lv.View = View.LargeIcon;   //listview中的项以最大项显示
+                tp.Controls.Add(lv);
+                tbSpeciality2.TabPages.Add(tp);
+            }
+            tbSpeciality2_Selecting(null, new TabControlCancelEventArgs(tbSpeciality2.SelectedTab, tbSpeciality2.SelectedIndex, false, TabControlAction.Selecting));    //调用选项卡改变事件
+        }
+
         //班级信息管理
         private void LoadClassInfoManage()
         {
@@ -566,6 +590,27 @@ namespace StudentStatusManageSystem.UI
         {
             frmEditScore frm = new UI.frmEditScore();
             frm.Show();
+        }
+        //选择 ”学院“选项卡页时发生
+        private void tbSpeciality2_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            if (e.TabPage == null) return;  //在进行Controls.Clear（）时，会触发此事件，所以需要判断            
+            ListView lv = e.TabPage.Controls[0] as ListView;    //得到选中卡中的ListView控件
+            lv.Items.Clear();
+            Dictionary<int,string> dictionary= bll_speciality.GetAllSpecialityIdAndNameByCollegeId((int)e.TabPage.Tag);    //得到专业Id-Name键值对
+            foreach(int key in dictionary.Keys)
+            {
+                lv.Items.Add(dictionary[key], 0).Tag=key;
+            }
+            //这次双击事件
+            lv.DoubleClick += new EventHandler((a, b) =>
+              {
+                  if (lv.SelectedItems.Count > 0)   //说明双击在item上
+                  {
+                      frmStudent frm = new frmStudent((int)lv.SelectedItems[0].Tag);
+                      frm.Show();
+                  }
+              });
         }
     }
 }

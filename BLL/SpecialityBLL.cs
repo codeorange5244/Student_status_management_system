@@ -95,5 +95,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.GetAllspecialityIdAndNameByDelFlag(delFlag);
         }
+
+        /// <summary>
+        /// 获得所有 “专业” Id—Name键值对，根据学院Id
+        /// </summary>
+        /// <param name="college_id">学院Id</param>
+        /// <returns></returns>
+        public Dictionary<int, string> GetAllSpecialityIdAndNameByCollegeId(int college_id)
+        {
+            return idal.GetAllSpecialityIdAndNameByCollegeId(college_id);
+        }
     }
 }

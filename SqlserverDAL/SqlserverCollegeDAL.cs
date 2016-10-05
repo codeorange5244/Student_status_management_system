@@ -57,5 +57,20 @@ namespace StudentStatusManageSystem.SqlserverDAL
             model.Submit_date = Convert.ToDateTime(dr[3]);
             return model;
         }
+
+        public Dictionary<int, string> GetAllSpecialityIdAndNameByDelFlag(int delFlag)
+        {
+            string sql = "SELECT [Id],[Name] FROM[dbo].[CollegeInfo] where [DelFlag]=" + delFlag;
+            Dictionary<int, string> dictionary = new Dictionary<int, string>();
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                foreach(DataRow dr in dt.Rows)
+                {
+                    dictionary.Add(Convert.ToInt32(dr[0]), dr[1].ToString());
+                }
+            }
+            return dictionary;
+        }
     }
 }
