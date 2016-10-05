@@ -19,5 +19,12 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="delFlag">删除标识：0---未删除，1---已删除</param>
         /// <returns></returns>
          List<Student> GetAllStudentByClassInfoId(int classInfo_id, int delFlag);
+
+        /// <summary>
+        /// 添加“学生”
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        int AddStudent(Student model);
     }
 }

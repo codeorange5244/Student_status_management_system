@@ -179,5 +179,18 @@ namespace StudentStatusManageSystem.SqlserverDAL
             }
             return dictionary;
         }
+
+        public Speciality GetSpecialityBySpecialityId(int speciality_id)
+        {
+            string sql = "SELECT [Id],[Name],[Remark],[Submitter_id],[Submit_datetime] FROM[dbo].[SpecialityInfo] WHERE [DelFlag]=0 AND [Id]=" + speciality_id;
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);          
+            if (dt.Rows.Count > 0)
+            {
+                return  RowToSpeciality(dt.Rows[0]);
+            }else
+            {
+                return null;
+            }
+        }
     }
 }

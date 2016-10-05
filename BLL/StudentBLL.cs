@@ -35,5 +35,15 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal_student.GetAllStudentByClassInfoId(classInfo_id, delFlag);
         }
+
+        /// <summary>
+        /// 添加“学生”
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public bool AddStudent(Student model)
+        {
+            return idal_student.AddStudent(model) > 0;
+        }
     }
 }

@@ -39,6 +39,14 @@ namespace StudentStatusManageSystem.AbstractDAL
 
 
         /// <summary>
+        /// 根据“专业Id”得到对象
+        /// </summary>
+        /// <param name="speciality_id"></param>
+        /// <returns></returns>
+        Speciality GetSpecialityBySpecialityId(int speciality_id);
+
+
+        /// <summary>
         /// 获取所有“专业”信息根据删除标识
         /// </summary>
         /// <param name="delFlag">删除标识，0---未删除，1---已删除</param>
