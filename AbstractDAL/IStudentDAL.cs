@@ -26,5 +26,13 @@ namespace StudentStatusManageSystem.AbstractDAL
         /// <param name="model"></param>
         /// <returns></returns>
         int AddStudent(Student model);
+
+        /// <summary>
+        /// 删除一个”学生“
+        /// </summary>
+        /// <param name="student_id">学生Id</param>
+        /// <param name="id">执行人Id</param>
+        /// <returns></returns>
+        int SoftDeleteByStudentId(int student_id, int id);
     }
 }

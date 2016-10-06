@@ -109,7 +109,7 @@
             this.txtName.Icon = null;
             this.txtName.IconIsButton = false;
             this.txtName.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtName.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtName.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtName.IsPasswordChat = '\0';
             this.txtName.IsSystemPasswordChar = false;
             this.txtName.Lines = new string[] {
@@ -179,7 +179,7 @@
             this.txtIDCard.Icon = null;
             this.txtIDCard.IconIsButton = false;
             this.txtIDCard.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtIDCard.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtIDCard.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtIDCard.IsPasswordChat = '\0';
             this.txtIDCard.IsSystemPasswordChar = false;
             this.txtIDCard.Lines = new string[] {
@@ -248,7 +248,7 @@
             this.txtNationality.Icon = null;
             this.txtNationality.IconIsButton = false;
             this.txtNationality.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtNationality.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtNationality.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtNationality.IsPasswordChat = '\0';
             this.txtNationality.IsSystemPasswordChar = false;
             this.txtNationality.Lines = new string[] {
@@ -305,7 +305,7 @@
             this.txtAddress.Icon = null;
             this.txtAddress.IconIsButton = false;
             this.txtAddress.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtAddress.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtAddress.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtAddress.IsPasswordChat = '\0';
             this.txtAddress.IsSystemPasswordChar = false;
             this.txtAddress.Lines = new string[] {
@@ -362,7 +362,7 @@
             this.txtPhone.Icon = null;
             this.txtPhone.IconIsButton = false;
             this.txtPhone.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtPhone.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtPhone.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtPhone.IsPasswordChat = '\0';
             this.txtPhone.IsSystemPasswordChar = false;
             this.txtPhone.Lines = new string[] {
@@ -419,7 +419,7 @@
             this.txtPolitical_role.Icon = null;
             this.txtPolitical_role.IconIsButton = false;
             this.txtPolitical_role.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtPolitical_role.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtPolitical_role.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtPolitical_role.IsPasswordChat = '\0';
             this.txtPolitical_role.IsSystemPasswordChar = false;
             this.txtPolitical_role.Lines = new string[] {
@@ -476,7 +476,7 @@
             this.txtPosecode.Icon = null;
             this.txtPosecode.IconIsButton = false;
             this.txtPosecode.IconMouseState = CCWin.SkinClass.ControlState.Normal;
-            this.txtPosecode.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.txtPosecode.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.txtPosecode.IsPasswordChat = '\0';
             this.txtPosecode.IsSystemPasswordChar = false;
             this.txtPosecode.Lines = new string[] {
@@ -576,7 +576,7 @@
             // 
             this.cbSex.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSex.FormattingEnabled = true;
-            this.cbSex.ImeMode = System.Windows.Forms.ImeMode.On;
+            this.cbSex.ImeMode = System.Windows.Forms.ImeMode.Off;
             this.cbSex.Items.AddRange(new object[] {
             "男",
             "女"});

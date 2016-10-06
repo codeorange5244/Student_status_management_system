@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using StudentStatusManageSystem.Model;
+using StudentStatusManageSystem.BLL;
 
 namespace StudentStatusManageSystem.UI
 {
@@ -38,6 +39,26 @@ namespace StudentStatusManageSystem.UI
                 frmAddStudent frm = new frmAddStudent(model);
                 frm.ShowDialog();
             }));
+            //添加”删除“选项
+            menu.Items.Add("删除改行数据", Properties.Resources.cancel2, new EventHandler((a, b) =>
+              {
+                  if (CCWin.MessageBoxEx.Show("是否要移除该名学生？", "提示", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                  {
+                      var currentRow = skinDataGridView1.CurrentRow;    //获取当前行
+                      int student_id = Convert.ToInt32(currentRow.Cells[0].Value);  //当前学生Id
+                      StudentBLL bll = new StudentBLL();
+                      if (bll.SoftDeleteByStudentId(student_id, frmMain.current_user.Id))
+                      {
+                          CCWin.MessageBoxEx.Show("移除成功！");
+                      }else
+                      {
+                          CCWin.MessageBoxEx.Show("移除失败，请重试！");
+                      }
+                      Action<object, TabControlCancelEventArgs> shua_xin = (Action<object, TabControlCancelEventArgs>)this.Tag;
+                      shua_xin(null, null); //刷新
+                  }
+
+              }));
             //菜单加入datagridview
             skinDataGridView1.ContextMenuStrip = menu;
         }

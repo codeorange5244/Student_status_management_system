@@ -87,5 +87,11 @@ namespace StudentStatusManageSystem.SqlserverDAL
             };
             return SqlserverHelper.ExecuteNonQuery(sql, ps);
         }
+
+        public int SoftDeleteByStudentId(int student_id, int id)
+        {
+            string sql = "UPDATE STUDENTINFO SET [DelFlag]=1,[Submitter_id]="+id+" where [Id]=" + student_id;
+            return SqlserverHelper.ExecuteNonQuery(sql);
+        }
     }
 }

@@ -45,5 +45,16 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal_student.AddStudent(model) > 0;
         }
+
+        /// <summary>
+        /// 删除一个”学生“
+        /// </summary>
+        /// <param name="student_id">学生Id</param>
+        /// <param name="id">执行人Id</param>
+        /// <returns></returns>
+        public bool SoftDeleteByStudentId(int student_id, int id)
+        {
+            return idal_student.SoftDeleteByStudentId(student_id, id)>0;
+        }
     }
 }
