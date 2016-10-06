@@ -14,7 +14,12 @@ namespace StudentStatusManageSystem.AbstractDAL
 
         int DeleteClassInfoByClassInfoId();
 
-        ClassInfo GetClassInfoByClassInfoId();
+        /// <summary>
+        /// 根据“班级Id”得到班级对象
+        /// </summary>
+        /// <param name="class_id"></param>
+        /// <returns></returns>
+        ClassInfo GetClassInfoByClassInfoId(int class_id);
 
         /// <summary>
         /// 添加一条数据

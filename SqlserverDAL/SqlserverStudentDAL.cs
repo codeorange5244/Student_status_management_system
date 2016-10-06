@@ -68,7 +68,7 @@ namespace StudentStatusManageSystem.SqlserverDAL
 
         public int AddStudent(Student model)
         {
-            string sql = "INSERT INTO [dbo].[StudentInfo]([Student_GUID],[Class_id],[Speciality_id],[Name],[ID_Card],[Sex],[Nationality],[Address],[Phone],[Political_role],[Posecode],[Remark],[Photograph],[Submitter_id]) VALUES(@Class_id,@Speciality_id,@Name,@ID_Card,@Sex,@Nationality,@Address,@Phone,@Political_role,@Posecode,@Remark,@Photograph,@Submitter_id)";
+            string sql = "INSERT INTO [dbo].[StudentInfo]([Class_id],[Speciality_id],[Name],[ID_Card],[Sex],[Nationality],[Address],[Phone],[Political_role],[Posecode],[Remark],[Submitter_id]) VALUES(@Class_id,@Speciality_id,@Name,@ID_Card,@Sex,@Nationality,@Address,@Phone,@Political_role,@Posecode,@Remark,@Submitter_id)";
             SqlParameter[] ps =
             {
                 new SqlParameter("@Class_id",model.Class_id),
@@ -82,9 +82,9 @@ namespace StudentStatusManageSystem.SqlserverDAL
                 new SqlParameter("@Political_role",model.Political_role),
                 new SqlParameter("@Posecode",model.Posecode),
                 new SqlParameter("@Remark",model.Remark),
-                new SqlParameter("@Photograph",model.Photograph),
+             //   new SqlParameter("@Photograph",model.Photograph),
                 new SqlParameter("@Submitter_id",model.Submitter_id)
-            }
+            };
             return SqlserverHelper.ExecuteNonQuery(sql, ps);
         }
     }

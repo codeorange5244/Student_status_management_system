@@ -41,13 +41,17 @@ namespace StudentStatusManageSystem.UI
                     tp.Controls.Add(new dgvStudent());  //添加Datagridview
                     tbClassInfo.TabPages.Add(tp);
                 }
-                tbClassInfo_Selecting(null, new TabControlCancelEventArgs(tbClassInfo.SelectedTab, tbClassInfo.SelectedIndex, false, TabControlAction.Selecting));  //手动调用一下选项卡改变事件
-                this.Text = "数据已加载完毕";
+                //如果有班级，则手动调用选项卡改变事件
+                if (tbClassInfo.TabPages.Count > 0)
+                {
+                    tbClassInfo_Selecting(null, new TabControlCancelEventArgs(tbClassInfo.SelectedTab, tbClassInfo.SelectedIndex, false, TabControlAction.Selecting));  //手动调用一下选项卡改变事件
+                }
+                this.Text = "班级数据已加载完毕";
             }));
         }
         //选择选项卡卡页时发生
         private void tbClassInfo_Selecting(object sender, TabControlCancelEventArgs e)
-        {            
+        {
             //从数据库加载学生数据
             CCWin.SkinControl.SkinDataGridView dgv = e.TabPage.Controls[0].Controls[0] as CCWin.SkinControl.SkinDataGridView;   //得到Datagridview
             StudentBLL bll = new StudentBLL();

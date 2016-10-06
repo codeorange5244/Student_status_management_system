@@ -14,11 +14,11 @@ namespace StudentStatusManageSystem.SqlserverDAL
     {
         public int AddClassInfo(ClassInfo model)
         {
-            string sql = "INSERT INTO[dbo].[ClassInfo]([Name],[Specility_id],[Room_name],[School_reform],[Headteacher],[Enrolment_time],[Submitter_id]) VALUES(@Name,@Specility_id,@Room_name,@School_reform,@Headteacher,@Enrolment_time,@Submitter_id)";
+            string sql = "INSERT INTO[dbo].[ClassInfo]([Name],[Speciality_id],[Room_name],[School_reform],[Headteacher],[Enrolment_time],[Submitter_id]) VALUES(@Name,@Speciality_id,@Room_name,@School_reform,@Headteacher,@Enrolment_time,@Submitter_id)";
             SqlParameter[] ps =
             {
                 new SqlParameter("@Name",model.Name),
-                new SqlParameter("@Specility_id",model.Specility_id),
+                new SqlParameter("@Speciality_id",model.Specility_id),
                 new SqlParameter("@Room_name",model.Room_name),
                 new SqlParameter("@School_reform",model.School_reform),
                 new SqlParameter ("@Headteacher",model.Headteacher),
@@ -101,6 +101,20 @@ namespace StudentStatusManageSystem.SqlserverDAL
                 }
             }
             return dictonary;
+        }
+
+        public ClassInfo GetClassInfoByClassInfoId(int class_id)
+        {
+            string sql = "SELECT [Id],[Name],[Speciality_id],[Room_name],[School_reform],[Headteacher],[Enrolment_time],[Submitter_id]  FROM[dbo].[ClassInfo] where [DelFlag]=0 AND [Id]="+class_id;
+            DataTable dt = SqlserverHelper.AdapterDataTable(sql);
+            if (dt.Rows.Count > 0)
+            {
+                return RowToClassInfo(dt.Rows[0]);
+            }else
+            {
+                return null;
+            }
+            
         }
     }
 }

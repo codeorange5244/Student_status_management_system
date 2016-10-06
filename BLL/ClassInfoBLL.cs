@@ -33,6 +33,11 @@ namespace StudentStatusManageSystem.BLL
             return idal.GetClassInfosBySpecialityId(id,delFlag);
         }
 
+        public ClassInfo GetClassInfoByClassInfoId(int class_id)
+        {
+            return idal.GetClassInfoByClassInfoId(class_id);
+        }
+
         /// <summary>
         /// 根据专业得到班级
         /// </summary>

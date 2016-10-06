@@ -109,10 +109,11 @@
             this.txtName.Icon = null;
             this.txtName.IconIsButton = false;
             this.txtName.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtName.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtName.IsPasswordChat = '\0';
             this.txtName.IsSystemPasswordChar = false;
             this.txtName.Lines = new string[] {
-        "skinTextBox1"};
+        "李翔"};
             this.txtName.Location = new System.Drawing.Point(101, 130);
             this.txtName.Margin = new System.Windows.Forms.Padding(0);
             this.txtName.MaxLength = 20;
@@ -137,11 +138,11 @@
             this.txtName.SkinTxt.Name = "BaseText";
             this.txtName.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtName.SkinTxt.TabIndex = 0;
-            this.txtName.SkinTxt.Text = "skinTextBox1";
+            this.txtName.SkinTxt.Text = "李翔";
             this.txtName.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtName.SkinTxt.WaterText = "";
             this.txtName.TabIndex = 2;
-            this.txtName.Text = "skinTextBox1";
+            this.txtName.Text = "李翔";
             this.txtName.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtName.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtName.WaterText = "";
@@ -178,10 +179,11 @@
             this.txtIDCard.Icon = null;
             this.txtIDCard.IconIsButton = false;
             this.txtIDCard.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtIDCard.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtIDCard.IsPasswordChat = '\0';
             this.txtIDCard.IsSystemPasswordChar = false;
             this.txtIDCard.Lines = new string[] {
-        "skinTextBox1"};
+        "12345678910"};
             this.txtIDCard.Location = new System.Drawing.Point(101, 189);
             this.txtIDCard.Margin = new System.Windows.Forms.Padding(0);
             this.txtIDCard.MaxLength = 32767;
@@ -205,11 +207,11 @@
             this.txtIDCard.SkinTxt.Name = "BaseText";
             this.txtIDCard.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtIDCard.SkinTxt.TabIndex = 0;
-            this.txtIDCard.SkinTxt.Text = "skinTextBox1";
+            this.txtIDCard.SkinTxt.Text = "12345678910";
             this.txtIDCard.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtIDCard.SkinTxt.WaterText = "";
             this.txtIDCard.TabIndex = 2;
-            this.txtIDCard.Text = "skinTextBox1";
+            this.txtIDCard.Text = "12345678910";
             this.txtIDCard.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtIDCard.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtIDCard.WaterText = "";
@@ -246,10 +248,11 @@
             this.txtNationality.Icon = null;
             this.txtNationality.IconIsButton = false;
             this.txtNationality.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtNationality.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtNationality.IsPasswordChat = '\0';
             this.txtNationality.IsSystemPasswordChar = false;
             this.txtNationality.Lines = new string[] {
-        "skinTextBox1"};
+        "汉族"};
             this.txtNationality.Location = new System.Drawing.Point(101, 308);
             this.txtNationality.Margin = new System.Windows.Forms.Padding(0);
             this.txtNationality.MaxLength = 32767;
@@ -273,11 +276,11 @@
             this.txtNationality.SkinTxt.Name = "BaseText";
             this.txtNationality.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtNationality.SkinTxt.TabIndex = 0;
-            this.txtNationality.SkinTxt.Text = "skinTextBox1";
+            this.txtNationality.SkinTxt.Text = "汉族";
             this.txtNationality.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtNationality.SkinTxt.WaterText = "";
             this.txtNationality.TabIndex = 2;
-            this.txtNationality.Text = "skinTextBox1";
+            this.txtNationality.Text = "汉族";
             this.txtNationality.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtNationality.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtNationality.WaterText = "";
@@ -302,10 +305,11 @@
             this.txtAddress.Icon = null;
             this.txtAddress.IconIsButton = false;
             this.txtAddress.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtAddress.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtAddress.IsPasswordChat = '\0';
             this.txtAddress.IsSystemPasswordChar = false;
             this.txtAddress.Lines = new string[] {
-        "skinTextBox1"};
+        "朱邓聪"};
             this.txtAddress.Location = new System.Drawing.Point(426, 130);
             this.txtAddress.Margin = new System.Windows.Forms.Padding(0);
             this.txtAddress.MaxLength = 32767;
@@ -329,11 +333,11 @@
             this.txtAddress.SkinTxt.Name = "BaseText";
             this.txtAddress.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtAddress.SkinTxt.TabIndex = 0;
-            this.txtAddress.SkinTxt.Text = "skinTextBox1";
+            this.txtAddress.SkinTxt.Text = "朱邓聪";
             this.txtAddress.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtAddress.SkinTxt.WaterText = "";
             this.txtAddress.TabIndex = 2;
-            this.txtAddress.Text = "skinTextBox1";
+            this.txtAddress.Text = "朱邓聪";
             this.txtAddress.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtAddress.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtAddress.WaterText = "";
@@ -358,10 +362,11 @@
             this.txtPhone.Icon = null;
             this.txtPhone.IconIsButton = false;
             this.txtPhone.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtPhone.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtPhone.IsPasswordChat = '\0';
             this.txtPhone.IsSystemPasswordChar = false;
             this.txtPhone.Lines = new string[] {
-        "skinTextBox1"};
+        "12345678910"};
             this.txtPhone.Location = new System.Drawing.Point(426, 189);
             this.txtPhone.Margin = new System.Windows.Forms.Padding(0);
             this.txtPhone.MaxLength = 32767;
@@ -385,11 +390,11 @@
             this.txtPhone.SkinTxt.Name = "BaseText";
             this.txtPhone.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtPhone.SkinTxt.TabIndex = 0;
-            this.txtPhone.SkinTxt.Text = "skinTextBox1";
+            this.txtPhone.SkinTxt.Text = "12345678910";
             this.txtPhone.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPhone.SkinTxt.WaterText = "";
             this.txtPhone.TabIndex = 2;
-            this.txtPhone.Text = "skinTextBox1";
+            this.txtPhone.Text = "12345678910";
             this.txtPhone.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPhone.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPhone.WaterText = "";
@@ -414,10 +419,11 @@
             this.txtPolitical_role.Icon = null;
             this.txtPolitical_role.IconIsButton = false;
             this.txtPolitical_role.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtPolitical_role.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtPolitical_role.IsPasswordChat = '\0';
             this.txtPolitical_role.IsSystemPasswordChar = false;
             this.txtPolitical_role.Lines = new string[] {
-        "skinTextBox1"};
+        "群众"};
             this.txtPolitical_role.Location = new System.Drawing.Point(426, 248);
             this.txtPolitical_role.Margin = new System.Windows.Forms.Padding(0);
             this.txtPolitical_role.MaxLength = 32767;
@@ -441,11 +447,11 @@
             this.txtPolitical_role.SkinTxt.Name = "BaseText";
             this.txtPolitical_role.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtPolitical_role.SkinTxt.TabIndex = 0;
-            this.txtPolitical_role.SkinTxt.Text = "skinTextBox1";
+            this.txtPolitical_role.SkinTxt.Text = "群众";
             this.txtPolitical_role.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPolitical_role.SkinTxt.WaterText = "";
             this.txtPolitical_role.TabIndex = 2;
-            this.txtPolitical_role.Text = "skinTextBox1";
+            this.txtPolitical_role.Text = "群众";
             this.txtPolitical_role.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPolitical_role.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPolitical_role.WaterText = "";
@@ -470,10 +476,11 @@
             this.txtPosecode.Icon = null;
             this.txtPosecode.IconIsButton = false;
             this.txtPosecode.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtPosecode.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtPosecode.IsPasswordChat = '\0';
             this.txtPosecode.IsSystemPasswordChar = false;
             this.txtPosecode.Lines = new string[] {
-        "skinTextBox1"};
+        "20160613"};
             this.txtPosecode.Location = new System.Drawing.Point(426, 307);
             this.txtPosecode.Margin = new System.Windows.Forms.Padding(0);
             this.txtPosecode.MaxLength = 32767;
@@ -497,11 +504,11 @@
             this.txtPosecode.SkinTxt.Name = "BaseText";
             this.txtPosecode.SkinTxt.Size = new System.Drawing.Size(120, 18);
             this.txtPosecode.SkinTxt.TabIndex = 0;
-            this.txtPosecode.SkinTxt.Text = "skinTextBox1";
+            this.txtPosecode.SkinTxt.Text = "20160613";
             this.txtPosecode.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPosecode.SkinTxt.WaterText = "";
             this.txtPosecode.TabIndex = 2;
-            this.txtPosecode.Text = "skinTextBox1";
+            this.txtPosecode.Text = "20160613";
             this.txtPosecode.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtPosecode.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtPosecode.WaterText = "";
@@ -526,10 +533,11 @@
             this.txtRemark.Icon = null;
             this.txtRemark.IconIsButton = false;
             this.txtRemark.IconMouseState = CCWin.SkinClass.ControlState.Normal;
+            this.txtRemark.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtRemark.IsPasswordChat = '\0';
             this.txtRemark.IsSystemPasswordChar = false;
             this.txtRemark.Lines = new string[] {
-        "skinTextBox1"};
+        "华鹏程"};
             this.txtRemark.Location = new System.Drawing.Point(71, 388);
             this.txtRemark.Margin = new System.Windows.Forms.Padding(0);
             this.txtRemark.MaxLength = 32767;
@@ -554,11 +562,11 @@
             this.txtRemark.SkinTxt.Name = "BaseText";
             this.txtRemark.SkinTxt.Size = new System.Drawing.Size(475, 82);
             this.txtRemark.SkinTxt.TabIndex = 0;
-            this.txtRemark.SkinTxt.Text = "skinTextBox1";
+            this.txtRemark.SkinTxt.Text = "华鹏程";
             this.txtRemark.SkinTxt.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtRemark.SkinTxt.WaterText = "";
             this.txtRemark.TabIndex = 2;
-            this.txtRemark.Text = "skinTextBox1";
+            this.txtRemark.Text = "华鹏程";
             this.txtRemark.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txtRemark.WaterColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(127)))), ((int)(((byte)(127)))));
             this.txtRemark.WaterText = "";
@@ -568,6 +576,7 @@
             // 
             this.cbSex.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.cbSex.FormattingEnabled = true;
+            this.cbSex.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbSex.Items.AddRange(new object[] {
             "男",
             "女"});
@@ -639,6 +648,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmAddStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "录入新生";
             this.Load += new System.EventHandler(this.frmAddStudent_Load);
             this.ResumeLayout(false);

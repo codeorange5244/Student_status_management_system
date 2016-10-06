@@ -313,6 +313,7 @@ namespace StudentStatusManageSystem.UI
             cbClassInfoSpeciality.DisplayMember = "Value";
             cbClassInfoSpeciality.ValueMember = "Key";
             //加载班级到TreeView
+            tvClassInfo.Nodes.Clear();  //先清空
             var keys = dictionary.Keys;
             foreach (int key in keys)
             {
@@ -545,7 +546,7 @@ namespace StudentStatusManageSystem.UI
             if (e.Node.Tag is ClassInfo)
             {
                 var model = e.Node.Tag as ClassInfo;
-                labClassInfoId.Text = model.Id.ToString();
+                labClassInfoId.Text += model.Id.ToString();
                 txtClassInfoName.Text = model.Name;
                 txtRoomName.Text = model.Room_name;
                 txtHeadTeacher.Text = model.Headteacher;

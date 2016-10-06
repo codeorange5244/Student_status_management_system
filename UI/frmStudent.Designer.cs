@@ -51,6 +51,7 @@
             this.Controls.Add(this.tbClassInfo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmStudent";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "";
             this.Load += new System.EventHandler(this.frmStudent_Load);
             this.ResumeLayout(false);
