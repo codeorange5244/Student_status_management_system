@@ -54,6 +54,8 @@
             this.cbSex = new CCWin.SkinControl.SkinComboBox();
             this.btnPhotograph = new CCWin.SkinControl.SkinButton();
             this.btnOk = new CCWin.SkinControl.SkinButton();
+            this.picPhotograph = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picPhotograph)).BeginInit();
             this.SuspendLayout();
             // 
             // skinLabel1
@@ -592,7 +594,7 @@
             this.btnPhotograph.BackColor = System.Drawing.Color.Transparent;
             this.btnPhotograph.ControlState = CCWin.SkinClass.ControlState.Normal;
             this.btnPhotograph.DownBack = null;
-            this.btnPhotograph.Location = new System.Drawing.Point(534, 67);
+            this.btnPhotograph.Location = new System.Drawing.Point(632, 157);
             this.btnPhotograph.MouseBack = null;
             this.btnPhotograph.Name = "btnPhotograph";
             this.btnPhotograph.NormlBack = null;
@@ -600,6 +602,7 @@
             this.btnPhotograph.TabIndex = 3;
             this.btnPhotograph.Text = "浏览照片";
             this.btnPhotograph.UseVisualStyleBackColor = false;
+            this.btnPhotograph.Click += new System.EventHandler(this.btnPhotograph_Click);
             // 
             // btnOk
             // 
@@ -616,11 +619,20 @@
             this.btnOk.UseVisualStyleBackColor = false;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
+            // picPhotograph
+            // 
+            this.picPhotograph.Location = new System.Drawing.Point(610, 44);
+            this.picPhotograph.Name = "picPhotograph";
+            this.picPhotograph.Size = new System.Drawing.Size(97, 93);
+            this.picPhotograph.TabIndex = 4;
+            this.picPhotograph.TabStop = false;
+            // 
             // frmAddStudent
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(735, 529);
+            this.Controls.Add(this.picPhotograph);
             this.Controls.Add(this.btnOk);
             this.Controls.Add(this.btnPhotograph);
             this.Controls.Add(this.txtRemark);
@@ -651,6 +663,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "录入新生";
             this.Load += new System.EventHandler(this.frmAddStudent_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.picPhotograph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,5 +695,6 @@
         private CCWin.SkinControl.SkinComboBox cbSex;
         private CCWin.SkinControl.SkinButton btnPhotograph;
         private CCWin.SkinControl.SkinButton btnOk;
+        private System.Windows.Forms.PictureBox picPhotograph;
     }
 }

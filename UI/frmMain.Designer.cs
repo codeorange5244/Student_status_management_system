@@ -295,7 +295,7 @@
             this.skinTabControl1.PageImagePosition = CCWin.SkinControl.SkinTabControl.ePageImagePosition.Top;
             this.skinTabControl1.PageNorml = null;
             this.skinTabControl1.PageNormlTxtColor = System.Drawing.Color.White;
-            this.skinTabControl1.SelectedIndex = 5;
+            this.skinTabControl1.SelectedIndex = 4;
             this.skinTabControl1.Size = new System.Drawing.Size(1129, 671);
             this.skinTabControl1.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.skinTabControl1.TabIndex = 1;
@@ -1332,7 +1332,7 @@
             // 
             this.tbClassInfo.Alignment = System.Windows.Forms.TabAlignment.Left;
             this.tbClassInfo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tbClassInfo.ItemSize = new System.Drawing.Size(10, 10);
+            this.tbClassInfo.ItemSize = new System.Drawing.Size(10, 23);
             this.tbClassInfo.Location = new System.Drawing.Point(0, 0);
             this.tbClassInfo.Multiline = true;
             this.tbClassInfo.Name = "tbClassInfo";

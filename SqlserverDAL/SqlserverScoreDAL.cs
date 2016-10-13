@@ -15,5 +15,11 @@ namespace StudentStatusManageSystem.SqlserverDAL
             string sql = "select CourseInfo.Name as 课程名,CourseInfo.Id 课程编号, ScoreInfo.Student_id 学生编号,ScoreInfo.Score 分数 from ScoreInfo  inner join CourseInfo on CourseInfo.Id = ScoreInfo.Course_id inner join StudentInfo on StudentInfo.Id = ScoreInfo.Student_id inner join UserInfo on UserInfo.Id = CourseInfo.Heather_id where UserInfo.Id = " + teacher_id;
             return SqlserverHelper.AdapterDataTable(sql);
         }
+
+        public int UpdateScore(int score_id,double score_value, int submitter_id)
+        {
+            string sql = "UPDATE ScoreInfo set Score=" + score_value + ",Submitter_id=" + submitter_id + " where Id=" + score_id;
+            return SqlserverHelper.ExecuteNonQuery(sql);
+        }
     }
 }

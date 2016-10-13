@@ -85,6 +85,7 @@
             this.dgvCourse.TitleBack = null;
             this.dgvCourse.TitleBackColorBegin = System.Drawing.Color.White;
             this.dgvCourse.TitleBackColorEnd = System.Drawing.Color.FromArgb(((int)(((byte)(83)))), ((int)(((byte)(196)))), ((int)(((byte)(242)))));
+            this.dgvCourse.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellContentClick);
             this.dgvCourse.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCourse_CellValueChanged);
             this.dgvCourse.RowsAdded += new System.Windows.Forms.DataGridViewRowsAddedEventHandler(this.dgvCourse_RowsAdded);
             // 
@@ -96,7 +97,8 @@
             this.Controls.Add(this.dgvCourse);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmEditScore";
-            this.Text = "管理成绩    欢迎您~  xxx";
+            this.Text = "管理成绩    欢迎您~  ";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmEditScore_FormClosed);
             this.Load += new System.EventHandler(this.frmEditScore_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvCourse)).EndInit();
             this.ResumeLayout(false);

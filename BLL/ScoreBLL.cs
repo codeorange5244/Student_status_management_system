@@ -15,5 +15,10 @@ namespace StudentStatusManageSystem.BLL
         {
             return idal.GetAllScoreByTeacherId(teacher_id);
         }
+
+        public bool UpdateScore(int score_id,double score_value, int submitter_id)
+        {
+            return idal.UpdateScore(score_id,score_value, submitter_id) > 0;
+        }
     }
 }

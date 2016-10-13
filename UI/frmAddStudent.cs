@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using CCWin;
 using StudentStatusManageSystem.Model;
 using StudentStatusManageSystem.BLL;
+using System.IO;
 
 namespace StudentStatusManageSystem.UI
 {
@@ -24,6 +25,7 @@ namespace StudentStatusManageSystem.UI
             this.student = model;
         }
         private Student student;      //存着专业和班级的Id
+        private string path = "";  //照片路径
 
         private void frmAddStudent_Load(object sender, EventArgs e)
         {
@@ -55,7 +57,7 @@ namespace StudentStatusManageSystem.UI
                 model.Posecode = txtPosecode.Text.Trim();
                 model.Remark = txtRemark.Text;
                 model.Submitter_id = frmMain.current_user.Id;
-               // model.Photograph = null;
+                model.Photograph = string.IsNullOrEmpty(path) ?new byte[0] : GetbytesByImage(path);
                 //添加的数据库
                 StudentBLL bll = new StudentBLL();
                 CCWin.MessageBoxEx.Show(bll.AddStudent(model) ? "录入成功！" : "录入失败，请检查数据后重试！");
@@ -78,6 +80,26 @@ namespace StudentStatusManageSystem.UI
                 MessageBox.Show(msg);
                 return false;
             }
+        }
+        //浏览照片
+        private void btnPhotograph_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openfile = new OpenFileDialog();            
+            openfile.Filter = "All Image|*.bmp;*.ico;*.jpeg;*.jpg;*.png;*.png;*.gif";            
+            openfile.Multiselect = false;
+            if(openfile.ShowDialog()== DialogResult.OK)
+            {
+                path = openfile.FileName;
+
+            }
+        }
+        private byte[] GetbytesByImage(string image_path)
+        {
+            FileStream fs = new FileStream(image_path,  FileMode.Open, FileAccess.Read);
+            byte[] bytes = new byte[fs.Length];
+             fs.Read(bytes, 0, bytes.Length);
+            fs.Close();
+            return bytes;
         }
     }
 }
