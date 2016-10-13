@@ -34,5 +34,25 @@ namespace StudentStatusManageSystem.SqliteDAL
         {
             throw new NotImplementedException();
         }
+
+        public int DeleteUserByUserId(int user_id, int submitter_id, int delFlag = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object GetUserByUserIdUserDelFlag(int user_id, int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object GetUsersByUserNameUserDelFlag(string user_name, int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int DeleteAllDeletedUsers(int submitter_id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

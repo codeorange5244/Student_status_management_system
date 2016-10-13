@@ -15,7 +15,42 @@ namespace StudentStatusManageSystem.SqliteDAL
             throw new NotImplementedException();
         }
 
+        public int AddSpeciality(Speciality model)
+        {
+            throw new NotImplementedException();
+        }
+
+        public int DeleteAllDeletedSpeciality(int submitter_id)
+        {
+            throw new NotImplementedException();
+        }
+
         public int DeleteSpecialityBySpecialityId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int DeleteSpecialityBySpecialityId(int specialityId, int submitterId, int delFlag = 1)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Speciality> GetAllSpecialityByDelFlag(int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Speciality> GetAllSpecialityByDelFlagAndCollegeId(int delFlag, int college_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Dictionary<int, string> GetAllSpecialityIdAndNameByCollegeId(int college_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Dictionary<int, string> GetAllspecialityIdAndNameByDelFlag(int delFlag)
         {
             throw new NotImplementedException();
         }
@@ -25,7 +60,22 @@ namespace StudentStatusManageSystem.SqliteDAL
             throw new NotImplementedException();
         }
 
+        public Speciality GetSpecialityBySpecialityId(int speciality_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Speciality> GetSpecialityBySpecialityNameIdAndDelFlag(string specialityName, int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
         public int UpdateSpecialityBySpecialityId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int UpdateSpecialityBySpecialityId(Speciality model)
         {
             throw new NotImplementedException();
         }

@@ -35,13 +35,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CSkin">
-      <HintPath>C:\Users\宇锅\Desktop\xinpian\Code\CSkin 16.1.14.2\CSkin 4.0\CSkin.dll</HintPath>
+      <HintPath>bin\Debug\MyLib\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="MyControl">
-      <HintPath>C:\Users\宇锅\Desktop\xinpian\Code\MyControl.dll</HintPath>
+      <HintPath>bin\Debug\MyLib\MyControl.dll</HintPath>
     </Reference>
     <Reference Include="SelfForm">
-      <HintPath>..\..\自定义控件\WindowsFormsApplication1\bin\Debug\SelfForm.dll</HintPath>
+      <HintPath>bin\Debug\MyLib\SelfForm.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
@@ -218,6 +218,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="bin\Debug\UI.vshost.exe.config" />
+    <None Include="bin\Debug\UI.vshost.exe.manifest" />
     <None Include="Properties\DataSources\StudentStatusManageSystem.UI.Properties.Resources.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -309,6 +311,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\UI.vshost.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\Debug\MyLib\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

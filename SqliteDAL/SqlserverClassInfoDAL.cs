@@ -15,7 +15,17 @@ namespace StudentStatusManageSystem.SqliteDAL
             throw new NotImplementedException();
         }
 
+        public int AddClassInfo(ClassInfo model)
+        {
+            throw new NotImplementedException();
+        }
+
         public int DeleteClassInfoByClassInfoId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Dictionary<int, string> GetAllClassInfoIdAndNameBySpecialityId(int speciality_id)
         {
             throw new NotImplementedException();
         }
@@ -25,7 +35,22 @@ namespace StudentStatusManageSystem.SqliteDAL
             throw new NotImplementedException();
         }
 
+        public ClassInfo GetClassInfoByClassInfoId(int class_id)
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<ClassInfo> GetClassInfosBySpecialityId(int id, int delFlag)
+        {
+            throw new NotImplementedException();
+        }
+
         public int UpdateClassInfoByClassInfoId()
+        {
+            throw new NotImplementedException();
+        }
+
+        public int UpdateClassInfoByDelFlag(ClassInfo model)
         {
             throw new NotImplementedException();
         }
